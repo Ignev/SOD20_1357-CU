@@ -56,73 +56,36 @@ let banners = [
 var recorder = null;
 var words = {
   ".module__1": [
-    "wie sieht der enyaq 4 innen aus",
-    "interieur",
-    "innenraum",
-    "infotainment",
-    "sitze",
-    "komfort",
-    "ausstattungslinien",
-    "display",
-    "nachhaltigkeit",
-    "ausstattung",
-    "cockpit",
-    "connect",
-    "konnektivität",
-    "features",
-    "lounge",
-    "lodge",
-    "suite",
+    "hallo ",
+    "caddye",
+    "wechsle",
+    "zum",
+    "nächsten",
+    "feature",
   ],
   ".module__2": [
-    "wie sieht der enyaq 4 außen aus",
-    "design",
-    "außenansicht",
-    "karosserie",
-    "farben",
-    "felgen",
-    "kofferraum",
-    "stauraum",
-    "scheinwerfer",
-    "lackierung",
-    "räder",
-    "reifen",
-    "größe",
-    "exterieur",
+    "hallo",
+    "caddye",
+    "wechsle",
+    "zum",
+    "nächsten",
+    "feature",
   ],
   ".module__3": [
-    "wie hoch ist die reichweite",
-    "ladung",
-    "ladedauer",
-    "akku",
-    "ps",
-    "geschwindigkeit",
-    "ladezeit",
-    "allrad",
-    "aufladen",
-    "weit",
-    "distanz",
-    "leistung",
+    "hallo ",
+    "caddye",
+    "wechsle",
+    "zum",
+    "nächsten",
+    "feature",
   ],
   ".module__4": [
-    "welche assistenzsysteme gibt es",
-    "sicherheit",
-    "assistenz",
-    "beihilfe",
-    "unterstützung",
-  ],
-  ".module__5": [
-    "was kostet der enyaq 4",
-    "förderungen",
-    "rabatt",
-    "nachlass",
-    "upe",
-    "preis",
-    "kosten",
-    "teuer",
-    "euro",
-    "betrag",
-    "summe",
+    "hallo ",
+    "caddye",
+    "wechsle",
+    "zum",
+    "nächsten",
+    "feature",
   ],
 };
 
@@ -186,120 +149,7 @@ const onGetUserMedia = (stream) => {
   recorder.start();
 };
 
-function onGetUserMediaError() {
-
-}
-
-document.querySelector('.banner__micro').addEventListener("click", e => {
-  e.preventDefault();
-  e.stopPropagation();
-
-  let thisC = document.querySelector(".banner__micro");
-  thisC.classList.add('active');
-  document.querySelector('body').classList.add('load');
-
-  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || null;
-  if (navigator.mediaDevices) {
-      navigator.mediaDevices.getUserMedia({ audio: true }).then(onGetUserMedia, onGetUserMediaError);
-  } else if (navigator.getUserMedia) {
-      navigator.getUserMedia({ audio: true }, onGetUserMedia, onGetUserMediaError);
-  } else {
-      if (!$this.classList.contains('active')) {
-          let module_run = thithisCs.data('module');
-          setTimeout(function() {
-            thisC.removeClass('active');
-              document.querySelector('body').classList.remove('load');
-              show_module(module_run);
-          }, 3000);
-      }
-  }
-})
-
-
-// const onGetUserMedia = (stream) => {
-//   recorder = new MediaRecorder(stream)
-
-//   recorder.addEventListener('dataavailable', e => {
-//       let reader = new FileReader();
-//       reader.readAsDataURL(e.data);
-//       reader.onloadend = () => {
-//           let ajax = new XMLHttpRequest();
-//           ajax.open("POST", "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyAUYZHhAPOK9k14mMNZkTf4hxIeUiubk2o", true);
-//           ajax.setRequestHeader("Content-type", "application/json");
-//           let params = {
-//               audio: {
-//                   content: reader.result.split(',')[1],
-//               },
-//               config: {
-//                   enableAutomaticPunctuation: false,
-//                   encoding: "LINEAR16",
-//                   languageCode: "de-DE",
-//                   model: "default"
-//               }
-//           }
-//           ajax.send(JSON.stringify(params));
-//           ajax.onreadystatechange = function() {
-//               if (ajax.readyState == 4 && ajax.status == 200) {
-//                   let data = JSON.parse(ajax.responseText);
-//                       let found = false;
-//                   if (typeof data.results != 'undefined') {
-//                       let resString = data.results[0].alternatives[0].transcript.toLowerCase();
-//                       let arResult = resString.split(" ");
-//                       console.log(resString);
-//                       arResult.foreach((i, v) =>  {
-//                         words.foreach((j, w) => {
-
-//                               if(words[j].indexOf(v) > -1 || words[j].indexOf(resString) > -1) {
-//                                   show_module(j);
-//                                   found = true;
-//                                   return false;
-//                               }
-//                           });
-//                       });
-//                   }
-//                   if(!found) {
-//                     document.querySelector('.bannerBtnMicro').classList.add('fail');
-//                       setTimeout(function() {
-//                         document.querySelector('.bannerBtnMicro').classList.remove('fail');
-//                       }, 1000);
-//                   }
-//               }
-//           }
-//       }
-//   });
-//   recorder.start();
-// }
-// document.querySelector('.banner__micro').addEventListener("click", e => {
-//   e.preventDefault();
-//   e.stopPropagation();
-
-//   let thisC = this;
-//   thisC.classList.add('active');
-//   $('body').classList.add('load');
-
-//   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || null;
-//   if (navigator.mediaDevices) {
-//       navigator.mediaDevices.getUserMedia({ audio: true }).then(onGetUserMedia, onGetUserMediaError);
-//   } else if (navigator.getUserMedia) {
-//       navigator.getUserMedia({ audio: true }, onGetUserMedia, onGetUserMediaError);
-//   } else {
-//       if (!$this.classList.contains('active')) {
-//           let module_run = thithisCs.data('module');
-//           setTimeout(function() {
-//             thisC.removeClass('active');
-//               document.querySelector('body').classList.remove('load');
-//               show_module(module_run);
-//           }, 3000);
-//       }
-//   }
-//   setTimeout(function() {
-//       if (recorder) {
-//           recorder.stop();
-//           document.querySelector('.bannerBtnMicro').classList.remove('active');
-//           document.querySelector('body').classList.remove('load');
-//       }
-//   }, 3000);
-// })
+function onGetUserMediaError() {}
 
 const showBanner = (
   bannerSelector,
@@ -323,46 +173,70 @@ const showBanner = (
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
-    bannerBtnMicro.addEventListener('click', () => {
-      if(bannerBtnMicro.classList.contains('action')){
-        bannerBtnMicro.classList.remove('action');
-        bannerBtnMicro.innerHTML = '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
-        
-      }
-      else{
-        bannerBtnMicro.classList.add('action');
-        bannerBtnMicro.innerHTML = '<img class="micro__media micro__media-action" src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-      }
-      
-    })
+  bannerBtnMicro.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    bannerBtnMicro.classList.add("active");
+
+    navigator.getUserMedia =
+      navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia ||
+      navigator.msGetUserMedia ||
+      null;
+    if (navigator.mediaDevices) {
+      navigator.mediaDevices
+        .getUserMedia({ audio: true })
+        .then(onGetUserMedia, onGetUserMediaError);
+    } else if (navigator.getUserMedia) {
+      navigator.getUserMedia(
+        { audio: true },
+        onGetUserMedia,
+        onGetUserMediaError
+      );
+    }
+    bannerBtnMicro.innerHTML =
+      '<img class="micro__media micro__media-action" src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+
+    setTimeout(() => {
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
+      recorder.stop();
+      nextBanner();
+    }, 3000);
+  });
+const nextBanner =()=> {
+  if (banner.dataset.step <= 4) {
+    banner.dataset.step++;
+  }
+  if (banner.dataset.step == 5) {
+    banner.dataset.step = 2;
+  }
+  banners.forEach((item) => {
+    if (banner.dataset.step == item.step) {
+      banner.style.background = `url(${item.bg})`;
+      bannerText.innerHTML = item.bannerText;
+      bannerSubtext.innerHTML = item.subtext;
+    }
+    if (banner.dataset.step == item.step && item.popupImg) {
+      popupVideo.setAttribute("src", item.popupImg);
+      popupText.innerHTML = item.popupText;
+      popupOpenBtn.style.animation = "showOpenPopup 1.5s ease";
+    }
+    if (banner.dataset.step == item.step && item.top) {
+      popupOpenBtnWrapper.style.display = "flex";
+      popupOpenBtnWrapper.style.top = item.top;
+      popupOpenBtnWrapper.style.right = item.right;
+      popupOpenBtnWrapper.innerHTML = `
+      <button class="popup__open">
+        <img src="./assets/img/plus.svg" alt="open" class="open__media" />
+      </button>`;
+    }
+  });
+}
   bannerBtnArrow.addEventListener("click", () => {
-    if (banner.dataset.step <= 4) {
-      banner.dataset.step++;
-    }
-    if (banner.dataset.step == 5) {
-      banner.dataset.step = 2;
-    }
-    banners.forEach((item) => {
-      if (banner.dataset.step == item.step) {
-        banner.style.background = `url(${item.bg})`;
-        bannerText.innerHTML = item.bannerText;
-        bannerSubtext.innerHTML = item.subtext;
-      }
-      if (banner.dataset.step == item.step && item.popupImg) {
-        popupVideo.setAttribute("src", item.popupImg);
-        popupText.innerHTML = item.popupText;
-        popupOpenBtn.style.animation = "showOpenPopup 1.5s ease";
-      }
-      if (banner.dataset.step == item.step && item.top) {
-        popupOpenBtnWrapper.style.display = "flex";
-        popupOpenBtnWrapper.style.top = item.top;
-        popupOpenBtnWrapper.style.right = item.right;
-        popupOpenBtnWrapper.innerHTML = `
-        <button class="popup__open">
-          <img src="./assets/img/plus.svg" alt="open" class="open__media" />
-        </button>`;
-      }
-    });
+    nextBanner();
   });
 };
 const closePopup = (popupSelector, popupClose) => {
