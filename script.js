@@ -98,7 +98,7 @@ const onGetUserMedia = (stream) => {
       let ajax = new XMLHttpRequest();
       ajax.open(
         "POST",
-        "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyAUYZHhAPOK9k14mMNZkTf4hxIeUiubk2o",
+        "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyB0prP56MBRzjZPVMLJHL408pTxzRtKJok",
         true
       );
       ajax.setRequestHeader("Content-type", "application/json");
@@ -113,6 +113,7 @@ const onGetUserMedia = (stream) => {
           model: "default",
         },
       };
+      ajax.send(JSON.stringify(params));
       ajax.onreadystatechange = function () {
         if (ajax.readyState == 4 && ajax.status == 200) {
           let data = JSON.parse(ajax.responseText);
@@ -127,7 +128,7 @@ const onGetUserMedia = (stream) => {
                   words[j].indexOf(v) > -1 ||
                   words[j].indexOf(resString) > -1
                 ) {
-                  show_module(j);
+                  nextBanner();
                   found = true;
                   return false;
                 }
@@ -135,10 +136,10 @@ const onGetUserMedia = (stream) => {
             });
           }
           if (!found) {
-            document.querySelector(".bannerBtnMicro").classList.add("fail");
+            document.querySelector(".banner__micro").classList.add("fail");
             setTimeout(function () {
               document
-                .querySelector(".bannerBtnMicro")
+                .querySelector(".banner__micro")
                 .classList.remove("fail");
             }, 1000);
           }
@@ -202,7 +203,7 @@ const showBanner = (
     setTimeout(() => {
       bannerBtnMicro.innerHTML =
         '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
-      recorder.stop();
+      // recorder.stop();
       nextBanner();
     }, 3000);
   });
