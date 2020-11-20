@@ -4,14 +4,14 @@ let banners = [
     bg: "./assets/img/bg-0.jpg",
     bannerText:
       "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>",
-      subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis"
+    subtext: "Abbildung zeigt Sonderausstattung gegen Mehrpreis",
   },
   {
     step: 1,
     bg: "./assets/img/bg-1.jpg",
     bannerText:
       "<strong>Der neue <br /> Caddy Cargo</strong> <br/> <span>ereit für alles, <br />was kommt</span>",
-      subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis"
+    subtext: "Abbildung zeigt Sonderausstattung gegen Mehrpreis",
   },
   {
     step: 2,
@@ -23,7 +23,8 @@ let banners = [
       "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
     top: "40%",
     right: "40px",
-    subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
+    subtext:
+      "Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis.",
   },
   {
     step: 3,
@@ -35,7 +36,7 @@ let banners = [
       "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
-    subtext:"Abbildungen zeigen Sonderausstattung gegen Mehrpreis."
+    subtext: "Abbildungen zeigen Sonderausstattung gegen Mehrpreis.",
   },
   {
     step: 4,
@@ -47,9 +48,258 @@ let banners = [
       "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
     top: "30%",
     right: "50px",
-    subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
-  }
+    subtext:
+      "Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis.",
+  },
 ];
+
+var recorder = null;
+var words = {
+  ".module__1": [
+    "wie sieht der enyaq 4 innen aus",
+    "interieur",
+    "innenraum",
+    "infotainment",
+    "sitze",
+    "komfort",
+    "ausstattungslinien",
+    "display",
+    "nachhaltigkeit",
+    "ausstattung",
+    "cockpit",
+    "connect",
+    "konnektivität",
+    "features",
+    "lounge",
+    "lodge",
+    "suite",
+  ],
+  ".module__2": [
+    "wie sieht der enyaq 4 außen aus",
+    "design",
+    "außenansicht",
+    "karosserie",
+    "farben",
+    "felgen",
+    "kofferraum",
+    "stauraum",
+    "scheinwerfer",
+    "lackierung",
+    "räder",
+    "reifen",
+    "größe",
+    "exterieur",
+  ],
+  ".module__3": [
+    "wie hoch ist die reichweite",
+    "ladung",
+    "ladedauer",
+    "akku",
+    "ps",
+    "geschwindigkeit",
+    "ladezeit",
+    "allrad",
+    "aufladen",
+    "weit",
+    "distanz",
+    "leistung",
+  ],
+  ".module__4": [
+    "welche assistenzsysteme gibt es",
+    "sicherheit",
+    "assistenz",
+    "beihilfe",
+    "unterstützung",
+  ],
+  ".module__5": [
+    "was kostet der enyaq 4",
+    "förderungen",
+    "rabatt",
+    "nachlass",
+    "upe",
+    "preis",
+    "kosten",
+    "teuer",
+    "euro",
+    "betrag",
+    "summe",
+  ],
+};
+
+const onGetUserMedia = (stream) => {
+  recorder = new MediaRecorder(stream);
+  recorder.addEventListener("dataavailable", (e) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(e.data);
+    reader.onloadend = () => {
+      let ajax = new XMLHttpRequest();
+      ajax.open(
+        "POST",
+        "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyAUYZHhAPOK9k14mMNZkTf4hxIeUiubk2o",
+        true
+      );
+      ajax.setRequestHeader("Content-type", "application/json");
+      let params = {
+        audio: {
+          content: reader.result.split(",")[1],
+        },
+        config: {
+          enableAutomaticPunctuation: false,
+          encoding: "LINEAR16",
+          languageCode: "de-DE",
+          model: "default",
+        },
+      };
+      ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+          let data = JSON.parse(ajax.responseText);
+          let found = false;
+          if (typeof data.results != "undefined") {
+            let resString = data.results[0].alternatives[0].transcript.toLowerCase();
+            let arResult = resString.split(" ");
+            console.log(resString);
+            arResult.foreach((i, v) => {
+              words.foreach((j, w) => {
+                if (
+                  words[j].indexOf(v) > -1 ||
+                  words[j].indexOf(resString) > -1
+                ) {
+                  show_module(j);
+                  found = true;
+                  return false;
+                }
+              });
+            });
+          }
+          if (!found) {
+            document.querySelector(".bannerBtnMicro").classList.add("fail");
+            setTimeout(function () {
+              document
+                .querySelector(".bannerBtnMicro")
+                .classList.remove("fail");
+            }, 1000);
+          }
+        }
+      };
+    };
+  });
+  recorder.start();
+};
+
+function onGetUserMediaError() {
+
+}
+
+document.querySelector('.banner__micro').addEventListener("click", e => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  let thisC = document.querySelector(".banner__micro");
+  thisC.classList.add('active');
+  document.querySelector('body').classList.add('load');
+
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || null;
+  if (navigator.mediaDevices) {
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(onGetUserMedia, onGetUserMediaError);
+  } else if (navigator.getUserMedia) {
+      navigator.getUserMedia({ audio: true }, onGetUserMedia, onGetUserMediaError);
+  } else {
+      if (!$this.classList.contains('active')) {
+          let module_run = thithisCs.data('module');
+          setTimeout(function() {
+            thisC.removeClass('active');
+              document.querySelector('body').classList.remove('load');
+              show_module(module_run);
+          }, 3000);
+      }
+  }
+})
+
+
+// const onGetUserMedia = (stream) => {
+//   recorder = new MediaRecorder(stream)
+
+//   recorder.addEventListener('dataavailable', e => {
+//       let reader = new FileReader();
+//       reader.readAsDataURL(e.data);
+//       reader.onloadend = () => {
+//           let ajax = new XMLHttpRequest();
+//           ajax.open("POST", "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyAUYZHhAPOK9k14mMNZkTf4hxIeUiubk2o", true);
+//           ajax.setRequestHeader("Content-type", "application/json");
+//           let params = {
+//               audio: {
+//                   content: reader.result.split(',')[1],
+//               },
+//               config: {
+//                   enableAutomaticPunctuation: false,
+//                   encoding: "LINEAR16",
+//                   languageCode: "de-DE",
+//                   model: "default"
+//               }
+//           }
+//           ajax.send(JSON.stringify(params));
+//           ajax.onreadystatechange = function() {
+//               if (ajax.readyState == 4 && ajax.status == 200) {
+//                   let data = JSON.parse(ajax.responseText);
+//                       let found = false;
+//                   if (typeof data.results != 'undefined') {
+//                       let resString = data.results[0].alternatives[0].transcript.toLowerCase();
+//                       let arResult = resString.split(" ");
+//                       console.log(resString);
+//                       arResult.foreach((i, v) =>  {
+//                         words.foreach((j, w) => {
+
+//                               if(words[j].indexOf(v) > -1 || words[j].indexOf(resString) > -1) {
+//                                   show_module(j);
+//                                   found = true;
+//                                   return false;
+//                               }
+//                           });
+//                       });
+//                   }
+//                   if(!found) {
+//                     document.querySelector('.bannerBtnMicro').classList.add('fail');
+//                       setTimeout(function() {
+//                         document.querySelector('.bannerBtnMicro').classList.remove('fail');
+//                       }, 1000);
+//                   }
+//               }
+//           }
+//       }
+//   });
+//   recorder.start();
+// }
+// document.querySelector('.banner__micro').addEventListener("click", e => {
+//   e.preventDefault();
+//   e.stopPropagation();
+
+//   let thisC = this;
+//   thisC.classList.add('active');
+//   $('body').classList.add('load');
+
+//   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || null;
+//   if (navigator.mediaDevices) {
+//       navigator.mediaDevices.getUserMedia({ audio: true }).then(onGetUserMedia, onGetUserMediaError);
+//   } else if (navigator.getUserMedia) {
+//       navigator.getUserMedia({ audio: true }, onGetUserMedia, onGetUserMediaError);
+//   } else {
+//       if (!$this.classList.contains('active')) {
+//           let module_run = thithisCs.data('module');
+//           setTimeout(function() {
+//             thisC.removeClass('active');
+//               document.querySelector('body').classList.remove('load');
+//               show_module(module_run);
+//           }, 3000);
+//       }
+//   }
+//   setTimeout(function() {
+//       if (recorder) {
+//           recorder.stop();
+//           document.querySelector('.bannerBtnMicro').classList.remove('active');
+//           document.querySelector('body').classList.remove('load');
+//       }
+//   }, 3000);
+// })
 
 const showBanner = (
   bannerSelector,
@@ -73,6 +323,18 @@ const showBanner = (
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
+    bannerBtnMicro.addEventListener('click', () => {
+      if(bannerBtnMicro.classList.contains('action')){
+        bannerBtnMicro.classList.remove('action');
+        bannerBtnMicro.innerHTML = '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
+        
+      }
+      else{
+        bannerBtnMicro.classList.add('action');
+        bannerBtnMicro.innerHTML = '<img class="micro__media micro__media-action" src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+      }
+      
+    })
   bannerBtnArrow.addEventListener("click", () => {
     if (banner.dataset.step <= 4) {
       banner.dataset.step++;
@@ -121,37 +383,40 @@ const openPopup = (popupSelector, popupOpen) => {
     popup.classList.add("open");
   });
 };
-const muteSound = (btnSoundSelector, videoSelector, imgSelector, popupClose) =>{
+const muteSound = (
+  btnSoundSelector,
+  videoSelector,
+  imgSelector,
+  popupClose
+) => {
   const video = document.querySelector(videoSelector),
-  btnSound = document.querySelector(btnSoundSelector),
-  img = document.querySelector(imgSelector),
-  closeBtn = document.querySelector(popupClose);
+    btnSound = document.querySelector(btnSoundSelector),
+    img = document.querySelector(imgSelector),
+    closeBtn = document.querySelector(popupClose);
 
   btnSound.addEventListener("click", () => {
-    if(btnSound.classList.contains("sound-off")){
+    if (btnSound.classList.contains("sound-off")) {
       btnSound.classList.remove("sound-off");
       btnSound.classList.add("sound-on");
       img.setAttribute("src", "./assets/img/sound-on.png");
       video.muted = false;
-      
-      video.removeAttribute(muted);
-      
 
+      video.removeAttribute(muted);
     }
-    if(btnSound.classList.contains("sound-on")){
+    if (btnSound.classList.contains("sound-on")) {
       btnSound.classList.remove("sound-on");
       btnSound.classList.add("sound-off");
       img.setAttribute("src", "./assets/img/sound-off.png");
       video.muted = true;
     }
   });
-  closeBtn.addEventListener("click", () =>{
+  closeBtn.addEventListener("click", () => {
     video.muted = true;
     btnSound.classList.remove("sound-on");
-      btnSound.classList.add("sound-off");
-      img.setAttribute("src", "./assets/img/sound-off.png");
-  })
-}
+    btnSound.classList.add("sound-off");
+    img.setAttribute("src", "./assets/img/sound-off.png");
+  });
+};
 window.addEventListener("DOMContentLoaded", () => {
   showBanner(
     ".banner",
@@ -167,5 +432,5 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   closePopup(".banner__popup", ".popup__close");
   openPopup(".banner__popup", ".popup__open-wrapp");
-  muteSound(".video__btn", ".popup__video", ".video__img",".popup__close");
+  muteSound(".video__btn", ".popup__video", ".video__img", ".popup__close");
 });

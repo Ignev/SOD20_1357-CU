@@ -237,6 +237,10 @@ button {
   width: 30px;
   fill: #ffffff;
 }
+.micro__media-action{
+width: 40px;
+height: 10px;
+}
 .banner__arrow {
   background: #00b1f2;
   width: 25px;
