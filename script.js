@@ -62,31 +62,7 @@ var words = {
     "zum",
     "nächsten",
     "feature",
-  ],
-  ".module__2": [
-    "hallo",
-    "caddye",
-    "wechsle",
-    "zum",
-    "nächsten",
-    "feature",
-  ],
-  ".module__3": [
-    "hallo ",
-    "caddye",
-    "wechsle",
-    "zum",
-    "nächsten",
-    "feature",
-  ],
-  ".module__4": [
-    "hallo ",
-    "caddye",
-    "wechsle",
-    "zum",
-    "nächsten",
-    "feature",
-  ],
+  ]
 };
 
 const onGetUserMedia = (stream) => {
@@ -148,6 +124,9 @@ const onGetUserMedia = (stream) => {
     };
   });
   recorder.start();
+  setTimeout(()=> {
+    stream.getTracks().forEach( track => track.stop() );
+  }, 3000)
 };
 
 function onGetUserMediaError() {}
@@ -203,7 +182,6 @@ const showBanner = (
     setTimeout(() => {
       bannerBtnMicro.innerHTML =
         '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
-      // recorder.stop();
       nextBanner();
     }, 3000);
   });
