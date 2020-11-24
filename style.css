@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+button{
+    outline: none;
+    
+}
+.body {
+  font-family: sans-serif;
+  font-style: 16px;
+  color: #ffffff;
+  position: relative;
+}
+.banner__wrapper {
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.301);
+}
+.banner {
+  position: absolute;
+  left: 37%;
+  top:0.5%;
+  width: 645px;
+  height: 960px;
+  background-image: url(./assets/img/bg-1.jpg);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.popup__open{
+    position: absolute;
+    background: #00b1f2;
+    border-radius: 50%;
+    padding: 5px;
+    display: none;
+    top: 50%;
+    right: 100px;
+}
+.open__media{
+    width: 25px;
+    height: 25px;
+}
+.banner__popup{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 1000;
+    color: #000000;
+    background: #ffff;
+    width: 620px;
+    height: 920px;
+    padding: 35px;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.popup__close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+}
+.close__media{
+    width: 25px;
+    height: 25px;
+}
+.popup__text{
+    font-size: 18px;
+}
+.popup__video{
+    width: 550px;
+    height: 690px;
+}
+.popup__button{
+    width: 260px;
+    height: 65px;
+    border-radius: 25px;
+    background: #001e50;
+    color: #ffff;
+    font-size: 20px;
+}
+.banner__logo{
+    margin-top: 50px;
+    margin-left: 2px;
+}
+.banner__content{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+.banner__text{
+    position: relative;
+}
+.banner__text > strong,span{
+    position: relative;
+    
+}
+.banner__text > strong{
+    animation: showText 1s ease;
+}
+.banner__text > span{
+    animation: showText 1.3s ease;
+}
+@keyframes showText{
+    0%{
+        top: 100px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+.banner__content-left{
+    display: flex;
+    flex-direction: column;
+}
+.banner__content-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+.banner__text{
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+.banner__btn{
+    padding: 15px;
+    background: #ffffff;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 20px;
+}
+.banner__micro{
+    background: #00b1f2;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.micro__media{
+    height: 50px;
+    width: 30px;
+    fill: #ffffff;
+}
+.banner__arrow{
+    background: #00b1f2;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.arrow__media{
+    width: 15px;
+    height: 20px;
+}
+.bunner__bubble{
+    position: absolute;
+    bottom: 150px;
+    right: -20px;
+    animation: showBubble 3s ease;
+}
+@keyframes showBubble{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
