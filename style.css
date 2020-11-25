@@ -1,8 +1,4 @@
-/* Fonts */
-
-
 /* Page */
-
 *,
 *::before,
 *::after {
@@ -81,7 +77,6 @@ button{
     display: none;
     overflow: hidden;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
 }
 .popup__close{
@@ -112,6 +107,7 @@ button{
     color: #ffff;
     font-size: 11px;
     padding: 5px;
+
 }
 .banner__logo{
     margin-top: 25px;
@@ -210,7 +206,17 @@ button{
     position: absolute;
     bottom: 100px;
     right: -20px;
+    width: 141px;
+    height: 67px;
+    background: url(./assets/img/bubble-2.png) no-repeat center;
     animation: showBubble 3s ease;
+}
+.bunner__bubble>p{
+    z-index: 10000;
+    color: #000000;
+    font-size: 9px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 @keyframes showBubble{
     0%{
