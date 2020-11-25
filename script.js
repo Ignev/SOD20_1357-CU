@@ -96,7 +96,6 @@ const showBanner = (
       if (banner.dataset.step == item.step && item.popupImg) {
         popupVideo.setAttribute("src", item.popupImg);
         popupText.innerHTML = item.popupText;
-        console.log(15);
       }
       if (banner.dataset.step == item.step && item.top) {
         popupOpenBtn.style.display = "flex";
