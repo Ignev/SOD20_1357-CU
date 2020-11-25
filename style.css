@@ -35,8 +35,8 @@ button{
 }
 .banner {
   position: absolute;
-  left: 37%;
-  top:0.5%;
+  left: 40%;
+  top:25%;
   width: 320px;
   height: 480px;
   background-image: url(./assets/img/bg-1.jpg);
