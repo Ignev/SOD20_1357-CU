@@ -20,7 +20,7 @@ let banners = [
       "<strong>Der neue <br /> Caddy Cargo</strong> <br/> <span>LED Scheinwerfer</span>",
     popupImg: "./assets/video/video-4.mp4",
     popupText:
-      "Alles im Blick: Mit den neuen LED Frontscheinwerfern* und LED Rückleuchten* entgeht Ihnen nichts mehr.",
+      "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
     top: "40%",
     right: "40px",
     subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
@@ -29,10 +29,10 @@ let banners = [
     step: 3,
     bg: "./assets/img/bg-3.jpg",
     bannerText:
-      "<strong>Der neue Caddy Cargo</strong> <br/> <span>LED Scheinwerfer</span>",
+      "<strong>Der neue Caddy Cargo</strong> <br/> <span>Großer Laderaum</span>",
     popupImg: "./assets/video/video-1.mp4",
     popupText:
-      "Innen überzeugt die fünfte Generation des Caddy Cargo mit neuen Hightech-Lösungen und deutlich mehr Platz.",
+      "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
     subtext:"Abbildungen zeigen Sonderausstattung gegen Mehrpreis."
@@ -44,7 +44,7 @@ let banners = [
       "<strong>Der neue <br/>Caddy Cargo Maxi</strong> <br/> <span>Breitere <br/>Schiebetür*</span>",
     popupImg: "./assets/video/video-2.mp4",
     popupText:
-      "Dank extrabreiter Schiebetür* können jetzt Europaletten sogar seitlich eingeladen werden.",
+      "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
     top: "30%",
     right: "50px",
     subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
@@ -56,7 +56,7 @@ let banners = [
       "<strong>Der neue <br/>Caddy Cargo</strong> <br/> <span>Lane Assist*</span>",
     popupImg: "./assets/video/video-3.mp4",
     popupText:
-      "Der Lane Assist* erfasst und korrigiert autonom bei drohender Überfahrung der Spurbegrenzungslinien.",
+      "Der Lane Assist* erfasst und korrigiert autonom bei <br/> drohender Überfahrung der Spurbegrenzungslinien.",
     top: "30%",
     right: "50px",
     subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
@@ -84,7 +84,7 @@ const showBanner = (
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector);
   bannerBtnArrow.addEventListener("click", () => {
-    if (banner.dataset.step <= 5) {
+    if (banner.dataset.step < 5) {
       banner.dataset.step++
     }
     banners.forEach((item) => {

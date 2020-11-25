@@ -1,3 +1,8 @@
+/* Fonts */
+
+
+/* Page */
+
 *,
 *::before,
 *::after {
@@ -5,13 +10,14 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: inherit;
 }
 button{
     outline: none;
     
 }
 .body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: 11px;
   color: #ffffff;
   position: relative;
@@ -85,12 +91,13 @@ button{
     background: none;
 }
 .close__media{
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
 }
 .popup__text{
     font-size: 11px;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 .popup__video{
     width: 275px;
@@ -120,14 +127,14 @@ button{
 .banner__text{
     position: relative;
 }
-.banner__text > span{
-    font-weight: lighter;
-}
 .banner__text > strong{
     animation: showText 1s ease;
+    font-family: 'Roboto', sans-serif;
 }
 .banner__text > span{
     animation: showText 1s ease;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
 }
 @keyframes showText{
     0%{
@@ -153,6 +160,7 @@ button{
 .banner__text{
     font-size: 24px;
     margin-bottom: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 .banner__btn{
     padding: 7px;
@@ -217,4 +225,5 @@ button{
     font-size: 9px;
     bottom: 5px;
     left: 10px;
+    font-family: "Arial", sans-serif;
 }
