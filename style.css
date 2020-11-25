@@ -90,10 +90,12 @@ button{
 }
 .popup__text{
     font-size: 9px;
+    margin-bottom: 10px;
 }
 .popup__video{
     width: 275px;
     height: 345px;
+    margin-bottom: 10px;
 }
 .popup__button{
     width: 130px;
