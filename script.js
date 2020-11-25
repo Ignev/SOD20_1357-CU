@@ -32,7 +32,7 @@ let banners = [
       "<strong>Der neue Caddy Cargo</strong> <br/> <span>LED Scheinwerfer</span>",
     popupImg: "./assets/video/video-1.mp4",
     popupText:
-      "nnen überzeugt die fünfte Generation des Caddy Cargo mit neuen Hightech-Lösungen und deutlich mehr Platz.",
+      "Innen überzeugt die fünfte Generation des Caddy Cargo mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
     subtext:"Abbildungen zeigen Sonderausstattung gegen Mehrpreis."
@@ -104,9 +104,9 @@ const showBanner = (
       }
     });
   });
-  bannerBtnMicro.addEventListener('click', ()=>{
-    bannerBtnMicro.style.animation = "bigBtn 1s ease";
-  });
+  // bannerBtnMicro.addEventListener('click', ()=>{
+  //   bannerBtnMicro.style.animation = "bigBtn 1s ease";
+  // });
 };
 const closePopup = (popupSelector, popupClose) => {
   const popup = document.querySelector(popupSelector),

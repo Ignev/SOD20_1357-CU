@@ -17,13 +17,15 @@ button{
   position: relative;
 }
 .banner__wrapper {
-    z-index: 1;
-    position: absolute;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.301);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-@keyframes showBunner{
+/* @keyframes showBunner{
     0%{
         right: -500px;
         opacity: 0;
@@ -32,11 +34,9 @@ button{
         right: 0px;
         opacity: 1;
     }
-}
+} */
 .banner {
-  position: absolute;
-  left: 40%;
-  top:25%;
+    position: relative;
   width: 320px;
   height: 480px;
   background-image: url(./assets/img/bg-1.jpg);
@@ -70,8 +70,8 @@ button{
     color: #000000;
     background: #ffff;
     width: 310px;
-    height: 410px;
-    padding: 17px;
+    height: 460px;
+    padding: 20px;
     display: none;
     overflow: hidden;
     flex-direction: column;
@@ -89,7 +89,7 @@ button{
     height: 12px;
 }
 .popup__text{
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 10px;
 }
 .popup__video{
@@ -99,11 +99,12 @@ button{
 }
 .popup__button{
     width: 130px;
-    height: 16px;
+    height: 30px;
     border-radius: 25px;
     background: #001e50;
     color: #ffff;
-    font-size: 10px;
+    font-size: 11px;
+    padding: 5px;
 }
 .banner__logo{
     margin-top: 25px;
@@ -119,9 +120,8 @@ button{
 .banner__text{
     position: relative;
 }
-.banner__text > strong,span{
-    position: relative;
-    
+.banner__text > span{
+    font-weight: lighter;
 }
 .banner__text > strong{
     animation: showText 1s ease;
