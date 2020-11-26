@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="banner__wrapper">
       <div class="banner" data-step="1">
-        <button class="popup__open">
-            <img src="./assets/img/plus.svg" alt="open" class="open__media">
-        </button>
-        <div class="banner__popup">
-            <button class="popup__close">
-                <img class="close__media" src="./assets/img/close.svg" alt="close">
-            </button>
+        <div class="popup__open-wrapp">
+          <button class="popup__open">
+            <img src="./assets/img/plus.svg" alt="open" class="open__media" />
+          </button>
+        </div>
+        <div class="banner__popup close">
+          <button class="popup__close">
+            <img
+              class="close__media"
+              src="./assets/img/close.svg"
+              alt="close"
+            />
+          </button>
           <video class="popup__video" autoplay muted>
             <source src="./assets/video/video-4.mp4" />
           </video>
+          <button class="video__btn sound-off">
+            <img src="./assets/img/sound-off.png" alt="sound img" class="video__img" />
+          </button>
           <p class="popup__text">
             Alles im Blick: Mit den neuen LED Frontscheinwerfern* und LED
             Rückleuchten* entgeht Ihnen nichts mehr.
@@ -47,7 +59,10 @@
           </div>
           <div class="banner__content-right">
             <div class="bunner__bubble">
-              <p>Sprechen Sie nach: <br/> <strong>„Hallo Caddy, wechsle zum nächsten Feature.“</strong> </p>
+              <p>
+                Sprechen Sie nach: <br />
+                <strong>„Hallo Caddy, wechsle zum nächsten Feature.“</strong>
+              </p>
             </div>
             <button class="banner__micro">
               <img
@@ -65,7 +80,9 @@
             </button>
           </div>
         </div>
-        <p class="banner__subtext">Abbildung zeigt Sonderausstattung gegen Mehrpreis</p>
+        <p class="banner__subtext">
+          Abbildung zeigt Sonderausstattung gegen Mehrpreis
+        </p>
       </div>
     </div>
     <script src="script.js"></script>

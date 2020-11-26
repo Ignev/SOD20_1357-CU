@@ -72,7 +72,8 @@ const showBanner = (
   popupSelector,
   popupVideoSelector,
   popupTextSelector,
-  bannerSubtextSelector
+  bannerSubtextSelector,
+  popupOpenBtnWrapperSelector
 ) => {
   const banner = document.querySelector(bannerSelector),
     bannerBtnArrow = document.querySelector(bannerBtnArrowSelector),
@@ -82,7 +83,8 @@ const showBanner = (
     popup = document.querySelector(popupSelector),
     popupVideo = document.querySelector(popupVideoSelector),
     popupText = document.querySelector(popupTextSelector),
-    bannerSubtext = document.querySelector(bannerSubtextSelector);
+    bannerSubtext = document.querySelector(bannerSubtextSelector),
+    popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
   bannerBtnArrow.addEventListener("click", () => {
     if (banner.dataset.step < 5) {
       banner.dataset.step++
@@ -96,11 +98,16 @@ const showBanner = (
       if (banner.dataset.step == item.step && item.popupImg) {
         popupVideo.setAttribute("src", item.popupImg);
         popupText.innerHTML = item.popupText;
+        popupOpenBtn.style.animation = "showOpenPopup 1.5s ease";
       }
       if (banner.dataset.step == item.step && item.top) {
-        popupOpenBtn.style.display = "flex";
-        popupOpenBtn.style.top = item.top;
-        popupOpenBtn.style.right = item.right;
+        popupOpenBtnWrapper.style.display = "flex";
+        popupOpenBtnWrapper.style.top = item.top;
+        popupOpenBtnWrapper.style.right = item.right;
+        popupOpenBtnWrapper.innerHTML = `
+        <button class="popup__open">
+          <img src="./assets/img/plus.svg" alt="open" class="open__media" />
+        </button>`;
       }
     });
   });
@@ -113,6 +120,8 @@ const closePopup = (popupSelector, popupClose) => {
     closeBtn = document.querySelector(popupClose);
   closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
+    popup.classList.remove("open");
+    popup.classList.add("close");
   });
 };
 const openPopup = (popupSelector, popupOpen) => {
@@ -120,9 +129,41 @@ const openPopup = (popupSelector, popupOpen) => {
     openBtn = document.querySelector(popupOpen);
   openBtn.addEventListener("click", () => {
     popup.style.display = "flex";
+    popup.classList.remove("close");
+    popup.classList.add("open");
   });
 };
+const muteSound = (btnSoundSelector, videoSelector, imgSelector, popupClose) =>{
+  const video = document.querySelector(videoSelector),
+  btnSound = document.querySelector(btnSoundSelector),
+  img = document.querySelector(imgSelector),
+  closeBtn = document.querySelector(popupClose);
 
+  btnSound.addEventListener("click", () => {
+    if(btnSound.classList.contains("sound-off")){
+      btnSound.classList.remove("sound-off");
+      btnSound.classList.add("sound-on");
+      img.setAttribute("src", "./assets/img/sound-on.png");
+      video.muted = false;
+      
+      video.removeAttribute(muted);
+      
+
+    }
+    if(btnSound.classList.contains("sound-on")){
+      btnSound.classList.remove("sound-on");
+      btnSound.classList.add("sound-off");
+      img.setAttribute("src", "./assets/img/sound-off.png");
+      video.muted = true;
+    }
+  });
+  closeBtn.addEventListener("click", () =>{
+    video.muted = true;
+    btnSound.classList.remove("sound-on");
+      btnSound.classList.add("sound-off");
+      img.setAttribute("src", "./assets/img/sound-off.png");
+  })
+}
 window.addEventListener("DOMContentLoaded", () => {
   showBanner(
     ".banner",
@@ -133,8 +174,10 @@ window.addEventListener("DOMContentLoaded", () => {
     ".banner__popup",
     ".popup__video",
     ".popup__text",
-    ".banner__subtext"
+    ".banner__subtext",
+    ".popup__open-wrapp"
   );
   closePopup(".banner__popup", ".popup__close");
-  openPopup(".banner__popup", ".popup__open");
+  openPopup(".banner__popup", ".popup__open-wrapp");
+  muteSound(".video__btn", ".popup__video", ".video__img",".popup__close");
 });
