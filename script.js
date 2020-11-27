@@ -86,8 +86,11 @@ const showBanner = (
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
   bannerBtnArrow.addEventListener("click", () => {
-    if (banner.dataset.step < 5) {
+    if (banner.dataset.step <= 5) {
       banner.dataset.step++;
+    }
+    if (banner.dataset.step == 6) {
+      banner.dataset.step = 1;
     }
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
