@@ -48,19 +48,7 @@ let banners = [
     top: "30%",
     right: "50px",
     subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
-  },
-  {
-    step: 5,
-    bg: "./assets/img/bg-5.jpg",
-    bannerText:
-      "<strong>Der neue <br/>Caddy Cargo</strong> <br/> <span>Lane Assist*</span>",
-    popupImg: "./assets/video/video-3.mp4",
-    popupText:
-      "Der Lane Assist* erfasst und korrigiert autonom bei <br/> drohender Überfahrung der Spurbegrenzungslinien.",
-    top: "30%",
-    right: "50px",
-    subtext:"Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis."
-  },
+  }
 ];
 
 const showBanner = (
@@ -86,10 +74,10 @@ const showBanner = (
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
   bannerBtnArrow.addEventListener("click", () => {
-    if (banner.dataset.step <= 5) {
+    if (banner.dataset.step <= 4) {
       banner.dataset.step++;
     }
-    if (banner.dataset.step == 6) {
+    if (banner.dataset.step == 5) {
       banner.dataset.step = 1;
     }
     banners.forEach((item) => {
