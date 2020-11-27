@@ -58,13 +58,18 @@ button{
     width: 30px;
     height: 30px;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 .popup__open{ 
     background: #00b1f2;
     border-radius: 50%;
     padding: 5px;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: showOpenPopup 1.2s ease;
 }
 .open__media{
@@ -82,7 +87,7 @@ button{
 .banner__popup{
     position: absolute;
     top: 2%;
-    left: 2%;
+    left: 1.7%;
     z-index: 1000;
     color: #000000;
     background: #ffff;
@@ -93,6 +98,7 @@ button{
     overflow: hidden;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 .popup__close{
     position: absolute;
@@ -112,7 +118,7 @@ button{
 .popup__video{
     width: 275px;
     height: 345px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     position: relative;
 }
 .video__btn{
@@ -129,12 +135,12 @@ button{
 }
 .popup__button{
     width: 130px;
-    height: 30px;
+    height: 70px;
     border-radius: 25px;
     background: #001e50;
     color: #ffff;
     font-size: 11px;
-    padding: 5px;
+    padding: 10px;
 
 }
 .banner__logo{
@@ -187,7 +193,7 @@ button{
     font-family: 'Roboto', sans-serif;
 }
 .banner__btn{
-    padding: 7px;
+    padding: 10px;
     background: #ffffff;
     font-size: 12px;
     width: 150px;
@@ -217,8 +223,8 @@ button{
 }
 .banner__arrow{
     background: #00b1f2;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -237,7 +243,8 @@ button{
     width: 141px;
     height: 67px;
     background: url(./assets/img/bubble-2.png) no-repeat center;
-    animation: showBubble 3s ease;
+    animation: showBubble 2s ease;
+    transition: background-image 2s ease ;
 }
 .bunner__bubble>p{
     z-index: 10000;
@@ -250,9 +257,11 @@ button{
 @keyframes showBubble{
     0%{
         opacity: 0;
+        bottom: 0px;
     }
     100%{
         opacity: 1;
+        bottom: 110px;
     }
 }
 .banner__subtext{

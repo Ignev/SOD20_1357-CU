@@ -17,7 +17,7 @@ let banners = [
     step: 2,
     bg: "./assets/img/bg-2.jpg",
     bannerText:
-      "<strong>Der neue <br /> Caddy Cargo</strong> <br/> <span>LED Scheinwerfer</span>",
+      "<strong>Der neue <br /> Caddy Cargo</strong> <br/> <span>LED Scheinwerfer*</span>",
     popupImg: "./assets/video/video-4.mp4",
     popupText:
       "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
@@ -87,7 +87,7 @@ const showBanner = (
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
   bannerBtnArrow.addEventListener("click", () => {
     if (banner.dataset.step < 5) {
-      banner.dataset.step++
+      banner.dataset.step++;
     }
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
@@ -111,9 +111,6 @@ const showBanner = (
       }
     });
   });
-  // bannerBtnMicro.addEventListener('click', ()=>{
-  //   bannerBtnMicro.style.animation = "bigBtn 1s ease";
-  // });
 };
 const closePopup = (popupSelector, popupClose) => {
   const popup = document.querySelector(popupSelector),
