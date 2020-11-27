@@ -37,11 +37,10 @@ button {
 .banner__wrapper {
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.301);
+  background: #ffff;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 /* @keyframes showBunner{
     0%{
