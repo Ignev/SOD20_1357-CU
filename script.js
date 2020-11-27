@@ -85,6 +85,7 @@ const showBanner = (
         banner.style.background = `url(${item.bg})`;
         bannerText.innerHTML = item.bannerText;
         bannerSubtext.innerHTML = item.subtext;
+        b
       }
       if (banner.dataset.step == item.step && item.popupImg) {
         popupVideo.setAttribute("src", item.popupImg);
