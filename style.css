@@ -256,11 +256,13 @@ button {
   position: absolute;
   bottom: 110px;
   right: -20px;
-  width: 141px;
-  height: 67px;
-  background: url(./assets/img/bubble-2.png) no-repeat center;
+  
   animation: showBubble 2s ease;
   transition: background-image 2s ease;
+}
+.bubble__media{
+  width: 141px;
+  height: 67px;
 }
 .bunner__bubble > p {
   z-index: 10000;
