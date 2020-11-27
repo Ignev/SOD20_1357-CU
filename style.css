@@ -10,6 +10,10 @@
   font-family: VWHead; 
   src: url(./assets/fonts/VWHead-Regular.otf); 
 }
+@font-face {
+  font-family: VWHead; 
+  src: url(./assets/fonts/VWHead-Light.otf); 
+}
 
 /* Page */
 *,
@@ -171,6 +175,7 @@ button {
 .banner__text > strong {
   animation: showText 1s ease;
   font-family: "VWHead";
+  font-weight: bolder;
 }
 .banner__text > span {
   animation: showText 1s ease;
