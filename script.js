@@ -78,7 +78,7 @@ const showBanner = (
       banner.dataset.step++;
     }
     if (banner.dataset.step == 5) {
-      banner.dataset.step = 1;
+      banner.dataset.step = 2;
     }
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
