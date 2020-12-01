@@ -53,83 +53,10 @@ let banners = [
   },
 ];
 
-var recorder = null;
-var words = {
-  ".module__1": [
-    "hallo ",
-    "caddye",
-    "wechsle",
-    "zum",
-    "nächsten",
-    "feature",
-  ]
-};
-
-const onGetUserMedia = (stream) => {
-  recorder = new MediaRecorder(stream);
-  recorder.addEventListener("dataavailable", (e) => {
-    let reader = new FileReader();
-    reader.readAsDataURL(e.data);
-    reader.onloadend = () => {
-      let ajax = new XMLHttpRequest();
-      ajax.open(
-        "POST",
-        "https://speech.googleapis.com/v1p1beta1/speech:recognize?key=AIzaSyB0prP56MBRzjZPVMLJHL408pTxzRtKJok",
-        true
-      );
-      ajax.setRequestHeader("Content-type", "application/json");
-      let params = {
-        audio: {
-          content: reader.result.split(",")[1],
-        },
-        config: {
-          enableAutomaticPunctuation: false,
-          encoding: "LINEAR16",
-          languageCode: "de-DE",
-          model: "default",
-        },
-      };
-      ajax.send(JSON.stringify(params));
-      ajax.onreadystatechange = function () {
-        if (ajax.readyState == 4 && ajax.status == 200) {
-          let data = JSON.parse(ajax.responseText);
-          let found = false;
-          if (typeof data.results != "undefined") {
-            let resString = data.results[0].alternatives[0].transcript.toLowerCase();
-            let arResult = resString.split(" ");
-            console.log(resString);
-            arResult.foreach((i, v) => {
-              words.foreach((j, w) => {
-                if (
-                  words[j].indexOf(v) > -1 ||
-                  words[j].indexOf(resString) > -1
-                ) {
-                  nextBanner();
-                  found = true;
-                  return false;
-                }
-              });
-            });
-          }
-          if (!found) {
-            document.querySelector(".banner__micro").classList.add("fail");
-            setTimeout(function () {
-              document
-                .querySelector(".banner__micro")
-                .classList.remove("fail");
-            }, 1000);
-          }
-        }
-      };
-    };
-  });
-  recorder.start();
-  setTimeout(()=> {
-    stream.getTracks().forEach( track => track.stop() );
-  }, 3000)
-};
-
-function onGetUserMediaError() {}
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+var SpeechRecognitionEvent =
+  SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 const showBanner = (
   bannerSelector,
@@ -153,71 +80,84 @@ const showBanner = (
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
-  bannerBtnMicro.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    bannerBtnMicro.classList.add("active");
-
-    navigator.getUserMedia =
-      navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia ||
-      null;
-    if (navigator.mediaDevices) {
-      navigator.mediaDevices
-        .getUserMedia({ audio: true })
-        .then(onGetUserMedia, onGetUserMediaError);
-    } else if (navigator.getUserMedia) {
-      navigator.getUserMedia(
-        { audio: true },
-        onGetUserMedia,
-        onGetUserMediaError
-      );
+  const nextBanner = () => {
+    if (banner.dataset.step <= 4) {
+      banner.dataset.step++;
     }
-    bannerBtnMicro.innerHTML =
-      '<img class="micro__media micro__media-action" src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-
-    setTimeout(() => {
-      bannerBtnMicro.innerHTML =
-        '<img class="micro__media micro__media" src="./assets/img/micro.svg" alt="microphone"/>';
-      nextBanner();
-    }, 3000);
-  });
-const nextBanner =()=> {
-  if (banner.dataset.step <= 4) {
-    banner.dataset.step++;
-  }
-  if (banner.dataset.step == 5) {
-    banner.dataset.step = 2;
-  }
-  banners.forEach((item) => {
-    if (banner.dataset.step == item.step) {
-      banner.style.background = `url(${item.bg})`;
-      bannerText.innerHTML = item.bannerText;
-      bannerSubtext.innerHTML = item.subtext;
+    if (banner.dataset.step == 5) {
+      banner.dataset.step = 2;
     }
-    if (banner.dataset.step == item.step && item.popupImg) {
-      popupVideo.setAttribute("src", item.popupImg);
-      popupText.innerHTML = item.popupText;
-      popupOpenBtn.style.animation = "showOpenPopup 1.5s ease";
-    }
-    if (banner.dataset.step == item.step && item.top) {
-      popupOpenBtnWrapper.style.display = "flex";
-      popupOpenBtnWrapper.style.top = item.top;
-      popupOpenBtnWrapper.style.right = item.right;
-      popupOpenBtnWrapper.innerHTML = `
+    banners.forEach((item) => {
+      if (banner.dataset.step == item.step) {
+        banner.style.background = `url(${item.bg})`;
+        bannerText.innerHTML = item.bannerText;
+        bannerSubtext.innerHTML = item.subtext;
+      }
+      if (banner.dataset.step == item.step && item.popupImg) {
+        popupVideo.setAttribute("src", item.popupImg);
+        popupText.innerHTML = item.popupText;
+        popupOpenBtn.style.animation = "showOpenPopup 1.5s ease";
+      }
+      if (banner.dataset.step == item.step && item.top) {
+        popupOpenBtnWrapper.style.display = "flex";
+        popupOpenBtnWrapper.style.top = item.top;
+        popupOpenBtnWrapper.style.right = item.right;
+        popupOpenBtnWrapper.innerHTML = `
       <button class="popup__open">
         <img src="./assets/img/plus.svg" alt="open" class="open__media" />
       </button>`;
-    }
+      }
+    });
+  };
+
+
+  let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten"];
+
+  let grammar =
+    "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
+  let recognition = new SpeechRecognition();
+  let speechRecognitionList = new SpeechGrammarList();
+  speechRecognitionList.addFromString(grammar, 1);
+  recognition.grammars = speechRecognitionList;
+  recognition.continuous = false;
+  recognition.lang = "de-DE";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+
+  
+  bannerBtnMicro.addEventListener("click", () => {
+    recognition.start();
   });
-}
+
+  recognition.onresult = function (event) {
+    if(event.results[0][0].confidence > 0.85){
+    nextBanner();
+    }
+    // else{
+    //   banners.forEach((item) => {
+    //     banner.style.background = `url(${item[0].bg})`;
+    //     bannerText.innerHTML = item[0].bannerText;
+    //     bannerSubtext.innerHTML = item[0].subtext;
+    //   })
+    //   }
+    console.log("Confidence: " + event.results[0][0].confidence);
+  };
+  recognition.onspeechend = function () {
+    recognition.stop();
+  };
+  recognition.onnomatch = function (event) {
+    diagnostic.textContent = "I didn't recognise that color.";
+  };
+  recognition.onerror = function (event) {
+    diagnostic.textContent = "Error occurred in recognition: " + event.error;
+  };
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
   });
 };
+
+
 const closePopup = (popupSelector, popupClose) => {
   const popup = document.querySelector(popupSelector),
     closeBtn = document.querySelector(popupClose);
