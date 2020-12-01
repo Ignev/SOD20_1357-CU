@@ -111,7 +111,7 @@ const showBanner = (
   };
 
 
-  let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten","feature hallo käddi wechsle zum nächsten"];
+  let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten","feature hallo käddi wechsle zum nächsten", "hallo käddi wechsle zum nächsten"];
 
   let grammar =
     "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
