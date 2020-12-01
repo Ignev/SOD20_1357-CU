@@ -131,7 +131,7 @@ const showBanner = (
   });
 
   recognition.onresult = function (event) {
-    if(event.results[0][0].confidence > 0.85){
+    if(event.results[0][0].confidence >= 0.85){
     nextBanner();
     }
     // else{
