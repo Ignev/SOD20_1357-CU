@@ -136,11 +136,12 @@ const showBanner = (
   
   bannerBtnMicro.addEventListener("click", () => {
     recognition.start();
-    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>'
+    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+    bannerBtnMicro.setAttribute('disabled' , 'disabled');
+    bannerBtnArrow.setAttribute('disabled' , 'disabled');
   });
 
   recognition.onresult = function (event) {
-    var color = event.results[0][0].transcript;
     if(event.results[0][0].confidence >= 0.70){
     nextBanner();
     }
@@ -148,25 +149,35 @@ const showBanner = (
       errorBanner();
       }
     console.log("Confidence: " + event.results[0][0].confidence);
-    console.log(event.results[0][0].transcript);
-    diagnostic.textContent = 'Result received: ' + color + '.';
   };
   recognition.onspeechend = function () {
     recognition.stop();
     bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
-  };
-  recognition.onnomatch = function (event) {
-    recognition.stop();
-    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
-  };
-  recognition.onerror = function (event) {
-    recognition.stop();
-    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
+    bannerBtnMicro.removeAttribute('disabled');
+    bannerBtnArrow.removeAttribute('disabled');
   };
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
   });
 };
+
+const addNewBubble = (bubbleSelector, btnMicroSelector, arrowBtnSelector) =>{
+  const bubble = document.querySelector(bubbleSelector),
+        btnMicro = document.querySelector(btnMicroSelector),
+        arrowBtn = document.querySelector(arrowBtnSelector);
+  btnMicro.addEventListener('click', () => {
+    bubble.classList.remove('bunner__bubble');
+    bubble.classList.add('bunner__bubble-active');
+    btnMicro.classList.remove('banner__micro-animate');
+    bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
+  })
+  arrowBtn.addEventListener('click', () => {
+    bubble.classList.remove('bunner__bubble');
+    bubble.classList.add('bunner__bubble-active');
+    btnMicro.classList.remove('banner__micro-animate');
+    bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
+  })
+}
 
 
 const closePopup = (popupSelector, popupClose) => {
@@ -237,4 +248,5 @@ window.addEventListener("DOMContentLoaded", () => {
   closePopup(".banner__popup", ".popup__close");
   openPopup(".banner__popup", ".popup__open-wrapp");
   muteSound(".video__btn", ".popup__video", ".video__img", ".popup__close");
+  addNewBubble(".bunner__bubble", ".banner__micro",".banner__arrow");
 });
