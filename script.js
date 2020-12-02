@@ -153,10 +153,12 @@ const showBanner = (
     bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
   };
   recognition.onnomatch = function (event) {
-    diagnostic.textContent = "I didn't recognise that color.";
+    recognition.stop();
+    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
   };
   recognition.onerror = function (event) {
-    diagnostic.textContent = "Error occurred in recognition: " + event.error;
+    recognition.stop();
+    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
   };
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
