@@ -134,6 +134,7 @@ const showBanner = (
   
   bannerBtnMicro.addEventListener("click", () => {
     recognition.start();
+    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>'
   });
 
   recognition.onresult = function (event) {
@@ -147,6 +148,7 @@ const showBanner = (
   };
   recognition.onspeechend = function () {
     recognition.stop();
+    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
   };
   recognition.onnomatch = function (event) {
     diagnostic.textContent = "I didn't recognise that color.";
