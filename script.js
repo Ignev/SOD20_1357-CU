@@ -68,7 +68,8 @@ const showBanner = (
   popupVideoSelector,
   popupTextSelector,
   bannerSubtextSelector,
-  popupOpenBtnWrapperSelector
+  popupOpenBtnWrapperSelector,
+  bubbleSelector
 ) => {
   const banner = document.querySelector(bannerSelector),
     bannerBtnArrow = document.querySelector(bannerBtnArrowSelector),
@@ -79,7 +80,9 @@ const showBanner = (
     popupVideo = document.querySelector(popupVideoSelector),
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
-    popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector);
+    popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
+    bubble = document.querySelector(bubbleSelector);
+    
   const nextBanner = () => {
     if (banner.dataset.step <= 4) {
       banner.dataset.step++;
@@ -87,6 +90,19 @@ const showBanner = (
     if (banner.dataset.step == 5) {
       banner.dataset.step = 2;
     }
+    if(banner.dataset.step>= 2){
+      bannerBtnMicro.classList.add('banner__micro-animate');
+    }
+    bannerBtnMicro.addEventListener('click', () => {
+      bubble.classList.remove('bunner__bubble');
+      bubble.classList.add('bunner__bubble-active');
+      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
+    })
+    bannerBtnArrow.addEventListener('click', () => {
+      bubble.classList.remove('bunner__bubble');
+      bubble.classList.add('bunner__bubble-active');
+      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
+    })
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
         banner.style.background = `url(${item.bg})`;
@@ -161,25 +177,6 @@ const showBanner = (
   });
 };
 
-const addNewBubble = (bubbleSelector, btnMicroSelector, arrowBtnSelector) =>{
-  const bubble = document.querySelector(bubbleSelector),
-        btnMicro = document.querySelector(btnMicroSelector),
-        arrowBtn = document.querySelector(arrowBtnSelector);
-  btnMicro.addEventListener('click', () => {
-    bubble.classList.remove('bunner__bubble');
-    bubble.classList.add('bunner__bubble-active');
-    btnMicro.classList.remove('banner__micro-animate');
-    bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
-  })
-  arrowBtn.addEventListener('click', () => {
-    bubble.classList.remove('bunner__bubble');
-    bubble.classList.add('bunner__bubble-active');
-    btnMicro.classList.remove('banner__micro-animate');
-    bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
-  })
-}
-
-
 const closePopup = (popupSelector, popupClose) => {
   const popup = document.querySelector(popupSelector),
     closeBtn = document.querySelector(popupClose);
@@ -243,10 +240,10 @@ window.addEventListener("DOMContentLoaded", () => {
     ".popup__video",
     ".popup__text",
     ".banner__subtext",
-    ".popup__open-wrapp"
+    ".popup__open-wrapp",
+    ".bunner__bubble"
   );
   closePopup(".banner__popup", ".popup__close");
   openPopup(".banner__popup", ".popup__open-wrapp");
   muteSound(".video__btn", ".popup__video", ".video__img", ".popup__close");
-  addNewBubble(".bunner__bubble", ".banner__micro",".banner__arrow");
 });
