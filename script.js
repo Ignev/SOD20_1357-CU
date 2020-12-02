@@ -140,13 +140,16 @@ const showBanner = (
   });
 
   recognition.onresult = function (event) {
-    if(event.results[0][0].confidence >= 0.90){
+    var color = event.results[0][0].transcript;
+    if(event.results[0][0].confidence >= 0.70){
     nextBanner();
     }
     else{
       errorBanner();
       }
     console.log("Confidence: " + event.results[0][0].confidence);
+    console.log(event.results[0][0].transcript);
+    diagnostic.textContent = 'Result received: ' + color + '.';
   };
   recognition.onspeechend = function () {
     recognition.stop();
