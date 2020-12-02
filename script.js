@@ -109,6 +109,12 @@ const showBanner = (
       }
     });
   };
+  const errorBanner = () => {
+    banner.style.background = `url(./assets/img/bg-0.jpg)`;
+    bannerText.innerHTML = "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>";
+    bannerSubtext.innerHTML = "Abbildung zeigt Sonderausstattung gegen Mehrpreis";
+    popupOpenBtnWrapper.style.display = "none";
+  }
 
 
   let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten","feature hallo käddi wechsle zum nächsten", "hallo käddi wechsle zum nächsten"];
@@ -131,16 +137,12 @@ const showBanner = (
   });
 
   recognition.onresult = function (event) {
-    if(event.results[0][0].confidence >= 0.85){
+    if(event.results[0][0].confidence >= 0.75){
     nextBanner();
     }
-    // else{
-    //   banners.forEach((item) => {
-    //     banner.style.background = `url(${item[0].bg})`;
-    //     bannerText.innerHTML = item[0].bannerText;
-    //     bannerSubtext.innerHTML = item[0].subtext;
-    //   })
-    //   }
+    else{
+      errorBanner();
+      }
     console.log("Confidence: " + event.results[0][0].confidence);
   };
   recognition.onspeechend = function () {
