@@ -115,7 +115,9 @@ const showBanner = (
     bannerSubtext.innerHTML = "Abbildung zeigt Sonderausstattung gegen Mehrpreis";
     popupOpenBtnWrapper.style.display = "none";
   }
-
+  bannerBtnMicro.addEventListener("click", () => {
+    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>'
+  });
 
   let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten","feature hallo käddi wechsle zum nächsten", "hallo käddi wechsle zum nächsten"];
 
