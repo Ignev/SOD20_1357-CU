@@ -64,7 +64,6 @@ const showBanner = (
   bannerBtnMicroSelector,
   bannerTextSelectoe,
   popupOpenBtnSelector,
-  popupSelector,
   popupVideoSelector,
   popupTextSelector,
   bannerSubtextSelector,
@@ -76,13 +75,12 @@ const showBanner = (
     bannerBtnMicro = document.querySelector(bannerBtnMicroSelector),
     bannerText = document.querySelector(bannerTextSelectoe),
     popupOpenBtn = document.querySelector(popupOpenBtnSelector),
-    popup = document.querySelector(popupSelector),
     popupVideo = document.querySelector(popupVideoSelector),
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
     bubble = document.querySelector(bubbleSelector);
-    
+
   const nextBanner = () => {
     if (banner.dataset.step <= 4) {
       banner.dataset.step++;
@@ -90,19 +88,23 @@ const showBanner = (
     if (banner.dataset.step == 5) {
       banner.dataset.step = 2;
     }
-    if(banner.dataset.step>= 2){
-      bannerBtnMicro.classList.add('banner__micro-animate');
+    if (banner.dataset.step >= 2) {
+      setTimeout(() => {
+        bannerBtnMicro.classList.add("banner__micro-animate");
+      }, 1000);
     }
-    bannerBtnMicro.addEventListener('click', () => {
-      bubble.classList.remove('bunner__bubble');
-      bubble.classList.add('bunner__bubble-active');
-      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
-    })
-    bannerBtnArrow.addEventListener('click', () => {
-      bubble.classList.remove('bunner__bubble');
-      bubble.classList.add('bunner__bubble-active');
-      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>'
-    })
+    bannerBtnMicro.addEventListener("click", () => {
+      bubble.classList.remove("bunner__bubble");
+      bubble.classList.add("bunner__bubble-active");
+      bubble.innerHTML =
+        '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
+    });
+    bannerBtnArrow.addEventListener("click", () => {
+      bubble.classList.remove("bunner__bubble");
+      bubble.classList.add("bunner__bubble-active");
+      bubble.innerHTML =
+        '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
+    });
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
         banner.style.background = `url(${item.bg})`;
@@ -124,18 +126,34 @@ const showBanner = (
       </button>`;
       }
     });
+    banner.classList.add("banner-animate");
+    setTimeout(()=> {
+      banner.classList.remove("banner-animate");
+    }, 1300)
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
-    bannerText.innerHTML = "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>";
-    bannerSubtext.innerHTML = "Abbildung zeigt Sonderausstattung gegen Mehrpreis";
+    bannerText.innerHTML =
+      "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>";
+    bannerSubtext.innerHTML =
+      "Abbildung zeigt Sonderausstattung gegen Mehrpreis";
     popupOpenBtnWrapper.style.display = "none";
-  }
+  };
   bannerBtnMicro.addEventListener("click", () => {
-    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>'
+    bannerBtnMicro.innerHTML =
+      '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
   });
 
-  let words = ["feature", "hallo", "käddi", "wechsle", "zum", "nächsten","feature hallo käddi wechsle zum nächsten", "hallo käddi wechsle zum nächsten"];
+  let words = [
+    "feature",
+    "hallo",
+    "käddi",
+    "wechsle",
+    "zum",
+    "nächsten",
+    "feature hallo käddi wechsle zum nächsten",
+    "hallo käddi wechsle zum nächsten",
+  ];
 
   let grammar =
     "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
@@ -148,33 +166,41 @@ const showBanner = (
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
-
-  
   bannerBtnMicro.addEventListener("click", () => {
     recognition.start();
-    bannerBtnMicro.innerHTML = '<img class="micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-    bannerBtnMicro.setAttribute('disabled' , 'disabled');
-    bannerBtnArrow.setAttribute('disabled' , 'disabled');
+    bannerBtnMicro.innerHTML =
+      '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+    bannerBtnMicro.setAttribute("disabled", "disabled");
+    bannerBtnArrow.setAttribute("disabled", "disabled");
+    if (banner.dataset.step >= 2) {
+        bannerBtnMicro.classList.remove("banner__micro-animate");
+    }
   });
 
   recognition.onresult = function (event) {
-    if(event.results[0][0].confidence >= 0.70){
-    nextBanner();
-    }
-    else{
+    if (event.results[0][0].confidence >= 0.7) {
+      nextBanner();
+    } else {
       errorBanner();
-      }
+    }
     console.log("Confidence: " + event.results[0][0].confidence);
   };
   recognition.onspeechend = function () {
     recognition.stop();
-    bannerBtnMicro.innerHTML = '<img class="micro__media "src="./assets/img/micro.svg" alt="microphone"/>'
-    bannerBtnMicro.removeAttribute('disabled');
-    bannerBtnArrow.removeAttribute('disabled');
+    bannerBtnMicro.innerHTML =
+      '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
+    bannerBtnMicro.removeAttribute("disabled");
+    bannerBtnArrow.removeAttribute("disabled");
   };
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
+    
   });
+  if (banner.dataset.step >= 2) {
+    setTimeout(() => {
+      bannerBtnMicro.classList.add("banner__micro-animate");
+    }, 1000);
+  }
 };
 
 const closePopup = (popupSelector, popupClose) => {
@@ -236,7 +262,6 @@ window.addEventListener("DOMContentLoaded", () => {
     ".banner__micro",
     ".banner__text",
     ".popup__open",
-    ".banner__popup",
     ".popup__video",
     ".popup__text",
     ".banner__subtext",
