@@ -301,7 +301,7 @@ height: 10px;
 .bunner__bubble {
   position: absolute;
   bottom: 110px;
-  right: -20px;
+  right: -10px;
   
   animation: showBubble 2.1s ease;
   transition: background-image 2.1s ease;
@@ -309,7 +309,7 @@ height: 10px;
 .bunner__bubble-active{
   position: absolute;
   bottom: 110px;
-  right: -20px;
+  right: -10px;
   animation: showActiveBubble 2.1s ease;
 }
 

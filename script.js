@@ -26,7 +26,7 @@ let banners = [
     top: "40%",
     right: "40px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/_Sonderausstattung gegen Mehrpreis..svg" alt="" class="second-media">',
+    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis..svg" alt="" class="second-media">',
   },
   {
     step: 3,
