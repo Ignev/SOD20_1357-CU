@@ -98,7 +98,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: showOpenPopup 1.2s ease;
+  animation: showOpenPopup 2.1s ease;
 }
 .open__media {
   width: 12px;
@@ -194,7 +194,7 @@ button {
 }
 .banner__content {
   display: flex;
-  padding: 30px;
+  padding: 30px 15px 30px 30px;
   justify-content: space-between;
 }
 .banner__text {
@@ -202,11 +202,11 @@ button {
 }
 .banner__text > strong {
   position: relative;
-  animation: showText 1s ease;
+  animation: showText 2.1s ease;
 }
 .banner__text > span {
   position: relative;
-  animation: showText 1s ease;
+  animation: showText 2.1s ease;
   font-weight: lighter;
   font-family: "VWHead";
 }
@@ -302,14 +302,14 @@ height: 10px;
   bottom: 110px;
   right: -20px;
   
-  animation: showBubble 2s ease;
-  transition: background-image 2s ease;
+  animation: showBubble 2.1s ease;
+  transition: background-image 2.1s ease;
 }
 .bunner__bubble-active{
   position: absolute;
   bottom: 110px;
   right: -20px;
-  animation: showActiveBubble 1s ease;
+  animation: showActiveBubble 2.1s ease;
 }
 
 @keyframes showActiveBubble{
