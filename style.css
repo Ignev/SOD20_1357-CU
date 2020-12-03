@@ -192,6 +192,7 @@ button {
 }
 .banner__text {
   position: relative;
+  animation: showText 2.1s ease;
 }
 .text__strong {
   width: 155px;
@@ -200,12 +201,6 @@ button {
 .text__span {
   width: 160px;
   height: 50px;
-}
-.banner__text > span {
-  position: relative;
-  animation: showText 2.1s ease;
-  font-weight: lighter;
-  font-family: "VWHead";
 }
 @keyframes showText {
   0% {
