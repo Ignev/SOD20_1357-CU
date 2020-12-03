@@ -1,3 +1,5 @@
+let isChrome =
+  !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 let banners = [
   {
     step: 0,
@@ -52,11 +54,12 @@ let banners = [
       "Abbildung zeigt Sonderausstattung gegen Mehrpreis.<br/> *Sonderausstattung gegen Mehrpreis.",
   },
 ];
-
-// var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-// var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-// var SpeechRecognitionEvent =
-//   SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+if (isChrome) {
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+  var SpeechRecognitionEvent =
+    SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+}
 
 const showBanner = (
   bannerSelector,
@@ -127,9 +130,9 @@ const showBanner = (
       }
     });
     banner.classList.add("banner-animate");
-    setTimeout(()=> {
+    setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 1400)
+    }, 1400);
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
@@ -144,57 +147,67 @@ const showBanner = (
       '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
   });
 
-  // let words = [
-  //   "feature",
-  //   "hallo",
-  //   "käddi",
-  //   "wechsle",
-  //   "zum",
-  //   "nächsten",
-  //   "feature hallo käddi wechsle zum nächsten",
-  //   "hallo käddi wechsle zum nächsten",
-  // ];
+  if (isChrome) {
+    let words = [
+      "feature",
+      "hallo",
+      "käddi",
+      "wechsle",
+      "zum",
+      "nächsten",
+      "feature hallo käddi wechsle zum nächsten",
+      "hallo käddi wechsle zum nächsten",
+    ];
 
-  // let grammar =
-  //   "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
-  // let recognition = new SpeechRecognition();
-  // let speechRecognitionList = new SpeechGrammarList();
-  // speechRecognitionList.addFromString(grammar, 1);
-  // recognition.grammars = speechRecognitionList;
-  // recognition.continuous = false;
-  // recognition.lang = "de-DE";
-  // recognition.interimResults = false;
-  // recognition.maxAlternatives = 1;
+    let grammar =
+      "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
+    let recognition = new SpeechRecognition();
+    let speechRecognitionList = new SpeechGrammarList();
+    speechRecognitionList.addFromString(grammar, 1);
+    recognition.grammars = speechRecognitionList;
+    recognition.continuous = false;
+    recognition.lang = "de-DE";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
 
-  // bannerBtnMicro.addEventListener("click", () => {
-  //   recognition.start();
-  //   bannerBtnMicro.innerHTML =
-  //     '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-  //   bannerBtnMicro.setAttribute("disabled", "disabled");
-  //   bannerBtnArrow.setAttribute("disabled", "disabled");
-  //   if (banner.dataset.step >= 2) {
-  //       bannerBtnMicro.classList.remove("banner__micro-animate");
-  //   }
-  // });
+    bannerBtnMicro.addEventListener("click", () => {
+      recognition.start();
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+      bannerBtnMicro.setAttribute("disabled", "disabled");
+      bannerBtnArrow.setAttribute("disabled", "disabled");
+      if (banner.dataset.step >= 2) {
+        bannerBtnMicro.classList.remove("banner__micro-animate");
+      }
+    });
 
-  // recognition.onresult = function (event) {
-  //   if (event.results[0][0].confidence >= 0.7) {
-  //     nextBanner();
-  //   } else {
-  //     errorBanner();
-  //   }
-  //   console.log("Confidence: " + event.results[0][0].confidence);
-  // };
-  // recognition.onspeechend = function () {
-  //   recognition.stop();
-  //   bannerBtnMicro.innerHTML =
-  //     '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
-  //   bannerBtnMicro.removeAttribute("disabled");
-  //   bannerBtnArrow.removeAttribute("disabled");
-  // };
+    recognition.onresult = function (event) {
+      if (event.results[0][0].confidence >= 0.7) {
+        nextBanner();
+      } else {
+        errorBanner();
+      }
+      console.log("Confidence: " + event.results[0][0].confidence);
+    };
+    recognition.onspeechend = function () {
+      recognition.stop();
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
+      bannerBtnMicro.removeAttribute("disabled");
+      bannerBtnArrow.removeAttribute("disabled");
+    };
+  } else {
+    bannerBtnMicro.addEventListener("click", () => {
+      setTimeout(() => {
+        nextBanner();
+        bannerBtnMicro.innerHTML =
+          '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
+      }, 4000);
+    });
+  }
+
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
-    
   });
   if (banner.dataset.step >= 2) {
     setTimeout(() => {

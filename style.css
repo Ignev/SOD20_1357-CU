@@ -283,9 +283,9 @@ width: 40px;
 height: 10px;
 }
 .banner__arrow {
-  background: #00b1f2;
-  width: 25px;
-  height: 25px;
+  background: none;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -294,8 +294,8 @@ height: 10px;
   margin-top: 15px;
 }
 .arrow__media {
-  width: 15px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 .bunner__bubble {
   position: absolute;
