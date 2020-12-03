@@ -181,14 +181,7 @@ const showBanner = (
     bannerBtnMicro.removeAttribute("disabled");
     bannerBtnArrow.removeAttribute("disabled");
   };
-} else {
-  bannerBtnMicro.addEventListener("click", () => {
-    setTimeout(() => {
-      nextBanner();
-      bannerBtnMicro.innerHTML =
-        '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
-    }, 4000);
-  });
+}
 
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
