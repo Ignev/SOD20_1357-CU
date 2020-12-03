@@ -6,14 +6,14 @@ let banners = [
     bg: "./assets/img/bg-0.jpg",
     bannerText:
       "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>",
-    subtext: '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__subtext">',
+    subtext: '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">',
   },
   {
     step: 1,
     bg: "./assets/img/bg-1.jpg",
     bannerText:
       '<img style="width: 155px; height: 63px;" src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img src="./assets/fonts/Bereit für alles, was kommt.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__subtext">',
+    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">',
   },
   {
     step: 2,
