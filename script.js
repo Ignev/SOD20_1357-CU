@@ -4,28 +4,28 @@ let banners = [
     step: 0,
     bg: "./assets/img/bg-0.jpg",
     bannerText:
-      "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>",
-    subtext: '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">',
+    '<img style="width: 155px; height: 63px;" src="./assets/fonts/Oh eine Sprachpanne.svg" alt="" class="text__strong"><img src="./assets/fonts/Sprechen Sie noch einmal.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
+    subtext: '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 1,
     bg: "./assets/img/bg-1.jpg",
     bannerText:
-      '<img style="width: 155px; height: 63px;" src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img src="./assets/fonts/Bereit für alles, was kommt.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">',
+      '<img style="width: 155px; height: 63px;" src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img src="./assets/fonts/Bereit fur alles was kommt.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
+    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 2,
     bg: "./assets/img/bg-2.jpg",
     bannerText:
-      '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 210px; height: 20px; " src="./assets/fonts/LED Scheinwerfer_.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 210px; height: 20px; " src="./assets/fonts/LED Scheinwerfer.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-4.mp4",
     popupText:
       "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
     top: "40%",
     right: "40px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis..svg" alt="" class="second-media">',
+    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
   },
   {
     step: 3,
@@ -37,20 +37,20 @@ let banners = [
       "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">',
+    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 4,
     bg: "./assets/img/bg-4.jpg",
     bannerText:
-    '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 50px;" src="./assets/fonts/Breitere Schiebetür_.svg" alt="" class="text__span">',
+    '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 50px;" src="./assets/fonts/Breitere Schiebetur.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-2.mp4",
     popupText:
       "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
     top: "30%",
     right: "50px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis..svg" alt="" class="second-media">',
+    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
   },
 ];
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
@@ -124,9 +124,9 @@ const showBanner = (
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
     bannerText.innerHTML =
-      "<strong>Oh, eine Sprachpanne.</strong> <br/> <span>Sprechen Sie noch einmal</span>";
+    '<img style="width: 220px; height: 60px;" src="./assets/fonts/Oh, eine Sprachpanne..svg" alt="" class="text__strong"><img src="./assets/fonts/Sprechen Sie noch einmal.svg" style="width: 100x; height: 50px;" alt="" class="text__span">';
     bannerSubtext.innerHTML =
-      "Abbildung zeigt Sonderausstattung gegen Mehrpreis";
+    '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis..svg" alt="" class="banner__first-media">';
     popupOpenBtnWrapper.style.display = "none";
   };
   bannerBtnMicro.addEventListener("click", () => {
