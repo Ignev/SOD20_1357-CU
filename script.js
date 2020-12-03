@@ -83,7 +83,6 @@ const showBanner = (
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
     bubble = document.querySelector(bubbleSelector);
-
   const nextBanner = () => {
     if (banner.dataset.step <= 4) {
       banner.dataset.step++;
@@ -95,19 +94,9 @@ const showBanner = (
       setTimeout(() => {
         bannerBtnMicro.classList.add("banner__micro-animate");
       }, 1000);
+      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
+      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
     }
-    bannerBtnMicro.addEventListener("click", () => {
-      bubble.classList.remove("bunner__bubble");
-      bubble.classList.add("bunner__bubble-active");
-      bubble.innerHTML =
-        '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
-    });
-    bannerBtnArrow.addEventListener("click", () => {
-      bubble.classList.remove("bunner__bubble");
-      bubble.classList.add("bunner__bubble-active");
-      bubble.innerHTML =
-        '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
-    });
     banners.forEach((item) => {
       if (banner.dataset.step == item.step) {
         banner.style.background = `url(${item.bg})`;
@@ -133,10 +122,6 @@ const showBanner = (
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1400);
-    bubble.classList.add("bunner__bubble-animate");
-    setTimeout(() => {
-      bubble.classList.remove("bunner__bubble-animate");
-    }, 2150);
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
