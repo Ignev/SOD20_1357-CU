@@ -236,14 +236,14 @@ button {
 .banner__btn {
   background: #ffffff;
   border-radius: 20px;
-  width: 160px;
+  width: 130px;
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .btn__media{
-  width: 130px;
+  width: 110px;
 }
 .banner__micro {
   background: #00b1f2fd;

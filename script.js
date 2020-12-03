@@ -19,7 +19,7 @@ let banners = [
     step: 2,
     bg: "./assets/img/bg-2.jpg",
     bannerText:
-      '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 150px; height: 20px; " src="./assets/fonts/LED Scheinwerfer_.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 210px; height: 20px; " src="./assets/fonts/LED Scheinwerfer_.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-4.mp4",
     popupText:
       "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
@@ -32,7 +32,7 @@ let banners = [
     step: 3,
     bg: "./assets/img/bg-3.jpg",
     bannerText:
-    '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 160px; height: 20px;" src="./assets/fonts/Großer Laderaum.svg" alt="" class="text__span">',
+    '<img src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img style="width: 200px; height: 20px;" src="./assets/fonts/Großer Laderaum.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-1.mp4",
     popupText:
       "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
@@ -133,9 +133,9 @@ const showBanner = (
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1400);
-    bubble.classList.add(".bunner__bubble-animate");
+    bubble.classList.add("bunner__bubble-animate");
     setTimeout(() => {
-      bubble.classList.remove(".bunner__bubble-animate");
+      bubble.classList.remove("bunner__bubble-animate");
     }, 2150);
   };
   const errorBanner = () => {
