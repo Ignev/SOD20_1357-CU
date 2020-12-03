@@ -66,7 +66,7 @@ button {
   overflow: hidden;
 }
 .banner-animate{
-  animation: showBanner 1s ease;
+  animation: showBanner 1.3s ease;
 }
 
 @keyframes showBanner{
