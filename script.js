@@ -133,6 +133,10 @@ const showBanner = (
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1400);
+    bubble.classList.add(".bunner__bubble-animate");
+    setTimeout(() => {
+      bubble.classList.remove(".bunner__bubble-animate");
+    }, 2150);
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;

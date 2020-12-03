@@ -303,8 +303,10 @@ height: 10px;
   bottom: 110px;
   right: -10px;
   
+  
+}
+.bunner__bubble-animate{
   animation: showBubble 2.1s ease;
-  transition: background-image 2.1s ease;
 }
 .bunner__bubble-active{
   position: absolute;
@@ -323,14 +325,6 @@ height: 10px;
 }
 .bubble__media{
   width: 160px;
-}
-.bunner__bubble > p {
-  z-index: 10000;
-  color: #000000;
-  font-size: 9px;
-  margin-left: 20px;
-  margin-top: 5px;
-  font-family: "Roboto", sans-serif;
 }
 @keyframes showBubble {
   0% {
