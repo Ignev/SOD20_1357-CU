@@ -145,6 +145,7 @@ const showBanner = (
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1400);
+    bubble.style.display = "none";
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
@@ -190,6 +191,7 @@ const showBanner = (
       if (banner.dataset.step >= 2) {
         bannerBtnMicro.classList.remove("banner__micro-animate");
       }
+      bubble.style.display = "block";
     });
 
     recognition.onresult = function (event) {
