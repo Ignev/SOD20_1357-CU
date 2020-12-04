@@ -8,6 +8,17 @@
   box-sizing: border-box;
   font-family: inherit;
 }
+.phone{
+  position: relative;
+  height: 621px;
+  width: 361px;
+}
+.phone__media{
+  height: 621px;
+  width: 361px;
+  position: relative;
+  z-index: -1;
+}
 button {
   outline: none;
 }
@@ -17,13 +28,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background: #1a4f45;
 }
 .banner__wrapper{
-  position: relative;
+  position: absolute;
   width: 320px;
   height: 480px;
   overflow: hidden;
   z-index: 1;
+  top: 72px;
+  left: 5.5%;
 }
 .banner {
   position: relative;
