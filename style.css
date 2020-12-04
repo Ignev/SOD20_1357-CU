@@ -23,35 +23,20 @@ body {
   width: 320px;
   height: 480px;
   overflow: hidden;
-  background: url(./assets/img/bg/1.png);
+  z-index: 1;
 }
-/* @keyframes showBunner{
-    0%{
-        right: -500px;
-        opacity: 0;
-    }
-    100%{
-        right: 0px;
-        opacity: 1;
-    }
-} */
 .banner {
   position: relative;
   width: 320px;
   height: 480px;
   background-image: url(./assets/img/bg-1.jpg);
-  z-index: 100;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: #ffffff;
   font-family: sans-serif;
   overflow: hidden;
-}
-.banner::after{
-  position: absolute;
-  content: "";
-  background: #222222 url(audio.svg) center center no-repeat;
 }
 .banner-animate{
   animation: showBanner 0.5s ease;

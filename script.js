@@ -152,9 +152,13 @@ const showBanner = (
       }
     });
     banner.classList.add("banner-animate");
+    
     setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 510);
+    }, 501);
+    setTimeout(() => {
+      bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step-1}.png)`;
+    },502)
     bubble.style.display = "none";
   };
   const errorBanner = () => {
