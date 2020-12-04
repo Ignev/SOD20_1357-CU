@@ -310,7 +310,7 @@ height: 10px;
 }
 .bunner__bubble-active{
   position: absolute;
-  bottom: 110px;
+  bottom: 115px;
   right: -10px;
   animation: showActiveBubble 2.1s ease;
 }
