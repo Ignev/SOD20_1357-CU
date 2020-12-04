@@ -150,7 +150,7 @@ const showBanner = (
     banner.classList.add("banner-animate");
     setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 1400);
+    }, 510);
     bubble.style.display = "none";
   };
   const errorBanner = () => {

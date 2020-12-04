@@ -54,7 +54,7 @@ body {
   background: #222222 url(audio.svg) center center no-repeat;
 }
 .banner-animate{
-  animation: showBanner 1.3s ease;
+  animation: showBanner 0.5s ease;
 }
 
 @keyframes showBanner{
