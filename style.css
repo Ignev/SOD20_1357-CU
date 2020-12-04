@@ -39,7 +39,7 @@ body {
   overflow: hidden;
 }
 .banner-animate{
-  animation: showBanner 0.5s ease;
+  animation: showBanner 1s ease;
 }
 
 @keyframes showBanner{

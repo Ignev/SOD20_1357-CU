@@ -155,10 +155,10 @@ const showBanner = (
     
     setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 501);
+    }, 1001);
     setTimeout(() => {
-      bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step-1}.png)`;
-    },502)
+      bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step}.png)`;
+    },1002)
     bubble.style.display = "none";
   };
   const errorBanner = () => {
