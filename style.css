@@ -202,14 +202,16 @@ button {
 .text__strong {
   width: 155px;
   height: 63px;
+  animation: showText 2.1s ease;
 }
 .text__span {
   width: 160px;
   height: 50px;
+  animation: showText 2.1s ease;
 }
 @keyframes showText {
   0% {
-    left: 10px;
+    left: 1le0px;
     opacity: 0;
   }
   100% {
@@ -302,8 +304,6 @@ height: 10px;
   position: absolute;
   bottom: 110px;
   right: -10px;
-  
-  
 }
 .bunner__bubble-animate{
   animation: showBubble 2.1s ease;
