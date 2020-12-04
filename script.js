@@ -60,7 +60,7 @@ let banners = [
     popupImg: "./assets/video/video-3.mp4",
     popupText:
       "Der Lane Assist* erfasst und korrigiert autonom bei drohender Überfahrung der Spurbegrenzungslinien.",
-    top: "30%",
+    top: "40%",
     right: "50px",
     subtext:'<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">'
   },
@@ -125,6 +125,12 @@ const showBanner = (
         banner.style.background = `url(${item.bg})`;
         bannerText.innerHTML = item.bannerText;
         bannerSubtext.innerHTML = item.subtext;
+      }
+      if (banner.dataset.step == 5) {
+        bannerText.style.top =  "-110%";
+      }
+      else{
+        bannerText.style.top =  "0px";
       }
       if (banner.dataset.step == item.step && item.popupImg) {
         popupVideo.setAttribute("src", item.popupImg);

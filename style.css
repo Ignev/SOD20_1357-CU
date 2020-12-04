@@ -209,7 +209,7 @@ body {
 }
 @keyframes showText {
   0% {
-    left: 1le0px;
+    left: 10px;
     opacity: 0;
   }
   100% {
@@ -300,7 +300,7 @@ height: 10px;
 }
 .bunner__bubble {
   position: absolute;
-  bottom: 115px;
+  bottom: 117px;
   right: -15px;
 }
 .bunner__bubble-animate{
