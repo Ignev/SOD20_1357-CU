@@ -89,20 +89,22 @@ body {
 .open__media {
   width: 12px;
   height: 12px;
-  animation: pulsOpen 1.5s infinite ease;
+  animation: pulsOpen 2s infinite ease ;
 }
 @keyframes pulsOpen{
   0% {
-    width: 12px;
-    height: 12px;
+    transform: scale(1.0);
+    backface-visibility: hidden;
   }
+  
   50% {
-    width: 18px;
-    height: 18px;
+    transform: scale(1.4);
+    backface-visibility: hidden;
   }
+
   100% {
-    width: 10px;
-    height: 10px;
+    transform: scale(1.0);
+    backface-visibility: hidden;
   }
   
 }
