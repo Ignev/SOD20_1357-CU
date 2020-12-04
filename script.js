@@ -220,11 +220,16 @@ const showBanner = (
 
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
+    bannerText.classList.add("banner__text-hidden")
+    setTimeout(() => {
+      bannerText.classList.remove("banner__text-hidden");
+    }, 501);
   });
   if (banner.dataset.step >= 2) {
     setTimeout(() => {
       bannerBtnMicro.classList.add("banner__micro-animate");
     }, 1000);
+    
   }
 };
 

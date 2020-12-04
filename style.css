@@ -200,21 +200,32 @@ body {
 .text__strong {
   width: 155px;
   height: 63px;
-  animation: showText 2.1s ease;
 }
 .text__span {
   width: 160px;
   height: 50px;
-  animation: showText 2.1s ease;
+}
+.banner__text-hidden{
+  animation: hiddenText .5s ease;
 }
 @keyframes showText {
   0% {
-    left: 10px;
+    left: 20px;
     opacity: 0;
   }
   100% {
     left: 0;
     opacity: 1;
+  }
+}
+@keyframes hiddenText {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 10px;
+    opacity: 0;
   }
 }
 .banner__content-left {
