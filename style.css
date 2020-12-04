@@ -302,8 +302,8 @@ height: 10px;
 }
 .bunner__bubble {
   position: absolute;
-  bottom: 110px;
-  right: -10px;
+  bottom: 115px;
+  right: -15px;
 }
 .bunner__bubble-animate{
   animation: showBubble 2.1s ease;
