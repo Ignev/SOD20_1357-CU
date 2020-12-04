@@ -12,7 +12,7 @@ let banners = [
     bg: "./assets/img/bg-1.jpg",
     bannerText:
       '<img style="width: 155px; height: 63px;" src="./assets/fonts/Der neue Caddy Cargo.svg" alt="" class="text__strong"><img src="./assets/fonts/Bereit fur alles was kommt.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media">',
+    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 2,
@@ -25,7 +25,7 @@ let banners = [
     top: "40%",
     right: "40px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
+    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
   },
   {
     step: 3,
@@ -37,7 +37,7 @@ let banners = [
       "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media">',
+    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 4,
@@ -50,7 +50,7 @@ let banners = [
     top: "30%",
     right: "50px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung zeigt Sonderausstattung gegen Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
+    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung gegen Mehrpreis.svg" alt="" class="second-media">',
   },
 ];
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
