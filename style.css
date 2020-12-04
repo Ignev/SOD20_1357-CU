@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: inherit;
 }
+
 .phone{
   position: relative;
   height: 621px;
@@ -19,6 +20,7 @@
   position: relative;
   z-index: -1;
 }
+
 button {
   outline: none;
 }
@@ -55,6 +57,24 @@ body {
 }
 .banner-animate{
   animation: showBanner 1s ease;
+}
+@media screen and (max-width: 900px) {
+  body{
+    align-items: start;
+    background: #ffffff;
+  }
+  .banner__wrapper{
+    position: relative;
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .phone__media{
+    display: none;
+  }
 }
 
 @keyframes showBanner{
