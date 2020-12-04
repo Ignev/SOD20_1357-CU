@@ -11,19 +11,19 @@
 button {
   outline: none;
 }
-.body {
-  font-family: "VWHead";
-  font-style: 11px;
-  color: #ffffff;
-  position: relative;
-}
-.banner__wrapper {
+body {
   width: 100vw;
   height: 100vh;
-  background: #ffff;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.banner__wrapper{
+  position: relative;
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+  background: url(./assets/img/bg/1.png);
 }
 /* @keyframes showBunner{
     0%{
@@ -59,12 +59,10 @@ button {
 
 @keyframes showBanner{
   0%{
-    left: 100px;
-    opacity: 0;
+    left: 320px;
   }
   100%{
     left: 0px;
-    opacity: 1;
   }
 }
 .popup__open-wrapp {

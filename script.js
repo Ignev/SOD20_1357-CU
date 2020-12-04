@@ -81,7 +81,8 @@ const showBanner = (
   popupTextSelector,
   bannerSubtextSelector,
   popupOpenBtnWrapperSelector,
-  bubbleSelector
+  bubbleSelector,
+  bannerWrapperSelector
 ) => {
   const banner = document.querySelector(bannerSelector),
     bannerBtnArrow = document.querySelector(bannerBtnArrowSelector),
@@ -92,7 +93,8 @@ const showBanner = (
     popupText = document.querySelector(popupTextSelector),
     bannerSubtext = document.querySelector(bannerSubtextSelector),
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
-    bubble = document.querySelector(bubbleSelector);
+    bubble = document.querySelector(bubbleSelector),
+    bannerWrapper = document.querySelector(bannerWrapperSelector);
     bannerBtnMicro.addEventListener('click', ()=> {
       console.log(1);
       bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
@@ -115,8 +117,10 @@ const showBanner = (
       }, 1000);
       bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
     }
+
     
     banners.forEach((item) => {
+      
       if (banner.dataset.step == item.step) {
         banner.style.background = `url(${item.bg})`;
         bannerText.innerHTML = item.bannerText;
@@ -278,7 +282,8 @@ window.addEventListener("DOMContentLoaded", () => {
     ".popup__text",
     ".banner__subtext",
     ".popup__open-wrapp",
-    ".bunner__bubble"
+    ".bunner__bubble",
+    ".banner__wrapper"
   );
   closePopup(".banner__popup", ".popup__close");
   openPopup(".banner__popup", ".popup__open-wrapp");
