@@ -154,6 +154,7 @@ const showBanner = (
     bannerSubtext.innerHTML =
     '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">';
     popupOpenBtnWrapper.style.display = "none";
+    bubble.style.display = "none";
   };
   bannerBtnMicro.addEventListener("click", () => {
     bannerBtnMicro.innerHTML =
