@@ -154,7 +154,7 @@ img{
   background: #ffff;
   width: 310px;
   height: 460px;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   display: none;
   overflow: hidden;
   flex-direction: column;
@@ -172,9 +172,7 @@ img{
   height: 10px;
 }
 .popup__text {
-  font-size: 11px;
-  margin-bottom: 10px;
-  font-family: "VWText";
+  float: left;
 }
 .popup__video {
   width: 275px;

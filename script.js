@@ -26,7 +26,7 @@ let banners = [
       '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 210px; height: 20px; " src="./assets/fonts/LED-Scheinwerfer.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-4.mp4",
     popupText:
-      "Alles im Blick: Mit den neuen LED Frontscheinwerfern* <br/> und LED Rückleuchten* entgeht Ihnen nichts mehr.",
+    '<img style="width: 240px; height: 30px; float: left;" src="./assets/fonts/Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg" alt="" class="banner__first-media">',
     top: "40%",
     right: "40px",
     subtext:
@@ -39,7 +39,7 @@ let banners = [
       '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 200px; height: 20px;" src="./assets/fonts/Großer-Laderaum.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-1.mp4",
     popupText:
-      "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
+    '<img style="width: 240px; height: 30px; float: left;" src="./assets/fonts/Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg" alt="" class="banner__first-media">',
     top: "40%",
     right: "100px",
     subtext:
@@ -52,7 +52,7 @@ let banners = [
       '<img style="width: 200px; height: 70px;" src="./assets/fonts/Der-neue-Caddy-Cargo-Maxi.svg" alt="" class="text__strong"><img style="width: 130px; height: 50px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-2.mp4",
     popupText:
-      "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
+    '<img style="width: 240px; height: 30px; float: left;" src="./assets/fonts/Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg" alt="" class="banner__first-media">',
     top: "30%",
     right: "50px",
     subtext:
@@ -65,7 +65,7 @@ let banners = [
       '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 20px;" src="./assets/fonts/Lane-Assist.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-3.mp4",
     popupText:
-      "Der Lane Assist* erfasst und korrigiert autonom bei drohender Überfahrung der Spurbegrenzungslinien.",
+    '<img style="width: 240px; height: 30px; float: left;" src="./assets/fonts/Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg" alt="" class="banner__first-media">',
     top: "40%",
     right: "50px",
     subtext:
