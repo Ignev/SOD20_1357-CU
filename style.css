@@ -225,6 +225,7 @@ img{
 .banner__text {
   position: relative;
   animation: showText 2.1s ease;
+  margin-bottom: 17px;
 }
 .text__strong {
   width: 155px;
@@ -268,11 +269,6 @@ img{
   align-items: flex-end;
   position: relative;
 }
-.banner__text {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-family: "VWHead";
-}
 .banner__btn {
   background: #ffffff;
   border-radius: 20px;
@@ -283,7 +279,7 @@ img{
   align-items: center;
 }
 .btn__media{
-  width: 110px;
+  width: 130px;
 }
 .banner__micro {
   background: #00b1f2fd;
