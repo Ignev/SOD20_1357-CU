@@ -103,7 +103,6 @@ const showBanner = (
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
     bubble = document.querySelector(bubbleSelector),
     bannerWrapper = document.querySelector(bannerWrapperSelector);
-    bannerWrapper.style.background = `url(./assets/img/bg/1.png)`;
   bannerBtnMicro.addEventListener("click", () => {
     console.log(1);
     bubble.innerHTML =
