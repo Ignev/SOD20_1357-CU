@@ -1,3 +1,7 @@
+var user = detect.parse(navigator.userAgent);
+console.log(
+  user.browser.family
+)
 let banners = [
   {
     step: 0,
@@ -45,7 +49,7 @@ let banners = [
     step: 4,
     bg: "./assets/img/bg-4.jpg",
     bannerText:
-      '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 50px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der-neue-Caddy-Cargo-Maxi.svg" alt="" class="text__strong"><img style="width: 170px; height: 70px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-2.mp4",
     popupText:
       "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
@@ -68,7 +72,7 @@ let banners = [
       '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
   },
 ];
-if (true) {
+if (!(user.browser.family === 'Safari' || user.browser.family === 'Firefox')) {
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
   var SpeechRecognitionEvent =
@@ -175,7 +179,7 @@ const showBanner = (
       '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
   });
 
-  if (true) {
+  if (!(user.browser.family === 'Safari' || user.browser.family === 'Firefox')) {
     let words = [
       "feature",
       "hallo",
@@ -328,4 +332,5 @@ window.addEventListener("DOMContentLoaded", () => {
   closePopup(".banner__popup", ".popup__close");
   openPopup(".banner__popup", ".popup__open-wrapp");
   muteSound(".video__btn", ".popup__video", ".video__img", ".popup__close");
+  
 });
