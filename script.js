@@ -68,7 +68,7 @@ let banners = [
       '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
   },
 ];
-if (false) {
+if (true) {
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
   var SpeechRecognitionEvent =
@@ -155,10 +155,10 @@ const showBanner = (
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1001);
-    setTimeout(() => {
+    if(banner.dataset.step >= 2){setTimeout(() => {
       bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step}.png)`;
     }, 1002);
-    bubble.style.display = "none";
+    bubble.style.display = "none";}
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
@@ -174,7 +174,7 @@ const showBanner = (
       '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
   });
 
-  if (false) {
+  if (true) {
     let words = [
       "feature",
       "hallo",

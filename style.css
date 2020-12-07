@@ -272,14 +272,15 @@ img{
 .banner__btn {
   background: #ffffff;
   border-radius: 20px;
-  width: 130px;
+  width: 140px;
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .btn__media{
-  width: 130px;
+  width: 150px;
 }
 .banner__micro {
   background: #00b1f2fd;
