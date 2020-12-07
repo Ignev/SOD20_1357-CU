@@ -99,6 +99,7 @@ const showBanner = (
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
     bubble = document.querySelector(bubbleSelector),
     bannerWrapper = document.querySelector(bannerWrapperSelector);
+    bannerWrapper.style.background = `url(./assets/img/bg/1.png)`;
   bannerBtnMicro.addEventListener("click", () => {
     console.log(1);
     bubble.innerHTML =
@@ -154,11 +155,11 @@ const showBanner = (
 
     setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 1001);
-    if(banner.dataset.step >= 2){setTimeout(() => {
+    }, 1050);
+    setTimeout(() => {
       bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step}.png)`;
-    }, 1002);
-    bubble.style.display = "none";}
+    }, 1051);
+    bubble.style.display = "none";
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;

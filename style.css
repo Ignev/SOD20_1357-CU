@@ -46,6 +46,7 @@ img{
   z-index: 1;
   top: 72px;
   left: 5.5%;
+  background-image: url(./assets/img/bg/1.jpg);
 }
 .banner {
   position: relative;
@@ -78,6 +79,7 @@ img{
     z-index: 1;
     top: 0;
     left: 0;
+    background-image: url(./assets/img/bg/1.jpg);
   }
   .phone__media{
     display: none;
