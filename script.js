@@ -158,10 +158,10 @@ const showBanner = (
 
     setTimeout(() => {
       banner.classList.remove("banner-animate");
-    }, 1050);
+    }, 550);
     setTimeout(() => {
       bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step}.png)`;
-    }, 1051);
+    }, 551);
     bubble.style.display = "none";
   };
   const errorBanner = () => {
