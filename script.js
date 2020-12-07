@@ -49,7 +49,7 @@ let banners = [
     step: 4,
     bg: "./assets/img/bg-4.jpg",
     bannerText:
-      '<img src="./assets/fonts/Der-neue-Caddy-Cargo-Maxi.svg" alt="" class="text__strong"><img style="width: 170px; height: 70px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
+      '<img style="width: 200px; height: 70px;" src="./assets/fonts/Der-neue-Caddy-Cargo-Maxi.svg" alt="" class="text__strong"><img style="width: 130px; height: 50px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-2.mp4",
     popupText:
       "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
