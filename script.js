@@ -1,19 +1,19 @@
-
-
 let banners = [
   {
     step: 0,
     bg: "./assets/img/bg-0.jpg",
     bannerText:
-    '<img style="width: 155px; height: 63px;" src="./assets/fonts/Oh-eine-Sprachpanne.svg" alt="" class="text__strong"><img src="./assets/fonts/Sprechen-Sie-noch-einmal.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
-    subtext: '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
+      '<img style="width: 155px; height: 63px;" src="./assets/fonts/Oh-eine-Sprachpanne.svg" alt="" class="text__strong"><img src="./assets/fonts/Sprechen-Sie-noch-einmal.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
+    subtext:
+      '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 1,
     bg: "./assets/img/bg-1.jpg",
     bannerText:
       '<img style="width: 155px; height: 63px;" src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img src="./assets/fonts/Bereit-fur-alles-was-kommt.svg" style="width: 160px; height: 50px;" alt="" class="text__span">',
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
+    subtext:
+      '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 2,
@@ -26,54 +26,54 @@ let banners = [
     top: "40%",
     right: "40px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
+      '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
   },
   {
     step: 3,
     bg: "./assets/img/bg-3.jpg",
     bannerText:
-    '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 200px; height: 20px;" src="./assets/fonts/Großer-Laderaum.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 200px; height: 20px;" src="./assets/fonts/Großer-Laderaum.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-1.mp4",
     popupText:
       "Innen überzeugt die fünfte Generation des Caddy Cargo <br/> mit neuen Hightech-Lösungen und deutlich mehr Platz.",
     top: "40%",
     right: "100px",
-    subtext: '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
+    subtext:
+      '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">',
   },
   {
     step: 4,
     bg: "./assets/img/bg-4.jpg",
     bannerText:
-    '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 50px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 50px;" src="./assets/fonts/Breitere-Schiebetur.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-2.mp4",
     popupText:
       "Dank extrabreiter Schiebetür* können jetzt <br/> Europaletten sogar seitlich eingeladen werden.",
     top: "30%",
     right: "50px",
     subtext:
-    '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
+      '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
   },
   {
     step: 5,
     bg: "./assets/img/bg-5.jpg",
     bannerText:
-    '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 20px;" src="./assets/fonts/Lane-Assist.svg" alt="" class="text__span">',
+      '<img src="./assets/fonts/Der-neue-Caddy-Cargo.svg" alt="" class="text__strong"><img style="width: 125px; height: 20px;" src="./assets/fonts/Lane-Assist.svg" alt="" class="text__span">',
     popupImg: "./assets/video/video-3.mp4",
     popupText:
       "Der Lane Assist* erfasst und korrigiert autonom bei drohender Überfahrung der Spurbegrenzungslinien.",
     top: "40%",
     right: "50px",
-    subtext:'<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">'
+    subtext:
+      '<img style="width: 210px; height: 10px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media"><img style="width: 150px; height: 10px;" src="./assets/fonts/Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="second-media">',
   },
 ];
-if(false){
+if (false) {
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
   var SpeechRecognitionEvent =
     SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 }
-  
-
 
 const showBanner = (
   bannerSelector,
@@ -99,16 +99,17 @@ const showBanner = (
     popupOpenBtnWrapper = document.querySelector(popupOpenBtnWrapperSelector),
     bubble = document.querySelector(bubbleSelector),
     bannerWrapper = document.querySelector(bannerWrapperSelector);
-    bannerBtnMicro.addEventListener('click', ()=> {
-      console.log(1);
-      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
-      bubble.classList.add('bunner__bubble-active');
-    })
+  bannerBtnMicro.addEventListener("click", () => {
+    console.log(1);
+    bubble.innerHTML =
+      '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
+    bubble.classList.add("bunner__bubble-active");
+  });
   const nextBanner = () => {
-    bubble.classList.add('bunner__bubble-active');
-      setTimeout(() => {
-        bubble.classList.remove('bunner__bubble-active');
-      }, 2130);
+    bubble.classList.add("bunner__bubble-active");
+    setTimeout(() => {
+      bubble.classList.remove("bunner__bubble-active");
+    }, 2130);
     if (banner.dataset.step <= 5) {
       banner.dataset.step++;
     }
@@ -119,22 +120,20 @@ const showBanner = (
       setTimeout(() => {
         bannerBtnMicro.classList.add("banner__micro-animate");
       }, 1000);
-      bubble.innerHTML = '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
+      bubble.innerHTML =
+        '<img src="./assets/img/comics1.svg" alt="" class="bubble__media"/>';
     }
 
-    
     banners.forEach((item) => {
-      
       if (banner.dataset.step == item.step) {
         banner.style.background = `url(${item.bg})`;
         bannerText.innerHTML = item.bannerText;
         bannerSubtext.innerHTML = item.subtext;
       }
       if (banner.dataset.step == 5) {
-        bannerText.style.top =  "-110%";
-      }
-      else{
-        bannerText.style.top =  "0px";
+        bannerText.style.top = "-110%";
+      } else {
+        bannerText.style.top = "0px";
       }
       if (banner.dataset.step == item.step && item.popupImg) {
         popupVideo.setAttribute("src", item.popupImg);
@@ -152,21 +151,21 @@ const showBanner = (
       }
     });
     banner.classList.add("banner-animate");
-    
+
     setTimeout(() => {
       banner.classList.remove("banner-animate");
     }, 1001);
     setTimeout(() => {
       bannerWrapper.style.background = `url(./assets/img/bg/${banner.dataset.step}.png)`;
-    },1002)
+    }, 1002);
     bubble.style.display = "none";
   };
   const errorBanner = () => {
     banner.style.background = `url(./assets/img/bg-0.jpg)`;
     bannerText.innerHTML =
-    '<img style="width: 220px; height: 60px;" src="./assets/fonts/Oh-eine-Sprachpanne.svg" alt="" class="text__strong"><img style="width: 150x; height: 57px;" src="./assets/fonts/Sprechen-Sie-noch-einmal.svg"  alt="" class="text__span">';
+      '<img style="width: 220px; height: 60px;" src="./assets/fonts/Oh-eine-Sprachpanne.svg" alt="" class="text__strong"><img style="width: 150x; height: 57px;" src="./assets/fonts/Sprechen-Sie-noch-einmal.svg"  alt="" class="text__span">';
     bannerSubtext.innerHTML =
-    '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">';
+      '<img style="width: 210px; height: 15px;" src="./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg" alt="" class="banner__first-media">';
     popupOpenBtnWrapper.style.display = "none";
     bubble.style.display = "none";
   };
@@ -175,81 +174,79 @@ const showBanner = (
       '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
   });
 
-    if(false){
-      let words = [
-        "feature",
-        "hallo",
-        "käddi",
-        "wechsle",
-        "zum",
-        "nächsten",
-        "feature hallo käddi wechsle zum nächsten",
-        "hallo käddi wechsle zum nächsten",
-      ];
-  
-      let grammar =
-        "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
-      let recognition = new SpeechRecognition();
-      let speechRecognitionList = new SpeechGrammarList();
-      speechRecognitionList.addFromString(grammar, 1);
-      recognition.grammars = speechRecognitionList;
-      recognition.continuous = false;
-      recognition.lang = "de-DE";
-      recognition.interimResults = false;
-      recognition.maxAlternatives = 1;
-  
-      bannerBtnMicro.addEventListener("click", () => {
-        recognition.start();
-        bannerBtnMicro.innerHTML =
-          '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-        bannerBtnMicro.setAttribute("disabled", "disabled");
-        bannerBtnArrow.setAttribute("disabled", "disabled");
-        if (banner.dataset.step >= 2) {
-          bannerBtnMicro.classList.remove("banner__micro-animate");
-        }
-        bubble.style.display = "block";
-      });
-  
-      recognition.onresult = function (event) {
-        if (event.results[0][0].confidence >= 0.7) {
-          nextBanner();
-        } else {
-          errorBanner();
-        }
-        console.log("Confidence: " + event.results[0][0].confidence);
-      };
-      recognition.onspeechend = function () {
-        recognition.stop();
+  if (false) {
+    let words = [
+      "feature",
+      "hallo",
+      "käddi",
+      "wechsle",
+      "zum",
+      "nächsten",
+      "feature hallo käddi wechsle zum nächsten",
+      "hallo käddi wechsle zum nächsten",
+    ];
+
+    let grammar =
+      "#JSGF V1.0; grammar words; public <word> = " + words.join(" | ") + " ;";
+    let recognition = new SpeechRecognition();
+    let speechRecognitionList = new SpeechGrammarList();
+    speechRecognitionList.addFromString(grammar, 1);
+    recognition.grammars = speechRecognitionList;
+    recognition.continuous = false;
+    recognition.lang = "de-DE";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    bannerBtnMicro.addEventListener("click", () => {
+      recognition.start();
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+      bannerBtnMicro.setAttribute("disabled", "disabled");
+      bannerBtnArrow.setAttribute("disabled", "disabled");
+      if (banner.dataset.step >= 2) {
+        bannerBtnMicro.classList.remove("banner__micro-animate");
+      }
+      bubble.style.display = "block";
+    });
+
+    recognition.onresult = function (event) {
+      if (event.results[0][0].confidence >= 0.7) {
+        nextBanner();
+      } else {
+        errorBanner();
+      }
+      console.log("Confidence: " + event.results[0][0].confidence);
+    };
+    recognition.onspeechend = function () {
+      recognition.stop();
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
+      bannerBtnMicro.removeAttribute("disabled");
+      bannerBtnArrow.removeAttribute("disabled");
+    };
+  } else {
+    bannerBtnMicro.addEventListener("click", () => {
+      setTimeout(() => {
+        nextBanner();
         bannerBtnMicro.innerHTML =
           '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
         bannerBtnMicro.removeAttribute("disabled");
         bannerBtnArrow.removeAttribute("disabled");
-      };
-    
-    }
-    else{
-      bannerBtnMicro.addEventListener("click", () => {
-          setTimeout(() => {
-            nextBanner();
-            bannerBtnMicro.innerHTML =
-          '<img class="micro__media-noaction "src="./assets/img/micro.svg" alt="microphone"/>';
-        bannerBtnMicro.removeAttribute("disabled");
-        bannerBtnArrow.removeAttribute("disabled");
-          }, 4000);
-        bannerBtnMicro.innerHTML =
-          '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
-        bannerBtnMicro.setAttribute("disabled", "disabled");
-        bannerBtnArrow.setAttribute("disabled", "disabled");
-        if (banner.dataset.step >= 2) {
-          bannerBtnMicro.classList.remove("banner__micro-animate");
-        }
-        bubble.style.display = "block";
-      });
-    }
+      }, 4000);
+      bannerBtnMicro.innerHTML =
+        '<img class="micro__media micro__media-action "src="./assets/img/soundWaveForm.gif" alt="microphone"/>';
+      bannerBtnMicro.setAttribute("disabled", "disabled");
+      bannerBtnArrow.setAttribute("disabled", "disabled");
+      if (banner.dataset.step >= 2) {
+        bannerBtnMicro.classList.remove("banner__micro-animate");
+      }
+      bubble.style.display = "block";
+    });
+  }
 
   bannerBtnArrow.addEventListener("click", () => {
     nextBanner();
-    bannerText.classList.add("banner__text-hidden")
+    bannerText.classList.add("banner__text-hidden");
     setTimeout(() => {
       bannerText.classList.remove("banner__text-hidden");
     }, 501);
@@ -258,7 +255,6 @@ const showBanner = (
     setTimeout(() => {
       bannerBtnMicro.classList.add("banner__micro-animate");
     }, 1000);
-    
   }
 };
 
