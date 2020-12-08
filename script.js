@@ -101,7 +101,7 @@ next__Slide5.addEventListener("click", function () {
 });
 next__Slide6.addEventListener("click", function () {
   $f0a5fc76378d1581cc7b$var$selectSlideById(0);
-  slide1.classList.remove("activeSlide");
+  
 });
 ////////////////////////////////////////////////////////////
 ///////////////// Second screen
