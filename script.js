@@ -48,22 +48,13 @@ const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
     fadeHeaderDelay: 750,
   };
   const slides = [slide1, slide3, slide4, slide5, slide6];
-  const errorSlide = slide2;
-  console.log(errorSlide);
   const headers = [
     text__Slide1,
     text__Slide3,
     text__Slide4,
     text__Slide5,
     text__Slide6,
-  ]; // reset on end
-  // console.log(slides.length, currentSlideId);
-  // if(slides.length === currentSlideId+1) {
-  // 	slides.forEach(slide => {
-  // 		slide.classList.remove(defaults.selectors.activeSlide);
-  // 	})
-  // 	currentSlideId = 0;
-  // }
+  ];
 
   if (currentSlideId === 0) {
     slides.forEach((slide) => {
@@ -82,7 +73,6 @@ const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
       headers[slideId].classList.remove(defaults.selectors.activeText);
     }
   });
-  console.log(slides);
 };
 
 function $f0a5fc76378d1581cc7b$var$play() {
@@ -111,6 +101,7 @@ next__Slide5.addEventListener("click", function () {
 });
 next__Slide6.addEventListener("click", function () {
   $f0a5fc76378d1581cc7b$var$selectSlideById(0);
+  slide1.classList.remove("activeSlide");
 });
 ////////////////////////////////////////////////////////////
 ///////////////// Second screen
@@ -366,19 +357,29 @@ recognition.lang = "de-DE";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
+let count;
+
 let micro3Slid = () => {
   mikro__Slide1.addEventListener("click", function () {
     mikro__Slide1.classList.add("active");
     mikro__img__Slide1.classList.add("hidden");
     mikro__img1__Slide1.classList.add("visible");
     comics1__Slide1.classList.add("active");
+    count = 1;
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.7) {
+          slide1.classList.remove('activeSlide');
+          text__Slide1.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide3Active();
       }
       else{
-
+        slide1.classList.remove('activeSlide');
+        text__Slide1.classList.remove('activeText');
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -392,30 +393,6 @@ let micro3Slid = () => {
   });
 };
 micro3Slid();
-let micro6Slid = () => {
-  mikro__Slide5.addEventListener("click", function () {
-    mikro__Slide5.classList.add("active");
-    mikro__img__Slide5.classList.add("hidden");
-    mikro__img1__Slide5.classList.add("visible");
-    comics1__Slide5.classList.add("active");
-    recognition.start();
-    recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.7) {
-        $f0a5fc76378d1581cc7b$var$slide6Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
-    };
-    recognition.onspeechend = function () {
-      recognition.stop();
-      mikro__Slide5.classList.remove("active");
-      mikro__img__Slide5.classList.remove("hidden");
-      mikro__img1__Slide5.classList.remove("visible");
-      comics1__Slide5.classList.remove("active");
-    };
-  });
-};
-micro6Slid();
-
 let micro4Slid = () => {
   mikro__Slide3.addEventListener("click", function () {
     mikro__Slide3.classList.add("active");
@@ -423,9 +400,20 @@ let micro4Slid = () => {
     mikro__img1__Slide3.classList.add("visible");
     comics1__Slide3.classList.add("active");
     recognition.start();
+    count = 3;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.7) {
+        slide3.classList.remove('activeSlide');
+        text__Slide3.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide4Active();
+      }
+      else{
+        slide3.classList.remove('activeSlide');
+        text__Slide3.classList.remove('activeText');
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -447,9 +435,20 @@ let micro5Slid = () => {
     mikro__img1__Slide4.classList.add("visible");
     comics1__Slide4.classList.add("active");
     recognition.start();
+    count = 4;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.7) {
+        slide4.classList.remove('activeSlide');
+        text__Slide4.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide5Active();
+      }
+      else{
+        slide4.classList.remove('activeSlide');
+        text__Slide4.classList.remove('activeText');
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -464,6 +463,40 @@ let micro5Slid = () => {
 };
 micro5Slid();
 
+let micro6Slid = () => {
+  mikro__Slide5.addEventListener("click", function () {
+    mikro__Slide5.classList.add("active");
+    mikro__img__Slide5.classList.add("hidden");
+    mikro__img1__Slide5.classList.add("visible");
+    comics1__Slide5.classList.add("active");
+    count = 2;
+    recognition.start();
+    recognition.onresult = function (event) {
+      if (event.results[0][0].confidence >= 0.7) {
+        slide5.classList.remove('activeSlide');
+        text__Slide5.classList.remove('activeText');
+        $f0a5fc76378d1581cc7b$var$slide6Active();
+      }
+      else{
+        slide5.classList.remove('activeSlide');
+        text__Slide5.classList.remove('activeText');
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
+      }
+      console.log("Confidence: " + event.results[0][0].confidence);
+    };
+    recognition.onspeechend = function () {
+      recognition.stop();
+      mikro__Slide5.classList.remove("active");
+      mikro__img__Slide5.classList.remove("hidden");
+      mikro__img1__Slide5.classList.remove("visible");
+      comics1__Slide5.classList.remove("active");
+    };
+  });
+};
+micro6Slid();
 
 let micro31Slid = () => {
   mikro__Slide6.addEventListener("click", function () {
@@ -472,12 +505,22 @@ let micro31Slid = () => {
     mikro__img1__Slide6.classList.add("visible");
     comics1__Slide6.classList.add("active");
     recognition.start();
+    count = 0;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.7) {
+        slide6.classList.remove('activeSlide');
+        text__Slide6.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$selectSlideById(0);
       }
+      else{
+        slide6.classList.remove('activeSlide');
+        text__Slide6.classList.remove('activeText');
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
+      }
       console.log("Confidence: " + event.results[0][0].confidence);
-      console.log(1);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -490,3 +533,38 @@ let micro31Slid = () => {
   
 };
 micro31Slid();
+
+let nextSlid = () => {
+  mikro__Slide2.addEventListener("click", function () {
+    mikro__Slide2.classList.add("active");
+    mikro__img__Slide2.classList.add("hidden");
+    mikro__img1__Slide2.classList.add("visible");
+    comics1__Slide2.classList.add("active");
+    recognition.start();
+    recognition.onresult = function (event) {
+      if (event.results[0][0].confidence >= 0.7) {
+        $f0a5fc76378d1581cc7b$var$selectSlideById(count++);
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+      }
+      else{
+        slide2.classList.remove("activeSlide");
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.add('activeSlide');
+        text__Slide2.classList.add('activeText');
+      }
+      console.log("Confidence: " + event.results[0][0].confidence);
+      
+    };
+    recognition.onspeechend = function () {
+      recognition.stop();
+      mikro__Slide6.classList.remove("active");
+      mikro__img__Slide6.classList.remove("hidden");
+      mikro__img1__Slide6.classList.remove("visible");
+      comics1__Slide6.classList.remove("active");
+    };
+  });
+  
+};
+
+nextSlid();
