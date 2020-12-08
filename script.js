@@ -109,6 +109,7 @@ function loopStart(){
   slide4.classList.remove('activeSlide');
   slide5.classList.remove('activeSlide');
   slide6.classList.remove('activeSlide');
+  text__Slide2.classList.remove('activeText');
   slide2.classList.remove('activeSlide');
   slide2.removeAttribute('style', 'z-index: 1');
   slide4.removeAttribute('style', 'z-index: 10');
@@ -523,9 +524,12 @@ let micro3Slid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
+        
         slide3Active();
       }
       else{
+        text__Slide1.classList.remove('activeText');
+        slide1.classList.remove('activeSlide');
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
@@ -553,6 +557,8 @@ let micro4Slid = () => {
         slide4Active();
       }
       else{
+        text__Slide3.classList.remove('activeText');
+        slide3.classList.remove('activeSlide');
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
@@ -581,6 +587,8 @@ let micro5Slid = () => {
         slide5Active();
       }
       else{
+        text__Slide4.classList.remove('activeText');
+        slide4.classList.remove('activeSlide');
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
@@ -609,6 +617,8 @@ let micro6Slid = () => {
         slide6Active();
       }
       else{
+        text__Slide5.classList.remove('activeText');
+        slide5.classList.remove('activeSlide');
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
@@ -645,6 +655,8 @@ let micro31Slid = () => {
         setTimeout(loopStart, 700);
       }
       else{
+        text__Slide6.classList.remove('activeText');
+        slide6.classList.remove('activeSlide');
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
@@ -672,6 +684,7 @@ let nextSlid = () => {
       if (event.results[0][0].confidence >= 0.70) {
         console.log(count);
         nextSlideBtn(count);
+        text__Slide2.classList.remove('activeText');
         slide2.classList.remove('activeSlide');
         slide2.removeAttribute('style', 'z-index: 1');
       }
