@@ -150,8 +150,8 @@ body {
 .text__Slide1 {
   background: url(./assets/fonts/text-banner-1.svg) 0% 100% no-repeat;
   background-size: contain;
-  width: 70%;
-  height: 24%;
+  width: 170px;
+  height: 112px;
   bottom: 78px;
   left: 21px;
   transition: 0.4s;
