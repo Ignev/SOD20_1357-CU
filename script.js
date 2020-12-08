@@ -73,6 +73,7 @@ next__Slide5.addEventListener('click', function(){
 });
 
 next__Slide6.addEventListener('click', function(){
+  text__Slide3.classList.remove('activeText');
   slide3Active();
   // slide4.classList.remove('activeSlide');
   // slide5.classList.remove('activeSlide');
@@ -88,6 +89,11 @@ next__Slide6.addEventListener('click', function(){
 function loopStart(){
   slide1.classList.remove('activeSlide');
   text__Slide1.classList.remove('activeText');
+  text__Slide2.classList.remove('activeText');
+  text__Slide3.classList.remove('activeText');
+  text__Slide4.classList.remove('activeText');
+  text__Slide5.classList.remove('activeText');
+  text__Slide6.classList.remove('activeText');
   slide4.classList.remove('activeSlide');
   slide5.classList.remove('activeSlide');
   slide6.classList.remove('activeSlide');
