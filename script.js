@@ -43,23 +43,33 @@ var hellopreloader = document.getElementById("hellopreloader_preload");
 
 next__Slide1.addEventListener('click', function(){
   slide3Active();
+  slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
 });
 
 next__Slide2.addEventListener('click', function(){
   slide5Active();
+  slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
 });
 
 next__Slide3.addEventListener('click', function(){
   slide4Active();
+  slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
 });
 
 next__Slide4.addEventListener('click', function(){
   slide5Active();
+  slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
 });
 
 next__Slide5.addEventListener('click', function(){
   slide6Active();
   slide3.classList.remove('activeSlide');
+  slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
 });
 
 next__Slide6.addEventListener('click', function(){
@@ -71,6 +81,7 @@ next__Slide6.addEventListener('click', function(){
   slide5.setAttribute('style', 'z-index: 11');
   slide6.setAttribute('style', 'z-index: 12');
   slide1.setAttribute('style', 'z-index: 5');
+  slide2.removeAttribute('style', 'z-index: 1');
   setTimeout(loopStart, 700);
 });
 
@@ -80,9 +91,13 @@ function loopStart(){
   slide4.classList.remove('activeSlide');
   slide5.classList.remove('activeSlide');
   slide6.classList.remove('activeSlide');
+  slide2.classList.remove('activeSlide');
+  slide2.removeAttribute('style', 'z-index: 1');
   slide4.removeAttribute('style', 'z-index: 10');
   slide5.removeAttribute('style', 'z-index: 11');
   slide6.removeAttribute('style', 'z-index: 12');
+  slide1.setAttribute('style', 'z-index: 5');
+  
 }
 
 //////////////////////////////////////////////////////////// 
@@ -91,6 +106,7 @@ function loopStart(){
 
 function slide2Active() {
   slide2.classList.add('activeSlide');
+  slide2.removeAttribute('style', 'z-index: 100');
   setTimeout(slide2Text, 750);
 }
 
@@ -636,6 +652,8 @@ let nextSlid = () => {
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
         slide2Active();
+        slide2.classList.remove('activeSlide');
+        slide2.removeAttribute('style', 'z-index: 1');
       }
       else{
         slide2Active();
