@@ -48,6 +48,8 @@ const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
     fadeHeaderDelay: 750,
   };
   const slides = [slide1, slide3, slide4, slide5, slide6];
+  const errorSlide = slide2;
+  console.log(errorSlide);
   const headers = [
     text__Slide1,
     text__Slide3,
@@ -80,6 +82,7 @@ const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
       headers[slideId].classList.remove(defaults.selectors.activeText);
     }
   });
+  console.log(slides);
 };
 
 function $f0a5fc76378d1581cc7b$var$play() {
@@ -107,21 +110,8 @@ next__Slide5.addEventListener("click", function () {
   slide3.classList.remove("activeSlide");
 });
 next__Slide6.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(0); // slide4.classList.remove('activeSlide');
-  // slide5.classList.remove('activeSlide');
-  // slide6.classList.remove('activeSlide');
-  // slide4.setAttribute('style', 'z-index: 10');
-  // slide5.setAttribute('style', 'z-index: 11');
-  // slide6.setAttribute('style', 'z-index: 12');
-  // setTimeout(loopStart, 700);
-}); // function loopStart(){
-// 	slide4.classList.remove('activeSlide');
-// 	slide5.classList.remove('activeSlide');
-// 	slide6.classList.remove('activeSlide');
-// 	slide4.removeAttribute('style', 'z-index: 10');
-// 	slide5.removeAttribute('style', 'z-index: 11');
-// 	slide6.removeAttribute('style', 'z-index: 12');
-// }
+  $f0a5fc76378d1581cc7b$var$selectSlideById(0);
+});
 ////////////////////////////////////////////////////////////
 ///////////////// Second screen
 ////////////////////////////////////////////////////////////
@@ -386,6 +376,9 @@ let micro3Slid = () => {
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.7) {
         $f0a5fc76378d1581cc7b$var$slide3Active();
+      }
+      else{
+
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
