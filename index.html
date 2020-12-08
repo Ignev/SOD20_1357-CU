@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.bc127fbf.css" />
-    <script type="text/javascript" src="./Detect.js-master/detect.js"></script>
-    <script type="text/javascript" src="SOD20_1357-DU.95f62fd3.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
     <div class="phone">
-      <img src="iPhone6SPlus.png" alt="" class="phone__media" />
+      <img src="./assets/img/iPhone6SPlus.png" alt="" class="phone__media" />
       <div class="container">
         <div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
         <div class="slide1" id="slide1">
@@ -31,7 +32,7 @@
             <div class="mikro__img__Slide1" id="mikro__img__Slide1"></div>
             <img
               id="mikro__img1__Slide1"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -56,7 +57,7 @@
             <div class="mikro__img__Slide2" id="mikro__img__Slide2"></div>
             <img
               id="mikro__img1__Slide2"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -77,7 +78,7 @@
                 playsinline=""
                 preload=""
                 id="video__Slide3"
-                src="video.8d072535.mp4"
+                src="./assets/video/video-1.mp4"
               ></video>
 
               <div class="muted" id="muted__Slide3"></div>
@@ -106,7 +107,7 @@
             <div class="mikro__img__Slide3" id="mikro__img__Slide3"></div>
             <img
               id="mikro__img1__Slide3"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -127,7 +128,7 @@
                 playsinline=""
                 preload=""
                 id="video__Slide4"
-                src="video.06521b0b.mp4"
+                src="./assets/video/video-2.mp4"
               ></video>
 
               <div class="muted" id="muted__Slide4"></div>
@@ -156,7 +157,7 @@
             <div class="mikro__img__Slide4" id="mikro__img__Slide4"></div>
             <img
               id="mikro__img1__Slide4"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -177,7 +178,7 @@
                 playsinline=""
                 preload=""
                 id="video__Slide5"
-                src="video.0e14250f.mp4"
+                src="./assets/video/video-3.mp4"
               ></video>
 
               <div class="muted" id="muted__Slide5"></div>
@@ -206,7 +207,7 @@
             <div class="mikro__img__Slide5" id="mikro__img__Slide5"></div>
             <img
               id="mikro__img1__Slide5"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -227,7 +228,7 @@
                 playsinline=""
                 preload=""
                 id="video__Slide6"
-                src="video.2783138f.mp4"
+                src="./assets/video/video-4.mp4"
               ></video>
 
               <div class="muted" id="muted__Slide6"></div>
@@ -256,7 +257,7 @@
             <div class="mikro__img__Slide6" id="mikro__img__Slide6"></div>
             <img
               id="mikro__img1__Slide6"
-              src="soundWaveForm.5eba5f7f.gif"
+              src="./assets/img/soundWaveForm.gif"
               alt=""
             />
           </div>
@@ -266,474 +267,6 @@
     </div>
 
     <script src="./Detect.js-master/detect.js"></script>
-
-    <script>
-
-
-            (function () {
-              var user = detect.parse(navigator.userAgent);
-            console.log(
-              user.browser.family
-            )
-            if(user.browser.family === 'Chrome' || user.browser.family === 'Mobile Chrome'){
-              const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-              const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
-              const SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
-            }
-
-              // ASSET: /home/user/Yard/SOD20_1357-DU/src/index.html
-              var $f0a5fc76378d1581cc7b$var$hellopreloader = document.getElementById(
-                "hellopreloader_preload"
-              );
-
-              function $f0a5fc76378d1581cc7b$var$fadeOutnojquery(el) {
-                el.style.opacity = 1;
-                var interhellopreloader = setInterval(function () {
-                  el.style.opacity = el.style.opacity - 0.05;
-
-                  if (el.style.opacity <= 0.05) {
-                    clearInterval(interhellopreloader);
-                    $f0a5fc76378d1581cc7b$var$hellopreloader.style.display = "none";
-                  }
-                }, 16);
-              }
-
-              window.onload = function () {
-                setTimeout(function () {
-                  $f0a5fc76378d1581cc7b$var$fadeOutnojquery(
-                    $f0a5fc76378d1581cc7b$var$hellopreloader
-                  );
-                  setTimeout($f0a5fc76378d1581cc7b$var$play, 250);
-                }, 1000);
-              };
-
-              const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
-                let currentSlideId = slideId;
-                const defaults = {
-                  selectors: {
-                    activeSlide: "activeSlide",
-                    activeText: "activeText",
-                  },
-                  fadeHeaderDelay: 750,
-                };
-                const slides = [slide1, slide3, slide4, slide5, slide6];
-                const headers = [
-                  text__Slide1,
-                  text__Slide3,
-                  text__Slide4,
-                  text__Slide5,
-                  text__Slide6,
-                ]; // reset on end
-                // console.log(slides.length, currentSlideId);
-                // if(slides.length === currentSlideId+1) {
-                // 	slides.forEach(slide => {
-                // 		slide.classList.remove(defaults.selectors.activeSlide);
-                // 	})
-                // 	currentSlideId = 0;
-                // }
-
-                if (currentSlideId === 0) {
-                  slides.forEach((slide) => {
-                    slide.classList.remove(defaults.selectors.activeSlide);
-                  });
-                  $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-                }
-
-                slides.forEach((slide, slideId) => {
-                  if (currentSlideId === slideId) {
-                    slide.classList.add(defaults.selectors.activeSlide);
-                    setTimeout(() => {
-                      headers[slideId].classList.add(defaults.selectors.activeText);
-                    }, defaults.fadeHeaderDelay);
-                  } else {
-                    headers[slideId].classList.remove(defaults.selectors.activeText);
-                  }
-                });
-              };
-
-              function $f0a5fc76378d1581cc7b$var$play() {
-                const slide1 = document.querySelector(".slide1");
-                slide1.classList.add("activeSlide");
-                text__Slide1.classList.add("activeText");////////
-              } ////////////////////////////////////////////////////
-              ///////////////// functions for switching screens by buttons
-              ////////////////////////////////////////////////////////////
-
-              next__Slide1.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$slide3Active();
-              });
-              next__Slide2.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$slide5Active();
-              });
-              next__Slide3.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$slide4Active();
-              });
-              next__Slide4.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$slide5Active();
-              });
-              next__Slide5.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$slide6Active();
-                slide3.classList.remove("activeSlide");
-              });
-              next__Slide6.addEventListener("click", function () {
-                $f0a5fc76378d1581cc7b$var$selectSlideById(0); // slide4.classList.remove('activeSlide');
-                // slide5.classList.remove('activeSlide');
-                // slide6.classList.remove('activeSlide');
-                // slide4.setAttribute('style', 'z-index: 10');
-                // slide5.setAttribute('style', 'z-index: 11');
-                // slide6.setAttribute('style', 'z-index: 12');
-                // setTimeout(loopStart, 700);
-              }); // function loopStart(){
-              // 	slide4.classList.remove('activeSlide');
-              // 	slide5.classList.remove('activeSlide');
-              // 	slide6.classList.remove('activeSlide');
-              // 	slide4.removeAttribute('style', 'z-index: 10');
-              // 	slide5.removeAttribute('style', 'z-index: 11');
-              // 	slide6.removeAttribute('style', 'z-index: 12');
-              // }
-              ////////////////////////////////////////////////////////////
-              ///////////////// Second screen
-              ////////////////////////////////////////////////////////////
-
-              ////////////////////////////////////////////////////////////
-              ///////////////// Third screen
-              ////////////////////////////////////////////////////////////
-              function $f0a5fc76378d1581cc7b$var$slide3Active() {
-                $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-              } ////////////////////////////////////////////////////////////
-              ///////////////// Fourth screen
-              ////////////////////////////////////////////////////////////
-
-              function $f0a5fc76378d1581cc7b$var$slide4Active() {
-                $f0a5fc76378d1581cc7b$var$selectSlideById(2);
-              } ////////////////////////////////////////////////////////////
-              ///////////////// Fifth screen
-              ////////////////////////////////////////////////////////////
-
-              function $f0a5fc76378d1581cc7b$var$slide5Active() {
-                $f0a5fc76378d1581cc7b$var$selectSlideById(3);
-              } ////////////////////////////////////////////////////////////
-              ///////////////// Sixth screen
-              ////////////////////////////////////////////////////////////
-
-              function $f0a5fc76378d1581cc7b$var$slide6Active() {
-                $f0a5fc76378d1581cc7b$var$selectSlideById(4);
-              }
-            })();
-    </script>
-    <script>
-      (function () {
-        var user = detect.parse(navigator.userAgent);
-        // ASSET: /home/user/Yard/SOD20_1357-DU/src/index.html
-        //////////////////////////////////////////////////////
-        ////////////////////Modal Window//////////////////////
-        //////////////////////////////////////////////////////
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool1 = false;
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool2 = false;
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool3 = false;
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool4 = false;
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool5 = false;
-        var $ef6f92be846a691dd94512c0bed259a0$var$bool6 = false;
-        comics__Slide1.classList.add("active");
-        mikro__Slide1.addEventListener("click", function () {
-          // if (!$ef6f92be846a691dd94512c0bed259a0$var$bool1) {
-            mikro__Slide1.classList.add("active");
-            mikro__img__Slide1.classList.add("hidden");
-            mikro__img1__Slide1.classList.add("visible");
-            comics__Slide1.classList.remove("active");
-            comics1__Slide1.classList.add("active");
-
-
-          //   $ef6f92be846a691dd94512c0bed259a0$var$bool1 = true;
-          // } else {
-          //   mikro__Slide1.classList.remove("active");
-          //   mikro__img__Slide1.classList.remove("hidden");
-          //   mikro__img1__Slide1.classList.remove("visible");
-          //   comics__Slide1.classList.add("active");
-          //   comics1__Slide1.classList.remove("active");
-          //   $ef6f92be846a691dd94512c0bed259a0$var$bool1 = false;
-          // }
-        });
-        mikro__Slide2.addEventListener("click", function () {
-          if (!$ef6f92be846a691dd94512c0bed259a0$var$bool2) {
-            mikro__img__Slide2.classList.add("hidden");
-            mikro__img1__Slide2.classList.add("visible");
-            comics1__Slide2.classList.add("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool2 = true;
-          } else {
-            mikro__img__Slide2.classList.remove("hidden");
-            mikro__img1__Slide2.classList.remove("visible");
-            comics1__Slide2.classList.remove("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool2 = false;
-          }
-        });
-        mikro__Slide3.addEventListener("click", function () {
-          if (!$ef6f92be846a691dd94512c0bed259a0$var$bool3) {
-            mikro__Slide3.classList.add("active");
-            mikro__img__Slide3.classList.add("hidden");
-            mikro__img1__Slide3.classList.add("visible");
-            comics1__Slide3.classList.add("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool3 = true;
-          } else {
-            mikro__Slide3.classList.remove("active");
-            mikro__img__Slide3.classList.remove("hidden");
-            mikro__img1__Slide3.classList.remove("visible");
-            comics1__Slide3.classList.remove("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool3 = false;
-          }
-        });
-        mikro__Slide4.addEventListener("click", function () {
-          if (!$ef6f92be846a691dd94512c0bed259a0$var$bool4) {
-            mikro__Slide4.classList.add("active");
-            mikro__img__Slide4.classList.add("hidden");
-            mikro__img1__Slide4.classList.add("visible");
-            comics1__Slide4.classList.add("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool4 = true;
-          } else {
-            mikro__Slide4.classList.remove("active");
-            mikro__img__Slide4.classList.remove("hidden");
-            mikro__img1__Slide4.classList.remove("visible");
-            comics1__Slide4.classList.remove("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool4 = false;
-          }
-        });
-        mikro__Slide5.addEventListener("click", function () {
-          if (!$ef6f92be846a691dd94512c0bed259a0$var$bool5) {
-            mikro__Slide5.classList.add("active");
-            mikro__img__Slide5.classList.add("hidden");
-            mikro__img1__Slide5.classList.add("visible");
-            comics1__Slide5.classList.add("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool5 = true;
-          } else {
-            mikro__Slide5.classList.remove("active");
-            mikro__img__Slide5.classList.remove("hidden");
-            mikro__img1__Slide5.classList.remove("visible");
-            comics1__Slide5.classList.remove("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool5 = false;
-          }
-        });
-        mikro__Slide6.addEventListener("click", function () {
-          if (!$ef6f92be846a691dd94512c0bed259a0$var$bool6) {
-            mikro__Slide6.classList.add("active");
-            mikro__img__Slide6.classList.add("hidden");
-            mikro__img1__Slide6.classList.add("visible");
-            comics1__Slide6.classList.add("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool6 = true;
-          } else {
-            mikro__Slide6.classList.remove("active");
-            mikro__img__Slide6.classList.remove("hidden");
-            mikro__img1__Slide6.classList.remove("visible");
-            comics1__Slide6.classList.remove("active");
-            $ef6f92be846a691dd94512c0bed259a0$var$bool6 = false;
-          }
-        }); //////////////////////////////////////////////////////
-        ////////////////////Modal Window//////////////////////
-        //////////////////////////////////////////////////////
-
-        modal__img__Slide3.addEventListener("click", function () {
-          modal__Slide3.classList.add("active");
-          mikro__img__Slide3.classList.add("hidden");
-          modal__img__Slide3.classList.add("hidden");
-          mikro__Slide3.classList.add("hidden");
-          next__Slide3.classList.add("hidden");
-          var playPromise = video__Slide3.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        close__Slide3.addEventListener("click", function () {
-          modal__Slide3.classList.remove("active");
-          mikro__img__Slide3.classList.remove("hidden");
-          modal__img__Slide3.classList.remove("hidden");
-          mikro__Slide3.classList.remove("hidden");
-          next__Slide3.classList.remove("hidden");
-          var playPromise = video__Slide3.pause();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        modal__img__Slide4.addEventListener("click", function () {
-          modal__Slide4.classList.add("active");
-          mikro__img__Slide4.classList.add("hidden");
-          modal__img__Slide4.classList.add("hidden");
-          mikro__Slide4.classList.add("hidden");
-          next__Slide4.classList.add("hidden");
-          var playPromise = video__Slide4.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        close__Slide4.addEventListener("click", function () {
-          modal__Slide4.classList.remove("active");
-          mikro__img__Slide4.classList.remove("hidden");
-          modal__img__Slide4.classList.remove("hidden");
-          mikro__Slide4.classList.remove("hidden");
-          next__Slide4.classList.remove("hidden");
-          var playPromise = video__Slide4.pause();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        modal__img__Slide5.addEventListener("click", function () {
-          modal__Slide5.classList.add("active");
-          mikro__img__Slide5.classList.add("hidden");
-          modal__img__Slide5.classList.add("hidden");
-          mikro__Slide5.classList.add("hidden");
-          next__Slide5.classList.add("hidden");
-          var playPromise = video__Slide5.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        close__Slide5.addEventListener("click", function () {
-          modal__Slide5.classList.remove("active");
-          mikro__img__Slide5.classList.remove("hidden");
-          modal__img__Slide5.classList.remove("hidden");
-          mikro__Slide5.classList.remove("hidden");
-          next__Slide5.classList.remove("hidden");
-          var playPromise = video__Slide5.pause();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        modal__img__Slide6.addEventListener("click", function () {
-          modal__Slide6.classList.add("active");
-          mikro__img__Slide6.classList.add("hidden");
-          modal__img__Slide6.classList.add("hidden");
-          mikro__Slide6.classList.add("hidden");
-          next__Slide6.classList.add("hidden");
-          var playPromise = video__Slide6.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        close__Slide6.addEventListener("click", function () {
-          modal__Slide6.classList.remove("active");
-          mikro__img__Slide6.classList.remove("hidden");
-          modal__img__Slide6.classList.remove("hidden");
-          mikro__Slide6.classList.remove("hidden");
-          next__Slide6.classList.remove("hidden");
-          var playPromise = video__Slide6.pause();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        }); //////////////////////////////////////////////////////
-        /////////////////////For Video////////////////////////
-        //////////////////////////////////////////////////////
-
-        muted__Slide3.addEventListener("click", function () {
-          video__Slide3.muted = false;
-          muted__Slide3.setAttribute("style", "visibility: hidden");
-          sound__Slide3.setAttribute("style", "visibility: visible");
-        });
-        sound__Slide3.addEventListener("click", function () {
-          video__Slide3.muted = true;
-          sound__Slide3.setAttribute("style", "visibility: hidden");
-          muted__Slide3.setAttribute("style", "visibility: visible");
-        });
-        replay__Slide3.addEventListener("click", function () {
-          if (video__Slide3.muted) {
-            sound__Slide3.setAttribute("style", "visibility: hidden");
-            muted__Slide3.setAttribute("style", "visibility: visible");
-          } else {
-            muted__Slide3.setAttribute("style", "visibility: hidden");
-            sound__Slide3.setAttribute("style", "visibility: visible");
-          }
-
-          replay__Slide3.setAttribute("style", "visibility: hidden");
-          var playPromise = video__Slide3.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        muted__Slide4.addEventListener("click", function () {
-          video__Slide4.muted = false;
-          muted__Slide4.setAttribute("style", "visibility: hidden");
-          sound__Slide4.setAttribute("style", "visibility: visible");
-        });
-        sound__Slide4.addEventListener("click", function () {
-          video__Slide4.muted = true;
-          sound__Slide4.setAttribute("style", "visibility: hidden");
-          muted__Slide4.setAttribute("style", "visibility: visible");
-        });
-        replay__Slide4.addEventListener("click", function () {
-          if (video__Slide4.muted) {
-            sound__Slide4.setAttribute("style", "visibility: hidden");
-            muted__Slide4.setAttribute("style", "visibility: visible");
-          } else {
-            muted__Slide4.setAttribute("style", "visibility: hidden");
-            sound__Slide4.setAttribute("style", "visibility: visible");
-          }
-
-          replay__Slide4.setAttribute("style", "visibility: hidden");
-          var playPromise = video__Slide4.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        muted__Slide5.addEventListener("click", function () {
-          video__Slide5.muted = false;
-          muted__Slide5.setAttribute("style", "visibility: hidden");
-          sound__Slide5.setAttribute("style", "visibility: visible");
-        });
-        sound__Slide5.addEventListener("click", function () {
-          video__Slide5.muted = true;
-          sound__Slide5.setAttribute("style", "visibility: hidden");
-          muted__Slide5.setAttribute("style", "visibility: visible");
-        });
-        replay__Slide5.addEventListener("click", function () {
-          if (video__Slide5.muted) {
-            sound__Slide5.setAttribute("style", "visibility: hidden");
-            muted__Slide5.setAttribute("style", "visibility: visible");
-          } else {
-            muted__Slide5.setAttribute("style", "visibility: hidden");
-            sound__Slide5.setAttribute("style", "visibility: visible");
-          }
-
-          replay__Slide5.setAttribute("style", "visibility: hidden");
-          var playPromise = video__Slide5.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-        muted__Slide6.addEventListener("click", function () {
-          video__Slide6.muted = false;
-          muted__Slide6.setAttribute("style", "visibility: hidden");
-          sound__Slide6.setAttribute("style", "visibility: visible");
-        });
-        sound__Slide6.addEventListener("click", function () {
-          video__Slide6.muted = true;
-          sound__Slide6.setAttribute("style", "visibility: hidden");
-          muted__Slide6.setAttribute("style", "visibility: visible");
-        });
-        replay__Slide6.addEventListener("click", function () {
-          if (video__Slide6.muted) {
-            sound__Slide6.setAttribute("style", "visibility: hidden");
-            muted__Slide6.setAttribute("style", "visibility: visible");
-          } else {
-            muted__Slide6.setAttribute("style", "visibility: hidden");
-            sound__Slide6.setAttribute("style", "visibility: visible");
-          }
-
-          replay__Slide6.setAttribute("style", "visibility: hidden");
-          var playPromise = video__Slide6.play();
-
-          if (playPromise !== undefined) {
-            playPromise.then((_) => {}).catch((error) => {});
-          }
-        });
-      })();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
