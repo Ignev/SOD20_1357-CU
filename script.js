@@ -46,12 +46,25 @@ next__Slide1.addEventListener('click', function(){
   slide2.classList.remove('activeSlide');
         slide2.removeAttribute('style', 'z-index: 1');
 });
+nextSlideBtn = (num) =>{
+  next__Slide2.addEventListener('click', function(){
+    if(num === 3){
+      slide3Active();
+    }
+    if(num === 4){
+      slide4Active();
+    }
+    if(num === 5){
+      slide5Active();
+    }
+    if(num === 6){
+      slide6Active();
+    }
+    slide2.classList.remove('activeSlide');
+          slide2.removeAttribute('style', 'z-index: 1');
+  });
+}
 
-next__Slide2.addEventListener('click', function(){
-  slide5Active();
-  slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-});
 
 next__Slide3.addEventListener('click', function(){
   slide4Active();
@@ -506,7 +519,7 @@ let micro3Slid = () => {
     mikro__img__Slide1.classList.add("hidden");
     mikro__img1__Slide1.classList.add("visible");
     comics1__Slide1.classList.add("active");
-    count = 1;
+    count = 3;
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
@@ -534,7 +547,7 @@ let micro4Slid = () => {
     mikro__img1__Slide3.classList.add("visible");
     comics1__Slide3.classList.add("active");
     recognition.start();
-    count = 3;
+    count = 4;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
         slide4Active();
@@ -562,7 +575,7 @@ let micro5Slid = () => {
     mikro__img1__Slide4.classList.add("visible");
     comics1__Slide4.classList.add("active");
     recognition.start();
-    count = 4;
+    count = 5;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
         slide5Active();
@@ -589,7 +602,7 @@ let micro6Slid = () => {
     mikro__img__Slide5.classList.add("hidden");
     mikro__img1__Slide5.classList.add("visible");
     comics1__Slide5.classList.add("active");
-    count = 2;
+    count = 6;
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
@@ -618,7 +631,7 @@ let micro31Slid = () => {
     mikro__img1__Slide6.classList.add("visible");
     comics1__Slide6.classList.add("active");
     recognition.start();
-    count = 0;
+    count = 3;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
         slide3Active();
@@ -657,7 +670,7 @@ let nextSlid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        slide2Active();
+        nextSlideBtn(count);
         slide2.classList.remove('activeSlide');
         slide2.removeAttribute('style', 'z-index: 1');
       }
@@ -679,3 +692,4 @@ let nextSlid = () => {
 };
 
 nextSlid();
+nextSlideBtn();
