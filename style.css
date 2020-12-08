@@ -44,7 +44,7 @@ body {
 
 @media screen and (max-width: 900px) {
   body {
-    align-items: start;
+    align-items: center;
     justify-content: center;
     background: #ffffff;
   }

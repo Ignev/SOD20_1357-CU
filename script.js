@@ -361,6 +361,7 @@ let count;
 
 let micro3Slid = () => {
   mikro__Slide1.addEventListener("click", function () {
+    comics__Slide1.classList.remove("active");
     mikro__Slide1.classList.add("active");
     mikro__img__Slide1.classList.add("hidden");
     mikro__img1__Slide1.classList.add("visible");
