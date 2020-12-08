@@ -556,7 +556,7 @@ let nextSlid = () => {
       console.log("Confidence: " + event.results[0][0].confidence);
       
     };
-    ecognition.onspeechend = function () {
+    recognition.onspeechend = function () {
       recognition.stop();
       mikro__Slide2.classList.remove("active");
       mikro__img__Slide2.classList.remove("hidden");
