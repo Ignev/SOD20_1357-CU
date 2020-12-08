@@ -13,124 +13,242 @@ const SpeechRecognitionEvent =
   window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
 // }
 
-var $f0a5fc76378d1581cc7b$var$hellopreloader = document.getElementById(
-  "hellopreloader_preload"
-);
+var hellopreloader = document.getElementById("hellopreloader_preload");
 
-function $f0a5fc76378d1581cc7b$var$fadeOutnojquery(el) {
-  el.style.opacity = 1;
-  var interhellopreloader = setInterval(function () {
-    el.style.opacity = el.style.opacity - 0.05;
-
-    if (el.style.opacity <= 0.05) {
-      clearInterval(interhellopreloader);
-      $f0a5fc76378d1581cc7b$var$hellopreloader.style.display = "none";
+    function fadeOutnojquery(el) {
+        el.style.opacity = 1;
+        var interhellopreloader = setInterval(function() {
+            el.style.opacity = el.style.opacity - 0.05;
+            if (el.style.opacity <= 0.05) {
+                clearInterval(interhellopreloader);
+                hellopreloader.style.display = "none";
+            }
+        }, 16);
     }
-  }, 16);
+    window.onload = function() {
+        setTimeout(function() {
+            fadeOutnojquery(hellopreloader);
+            setTimeout(play, 250);
+        }, 1000);
+    };
+
+    function play(){
+      slide1.classList.add('activeSlide');
+    	text__Slide1.classList.add('activeText');
+      // mikro__Slide1.classList.add('mikro__Slide1Active')
+      console.log(1);
+    }
+
+
+
+next__Slide1.addEventListener('click', function(){
+  slide3Active();
+});
+
+next__Slide2.addEventListener('click', function(){
+  slide5Active();
+});
+
+next__Slide3.addEventListener('click', function(){
+  slide4Active();
+});
+
+next__Slide4.addEventListener('click', function(){
+  slide5Active();
+});
+
+next__Slide5.addEventListener('click', function(){
+  slide6Active();
+  slide3.classList.remove('activeSlide');
+});
+
+next__Slide6.addEventListener('click', function(){
+  slide3Active();
+  // slide4.classList.remove('activeSlide');
+  // slide5.classList.remove('activeSlide');
+  // slide6.classList.remove('activeSlide');
+  slide4.setAttribute('style', 'z-index: 10');
+  slide5.setAttribute('style', 'z-index: 11');
+  slide6.setAttribute('style', 'z-index: 12');
+  slide1.setAttribute('style', 'z-index: 5');
+  setTimeout(loopStart, 700);
+});
+
+function loopStart(){
+  slide1.classList.remove('activeSlide');
+  text__Slide1.classList.remove('activeText');
+  slide4.classList.remove('activeSlide');
+  slide5.classList.remove('activeSlide');
+  slide6.classList.remove('activeSlide');
+  slide4.removeAttribute('style', 'z-index: 10');
+  slide5.removeAttribute('style', 'z-index: 11');
+  slide6.removeAttribute('style', 'z-index: 12');
 }
 
-window.onload = function () {
-  setTimeout(function () {
-    $f0a5fc76378d1581cc7b$var$fadeOutnojquery(
-      $f0a5fc76378d1581cc7b$var$hellopreloader
-    );
-    setTimeout($f0a5fc76378d1581cc7b$var$play, 250);
-  }, 1000);
-};
-
-const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
-  let currentSlideId = slideId;
-  const defaults = {
-    selectors: {
-      activeSlide: "activeSlide",
-      activeText: "activeText",
-    },
-    fadeHeaderDelay: 750,
-  };
-  const slides = [slide1, slide3, slide4, slide5, slide6];
-  const headers = [
-    text__Slide1,
-    text__Slide3,
-    text__Slide4,
-    text__Slide5,
-    text__Slide6,
-  ];
-
-  if (currentSlideId === 0) {
-    slides.forEach((slide) => {
-      slide.classList.remove(defaults.selectors.activeSlide);
-    });
-    $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-  }
-
-  slides.forEach((slide, slideId) => {
-    if (currentSlideId === slideId) {
-      slide.classList.add(defaults.selectors.activeSlide);
-      setTimeout(() => {
-        headers[slideId].classList.add(defaults.selectors.activeText);
-      }, defaults.fadeHeaderDelay);
-    } else {
-      headers[slideId].classList.remove(defaults.selectors.activeText);
-    }
-  });
-};
-
-function $f0a5fc76378d1581cc7b$var$play() {
-  const slide1 = document.querySelector(".slide1");
-  slide1.classList.add("activeSlide");
-  text__Slide1.classList.add("activeText"); ////////
-} ////////////////////////////////////////////////////
-///////////////// functions for switching screens by buttons
-////////////////////////////////////////////////////////////
-
-next__Slide1.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$slide3Active();
-});
-next__Slide2.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$slide5Active();
-});
-next__Slide3.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$slide4Active();
-});
-next__Slide4.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$slide5Active();
-});
-next__Slide5.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$slide6Active();
-  slide3.classList.remove("activeSlide");
-});
-next__Slide6.addEventListener("click", function () {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(0);
-  
-});
-////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////// 
 ///////////////// Second screen
-////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////// 
 
-////////////////////////////////////////////////////////////
-///////////////// Third screen
-////////////////////////////////////////////////////////////
-function $f0a5fc76378d1581cc7b$var$slide3Active() {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-} ////////////////////////////////////////////////////////////
-///////////////// Fourth screen
-////////////////////////////////////////////////////////////
-
-function $f0a5fc76378d1581cc7b$var$slide4Active() {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(2);
-} ////////////////////////////////////////////////////////////
-///////////////// Fifth screen
-////////////////////////////////////////////////////////////
-
-function $f0a5fc76378d1581cc7b$var$slide5Active() {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(3);
-} ////////////////////////////////////////////////////////////
-///////////////// Sixth screen
-////////////////////////////////////////////////////////////
-
-function $f0a5fc76378d1581cc7b$var$slide6Active() {
-  $f0a5fc76378d1581cc7b$var$selectSlideById(4);
+function slide2Active() {
+  slide2.classList.add('activeSlide');
+  setTimeout(slide2Text, 750);
 }
+
+function slide2Text(){
+  text__Slide2.classList.add('activeText');
+}
+
+//////////////////////////////////////////////////////////// 
+///////////////// Third screen
+//////////////////////////////////////////////////////////// 
+
+function slide3Active() {
+  slide3.classList.add('activeSlide');
+  setTimeout(slide3Text, 750);
+}
+
+function slide3Text(){
+  text__Slide3.classList.add('activeText');
+}
+
+//////////////////////////////////////////////////////////// 
+///////////////// Fourth screen
+//////////////////////////////////////////////////////////// 
+
+function slide4Active() {
+  slide4.classList.add('activeSlide');
+  setTimeout(slide4Text, 750);
+}
+
+function slide4Text(){
+  text__Slide4.classList.add('activeText');
+}
+
+//////////////////////////////////////////////////////////// 
+///////////////// Fifth screen
+//////////////////////////////////////////////////////////// 
+
+function slide5Active() {
+  slide5.classList.add('activeSlide');
+  setTimeout(slide5Text, 750);
+}
+
+function slide5Text(){
+  text__Slide5.classList.add('activeText');
+}
+
+//////////////////////////////////////////////////////////// 
+///////////////// Sixth screen
+//////////////////////////////////////////////////////////// 
+
+function slide6Active() {
+  slide6.classList.add('activeSlide');
+  setTimeout(slide6Text, 750);
+}
+
+function slide6Text(){
+  text__Slide6.classList.add('activeText');
+}
+
+
+
+
+
+
+
+// const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
+//   let currentSlideId = slideId;
+//   const defaults = {
+//     selectors: {
+//       activeSlide: "activeSlide",
+//       activeText: "activeText",
+//     },
+//     fadeHeaderDelay: 750,
+//   };
+//   const slides = [slide1, slide3, slide4, slide5, slide6];
+//   const headers = [
+//     text__Slide1,
+//     text__Slide3,
+//     text__Slide4,
+//     text__Slide5,
+//     text__Slide6,
+//   ];
+
+//   if (currentSlideId === 0) {
+//     slides.forEach((slide) => {
+//       slide.classList.remove(defaults.selectors.activeSlide);
+//     });
+//     $f0a5fc76378d1581cc7b$var$selectSlideById(1);
+//   }
+
+//   slides.forEach((slide, slideId) => {
+//     if (currentSlideId === slideId) {
+//       slide.classList.add(defaults.selectors.activeSlide);
+//       setTimeout(() => {
+//         headers[slideId].classList.add(defaults.selectors.activeText);
+//       }, defaults.fadeHeaderDelay);
+//     } else {
+//       headers[slideId].classList.remove(defaults.selectors.activeText);
+//     }
+//   });
+// };
+
+// function $f0a5fc76378d1581cc7b$var$play() {
+//   const slide1 = document.querySelector(".slide1");
+//   slide1.classList.add("activeSlide");
+//   text__Slide1.classList.add("activeText"); ////////
+// } ////////////////////////////////////////////////////
+// ///////////////// functions for switching screens by buttons
+// ////////////////////////////////////////////////////////////
+
+// next__Slide1.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$slide3Active();
+// });
+// next__Slide2.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$slide5Active();
+// });
+// next__Slide3.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$slide4Active();
+// });
+// next__Slide4.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$slide5Active();
+// });
+// next__Slide5.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$slide6Active();
+//   slide3.classList.remove("activeSlide");
+// });
+// next__Slide6.addEventListener("click", function () {
+//   $f0a5fc76378d1581cc7b$var$selectSlideById(0);
+  
+// });
+// ////////////////////////////////////////////////////////////
+// ///////////////// Second screen
+// ////////////////////////////////////////////////////////////
+
+// ////////////////////////////////////////////////////////////
+// ///////////////// Third screen
+// ////////////////////////////////////////////////////////////
+// function $f0a5fc76378d1581cc7b$var$slide3Active() {
+//   $f0a5fc76378d1581cc7b$var$selectSlideById(1);
+// } ////////////////////////////////////////////////////////////
+// ///////////////// Fourth screen
+// ////////////////////////////////////////////////////////////
+
+// function $f0a5fc76378d1581cc7b$var$slide4Active() {
+//   $f0a5fc76378d1581cc7b$var$selectSlideById(2);
+// } ////////////////////////////////////////////////////////////
+// ///////////////// Fifth screen
+// ////////////////////////////////////////////////////////////
+
+// function $f0a5fc76378d1581cc7b$var$slide5Active() {
+//   $f0a5fc76378d1581cc7b$var$selectSlideById(3);
+// } ////////////////////////////////////////////////////////////
+// ///////////////// Sixth screen
+// ////////////////////////////////////////////////////////////
+
+// function $f0a5fc76378d1581cc7b$var$slide6Active() {
+//   $f0a5fc76378d1581cc7b$var$selectSlideById(4);
+// }
 modal__img__Slide3.addEventListener("click", function () {
   modal__Slide3.classList.add("active");
   mikro__img__Slide3.classList.add("hidden");
@@ -370,17 +488,10 @@ let micro3Slid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-          slide1.classList.remove('activeSlide');
-          text__Slide1.classList.remove('activeText');
-        $f0a5fc76378d1581cc7b$var$slide3Active();
+        slide3Active();
       }
       else{
-        slide1.classList.remove('activeSlide');
-        text__Slide1.classList.remove('activeText');
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -404,17 +515,10 @@ let micro4Slid = () => {
     count = 3;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        slide3.classList.remove('activeSlide');
-        text__Slide3.classList.remove('activeText');
-        $f0a5fc76378d1581cc7b$var$slide4Active();
+        slide4Active();
       }
       else{
-        slide3.classList.remove('activeSlide');
-        text__Slide3.classList.remove('activeText');
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -439,17 +543,10 @@ let micro5Slid = () => {
     count = 4;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        slide4.classList.remove('activeSlide');
-        text__Slide4.classList.remove('activeText');
-        $f0a5fc76378d1581cc7b$var$slide5Active();
+        slide5Active();
       }
       else{
-        slide4.classList.remove('activeSlide');
-        text__Slide4.classList.remove('activeText');
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -474,17 +571,10 @@ let micro6Slid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        slide5.classList.remove('activeSlide');
-        text__Slide5.classList.remove('activeText');
-        $f0a5fc76378d1581cc7b$var$slide6Active();
+        slide6Active();
       }
       else{
-        slide5.classList.remove('activeSlide');
-        text__Slide5.classList.remove('activeText');
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -509,17 +599,18 @@ let micro31Slid = () => {
     count = 0;
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        slide6.classList.remove('activeSlide');
-        text__Slide6.classList.remove('activeText');
-        $f0a5fc76378d1581cc7b$var$selectSlideById(0);
+        slide3Active();
+        // slide4.classList.remove('activeSlide');
+        // slide5.classList.remove('activeSlide');
+        // slide6.classList.remove('activeSlide');
+        slide4.setAttribute('style', 'z-index: 10');
+        slide5.setAttribute('style', 'z-index: 11');
+        slide6.setAttribute('style', 'z-index: 12');
+        slide1.setAttribute('style', 'z-index: 5');
+        setTimeout(loopStart, 700);
       }
       else{
-        slide6.classList.remove('activeSlide');
-        text__Slide6.classList.remove('activeText');
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
     };
@@ -544,15 +635,10 @@ let nextSlid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
-        $f0a5fc76378d1581cc7b$var$selectSlideById(count++);
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
+        slide2Active();
       }
       else{
-        slide2.classList.remove("activeSlide");
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.add('activeSlide');
-        text__Slide2.classList.add('activeText');
+        slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
       
