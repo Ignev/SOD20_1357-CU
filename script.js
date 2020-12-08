@@ -556,12 +556,12 @@ let nextSlid = () => {
       console.log("Confidence: " + event.results[0][0].confidence);
       
     };
-    recognition.onspeechend = function () {
+    ecognition.onspeechend = function () {
       recognition.stop();
-      mikro__Slide6.classList.remove("active");
-      mikro__img__Slide6.classList.remove("hidden");
-      mikro__img1__Slide6.classList.remove("visible");
-      comics1__Slide6.classList.remove("active");
+      mikro__Slide2.classList.remove("active");
+      mikro__img__Slide2.classList.remove("hidden");
+      mikro__img1__Slide2.classList.remove("visible");
+      comics1__Slide2.classList.remove("active");
     };
   });
   
