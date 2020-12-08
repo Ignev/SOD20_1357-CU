@@ -368,7 +368,7 @@ let micro3Slid = () => {
     count = 1;
     recognition.start();
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
           slide1.classList.remove('activeSlide');
           text__Slide1.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide3Active();
@@ -402,7 +402,7 @@ let micro4Slid = () => {
     recognition.start();
     count = 3;
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
         slide3.classList.remove('activeSlide');
         text__Slide3.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide4Active();
@@ -437,7 +437,7 @@ let micro5Slid = () => {
     recognition.start();
     count = 4;
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
         slide4.classList.remove('activeSlide');
         text__Slide4.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide5Active();
@@ -472,7 +472,7 @@ let micro6Slid = () => {
     count = 2;
     recognition.start();
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
         slide5.classList.remove('activeSlide');
         text__Slide5.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$slide6Active();
@@ -507,7 +507,7 @@ let micro31Slid = () => {
     recognition.start();
     count = 0;
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
         slide6.classList.remove('activeSlide');
         text__Slide6.classList.remove('activeText');
         $f0a5fc76378d1581cc7b$var$selectSlideById(0);
@@ -542,7 +542,7 @@ let nextSlid = () => {
     comics1__Slide2.classList.add("active");
     recognition.start();
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.85) {
+      if (event.results[0][0].confidence >= 0.75) {
         $f0a5fc76378d1581cc7b$var$selectSlideById(count++);
         slide2.classList.remove("activeSlide");
         text__Slide2.classList.remove("activeText");
