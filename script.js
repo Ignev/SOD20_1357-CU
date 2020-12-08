@@ -47,7 +47,6 @@ next__Slide1.addEventListener('click', function(){
         slide2.removeAttribute('style', 'z-index: 1');
 });
 nextSlideBtn = (num) =>{
-  next__Slide2.addEventListener('click', function(){
     if(num === 3){
       slide3Active();
     }
@@ -62,7 +61,7 @@ nextSlideBtn = (num) =>{
     }
     slide2.classList.remove('activeSlide');
           slide2.removeAttribute('style', 'z-index: 1');
-  });
+  
 }
 
 
@@ -127,6 +126,7 @@ function slide2Active() {
   slide2.classList.add('activeSlide');
   slide2.removeAttribute('style', 'z-index: 100');
   setTimeout(slide2Text, 750);
+  console.log(156);
 }
 
 function slide2Text(){
@@ -670,6 +670,7 @@ let nextSlid = () => {
     recognition.start();
     recognition.onresult = function (event) {
       if (event.results[0][0].confidence >= 0.70) {
+        console.log(count);
         nextSlideBtn(count);
         slide2.classList.remove('activeSlide');
         slide2.removeAttribute('style', 'z-index: 1');
@@ -690,6 +691,7 @@ let nextSlid = () => {
   });
   
 };
-
+next__Slide2.addEventListener('click', function(){
+  nextSlideBtn(count);
+});
 nextSlid();
-nextSlideBtn();
