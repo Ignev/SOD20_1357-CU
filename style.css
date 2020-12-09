@@ -778,7 +778,7 @@ body {
   width: 65%;
   height: 20%;
   bottom: 80px;
-  left: 21px;
+  left: 23px;
   transition: 0.4s;
   transform: translateX(10px);
   opacity: 0;
@@ -956,8 +956,8 @@ comics1__Slide4.acitve {
 .text__Slide5 {
   background: url(./assets/fonts/GroupThree.svg) 0% 100% no-repeat;
   background-size: contain;
-  width: 77%;
-  height: 32%;
+  width: 76%;
+  height: 31%;
   bottom: 80px;
   left: 24px;
   transition: 0.4s;
@@ -1145,7 +1145,7 @@ comics1__Slide4.acitve {
   width: 67.5%;
   height: 17.5%;
   top: 155px;
-  left: 24px;
+  left: 26px;
   transition: 0.4s;
   transform: translateX(10px);
   opacity: 0;
