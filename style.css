@@ -775,8 +775,8 @@ body {
 .text__Slide4 {
   background: url(./assets/fonts/GroupFo.svg) 0% 100% no-repeat;
   background-size: contain;
-  width: 70%;
-  height: 25%;
+  width: 65%;
+  height: 20%;
   bottom: 80px;
   left: 21px;
   transition: 0.4s;
@@ -956,8 +956,8 @@ comics1__Slide4.acitve {
 .text__Slide5 {
   background: url(./assets/fonts/GroupThree.svg) 0% 100% no-repeat;
   background-size: contain;
-  width: 75%;
-  height: 30%;
+  width: 77%;
+  height: 32%;
   bottom: 80px;
   left: 24px;
   transition: 0.4s;
@@ -1142,8 +1142,8 @@ comics1__Slide4.acitve {
 .text__Slide6 {
   background: url(./assets/fonts/GroupSix.svg) 0% 100% no-repeat;
   background-size: contain;
-  width: 69%;
-  height: 19%;
+  width: 67.5%;
+  height: 17.5%;
   top: 155px;
   left: 24px;
   transition: 0.4s;
