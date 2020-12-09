@@ -152,7 +152,7 @@ body {
   background-size: contain;
   width: 70%;
   height: 24%;
-  bottom: 78px;
+  bottom: 80px;
   left: 21px;
   transition: 0.4s;
   transform: translateX(10px);
@@ -413,7 +413,7 @@ body {
 }
 
 .text__Slide2 {
-  background: url(./assets/fonts/text-banner-0.svg) 0% 100% no-repeat;
+  background: url(./assets/fonts/GroupTwo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
@@ -592,11 +592,11 @@ body {
 }
 
 .text__Slide3 {
-  background: url(./assets/fonts/text-banner-2.svg) 0% 100% no-repeat;
+  background: url(./assets/fonts/Groupfive.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
-  bottom: 70px;
+  bottom: 75px;
   left: 21px;
   transition: 0.4s;
   transform: translateX(10px);
@@ -773,11 +773,11 @@ body {
 }
 
 .text__Slide4 {
-  background: url(./assets/fonts/text-banner-3.svg) 0% 100% no-repeat;
+  background: url(./assets/fonts/GroupFo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 25%;
-  bottom: 70px;
+  bottom: 75px;
   left: 21px;
   transition: 0.4s;
   transform: translateX(10px);
@@ -954,11 +954,11 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide5 {
-  background: url(./assets/fonts/text-banner-4.svg) 0% 100% no-repeat;
+  background: url(./assets/fonts/GroupThree.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 25%;
-  bottom: 73px;
+  bottom: 75px;
   left: 24px;
   transition: 0.4s;
   transform: translateX(10px);
@@ -1140,11 +1140,11 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide6 {
-  background: url(./assets/fonts/text-banner-5.svg) 0% 100% no-repeat;
+  background: url(./assets/fonts/GroupSix.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 20%;
-  top: 134px;
+  top: 155px;
   left: 24px;
   transition: 0.4s;
   transform: translateX(10px);
