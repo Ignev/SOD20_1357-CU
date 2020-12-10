@@ -577,17 +577,25 @@ let nextSlid = () => {
     mikro__img1__Slide2.classList.add("visible");
     comics1__Slide2.classList.add("active");
     recognition.start();
+
+
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.7) {
-        console.log(count);
-        nextSlideBtn(count);
-        text__Slide2.classList.remove("activeText");
-        slide2.classList.remove("activeSlide");
-        slide2.removeAttribute("style", "z-index: 1");
-      } else {
-        slide2Active();
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
+            console.log(count);
+            nextSlideBtn(count);
+            text__Slide2.classList.remove("activeText");
+            slide2.classList.remove("activeSlide");
+            slide2.removeAttribute("style", "z-index: 1");
+          } else {
+            slide2Active();
+          }
+        });
       }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
