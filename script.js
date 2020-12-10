@@ -55,8 +55,8 @@ nextSlideBtn = (num) => {
   if (num === 6) {
     slide6Active();
   }
-  slide2.classList.remove("activeSlide");
-  slide2.removeAttribute("style", "z-index: 1");
+  // slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 20");
 };
 
 next__Slide3.addEventListener("click", function () {
@@ -473,10 +473,16 @@ let micro5Slid = () => {
         arResult.forEach(function (i, v) {
           if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
             slide5Active();
+            console.log(15);
           } else {
             text__Slide4.classList.remove("activeText");
             slide4.classList.remove("activeSlide");
+            
             slide2Active();
+
+            text__Slide3.classList.remove("activeText");
+            slide3.classList.remove("activeSlide");
+            console.log(55);
           }
         });
       }
@@ -513,6 +519,8 @@ let micro6Slid = () => {
             text__Slide5.classList.remove("activeText");
             slide5.classList.remove("activeSlide");
             slide2Active();
+            text__Slide4.classList.remove("activeText");
+            slide4.classList.remove("activeSlide");
           }
         });
       }
@@ -607,6 +615,9 @@ let nextSlid = () => {
   });
 };
 next__Slide2.addEventListener("click", function () {
+  text__Slide2.classList.remove("activeText");
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
   nextSlideBtn(count);
 });
 nextSlid();
