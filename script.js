@@ -15,276 +15,148 @@ const SpeechRecognitionEvent =
 
 var hellopreloader = document.getElementById("hellopreloader_preload");
 
-    function fadeOutnojquery(el) {
-        el.style.opacity = 1;
-        var interhellopreloader = setInterval(function() {
-            el.style.opacity = el.style.opacity - 0.05;
-            if (el.style.opacity <= 0.05) {
-                clearInterval(interhellopreloader);
-                hellopreloader.style.display = "none";
-            }
-        }, 16);
+function fadeOutnojquery(el) {
+  el.style.opacity = 1;
+  var interhellopreloader = setInterval(function () {
+    el.style.opacity = el.style.opacity - 0.05;
+    if (el.style.opacity <= 0.05) {
+      clearInterval(interhellopreloader);
+      hellopreloader.style.display = "none";
     }
-    window.onload = function() {
-        setTimeout(function() {
-            fadeOutnojquery(hellopreloader);
-            setTimeout(play, 250);
-        }, 1000);
-    };
+  }, 16);
+}
+window.onload = function () {
+  setTimeout(function () {
+    fadeOutnojquery(hellopreloader);
+    setTimeout(play, 250);
+  }, 1000);
+};
 
-    function play(){
-      slide1.classList.add('activeSlide');
-    	text__Slide1.classList.add('activeText');
-      // mikro__Slide1.classList.add('mikro__Slide1Active')
-      console.log(1);
-    }
-
-
-
-next__Slide1.addEventListener('click', function(){
-  slide3Active();
-  slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-});
-nextSlideBtn = (num) =>{
-    if(num === 3){
-      slide3Active();
-    }
-    if(num === 4){
-      slide4Active();
-    }
-    if(num === 5){
-      slide5Active();
-    }
-    if(num === 6){
-      slide6Active();
-    }
-    slide2.classList.remove('activeSlide');
-          slide2.removeAttribute('style', 'z-index: 1');
-  
+function play() {
+  slide1.classList.add("activeSlide");
+  text__Slide1.classList.add("activeText");
+  console.log(1);
 }
 
-
-next__Slide3.addEventListener('click', function(){
-  slide4Active();
-  slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-});
-
-next__Slide4.addEventListener('click', function(){
-  slide5Active();
-  slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-});
-
-next__Slide5.addEventListener('click', function(){
-  slide6Active();
-  slide3.classList.remove('activeSlide');
-  slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-});
-
-next__Slide6.addEventListener('click', function(){
-  text__Slide3.classList.remove('activeText');
+next__Slide1.addEventListener("click", function () {
   slide3Active();
-  // slide4.classList.remove('activeSlide');
-  // slide5.classList.remove('activeSlide');
-  // slide6.classList.remove('activeSlide');
-  slide4.setAttribute('style', 'z-index: 10');
-  slide5.setAttribute('style', 'z-index: 11');
-  slide6.setAttribute('style', 'z-index: 12');
-  slide1.setAttribute('style', 'z-index: 5');
-  slide2.removeAttribute('style', 'z-index: 1');
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+});
+nextSlideBtn = (num) => {
+  if (num === 3) {
+    slide3Active();
+  }
+  if (num === 4) {
+    slide4Active();
+  }
+  if (num === 5) {
+    slide5Active();
+  }
+  if (num === 6) {
+    slide6Active();
+  }
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+};
+
+next__Slide3.addEventListener("click", function () {
+  slide4Active();
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+});
+
+next__Slide4.addEventListener("click", function () {
+  slide5Active();
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+});
+
+next__Slide5.addEventListener("click", function () {
+  slide6Active();
+  slide3.classList.remove("activeSlide");
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+});
+
+next__Slide6.addEventListener("click", function () {
+  text__Slide3.classList.remove("activeText");
+  slide3Active();
+  slide4.setAttribute("style", "z-index: 10");
+  slide5.setAttribute("style", "z-index: 11");
+  slide6.setAttribute("style", "z-index: 12");
+  slide1.setAttribute("style", "z-index: 5");
+  slide2.removeAttribute("style", "z-index: 1");
   setTimeout(loopStart, 700);
 });
 
-function loopStart(){
-  slide1.classList.remove('activeSlide');
-  text__Slide1.classList.remove('activeText');
-  text__Slide2.classList.remove('activeText');
-  text__Slide3.classList.remove('activeText');
-  text__Slide4.classList.remove('activeText');
-  text__Slide5.classList.remove('activeText');
-  text__Slide6.classList.remove('activeText');
-  slide4.classList.remove('activeSlide');
-  slide5.classList.remove('activeSlide');
-  slide6.classList.remove('activeSlide');
-  text__Slide2.classList.remove('activeText');
-  slide2.classList.remove('activeSlide');
-  slide2.removeAttribute('style', 'z-index: 1');
-  slide4.removeAttribute('style', 'z-index: 10');
-  slide5.removeAttribute('style', 'z-index: 11');
-  slide6.removeAttribute('style', 'z-index: 12');
-  slide1.setAttribute('style', 'z-index: 5');
-  
+function loopStart() {
+  slide1.classList.remove("activeSlide");
+  text__Slide1.classList.remove("activeText");
+  text__Slide2.classList.remove("activeText");
+  text__Slide3.classList.remove("activeText");
+  text__Slide4.classList.remove("activeText");
+  text__Slide5.classList.remove("activeText");
+  text__Slide6.classList.remove("activeText");
+  slide4.classList.remove("activeSlide");
+  slide5.classList.remove("activeSlide");
+  slide6.classList.remove("activeSlide");
+  text__Slide2.classList.remove("activeText");
+  slide2.classList.remove("activeSlide");
+  slide2.removeAttribute("style", "z-index: 1");
+  slide4.removeAttribute("style", "z-index: 10");
+  slide5.removeAttribute("style", "z-index: 11");
+  slide6.removeAttribute("style", "z-index: 12");
+  slide1.setAttribute("style", "z-index: 5");
 }
 
-//////////////////////////////////////////////////////////// 
-///////////////// Second screen
-//////////////////////////////////////////////////////////// 
-
 function slide2Active() {
-  slide2.classList.add('activeSlide');
-  slide2.removeAttribute('style', 'z-index: 100');
+  slide2.classList.add("activeSlide");
+  slide2.removeAttribute("style", "z-index: 100");
   setTimeout(slide2Text, 750);
   console.log(156);
 }
 
-function slide2Text(){
-  text__Slide2.classList.add('activeText');
+function slide2Text() {
+  text__Slide2.classList.add("activeText");
 }
 
-//////////////////////////////////////////////////////////// 
-///////////////// Third screen
-//////////////////////////////////////////////////////////// 
-
 function slide3Active() {
-  slide3.classList.add('activeSlide');
+  slide3.classList.add("activeSlide");
   setTimeout(slide3Text, 750);
 }
 
-function slide3Text(){
-  text__Slide3.classList.add('activeText');
+function slide3Text() {
+  text__Slide3.classList.add("activeText");
 }
 
-//////////////////////////////////////////////////////////// 
-///////////////// Fourth screen
-//////////////////////////////////////////////////////////// 
-
 function slide4Active() {
-  slide4.classList.add('activeSlide');
+  slide4.classList.add("activeSlide");
   setTimeout(slide4Text, 750);
 }
 
-function slide4Text(){
-  text__Slide4.classList.add('activeText');
+function slide4Text() {
+  text__Slide4.classList.add("activeText");
 }
 
-//////////////////////////////////////////////////////////// 
-///////////////// Fifth screen
-//////////////////////////////////////////////////////////// 
-
 function slide5Active() {
-  slide5.classList.add('activeSlide');
+  slide5.classList.add("activeSlide");
   setTimeout(slide5Text, 750);
 }
 
-function slide5Text(){
-  text__Slide5.classList.add('activeText');
+function slide5Text() {
+  text__Slide5.classList.add("activeText");
 }
 
-//////////////////////////////////////////////////////////// 
-///////////////// Sixth screen
-//////////////////////////////////////////////////////////// 
-
 function slide6Active() {
-  slide6.classList.add('activeSlide');
+  slide6.classList.add("activeSlide");
   setTimeout(slide6Text, 750);
 }
 
-function slide6Text(){
-  text__Slide6.classList.add('activeText');
+function slide6Text() {
+  text__Slide6.classList.add("activeText");
 }
 
-
-
-
-
-
-
-// const $f0a5fc76378d1581cc7b$var$selectSlideById = (slideId) => {
-//   let currentSlideId = slideId;
-//   const defaults = {
-//     selectors: {
-//       activeSlide: "activeSlide",
-//       activeText: "activeText",
-//     },
-//     fadeHeaderDelay: 750,
-//   };
-//   const slides = [slide1, slide3, slide4, slide5, slide6];
-//   const headers = [
-//     text__Slide1,
-//     text__Slide3,
-//     text__Slide4,
-//     text__Slide5,
-//     text__Slide6,
-//   ];
-
-//   if (currentSlideId === 0) {
-//     slides.forEach((slide) => {
-//       slide.classList.remove(defaults.selectors.activeSlide);
-//     });
-//     $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-//   }
-
-//   slides.forEach((slide, slideId) => {
-//     if (currentSlideId === slideId) {
-//       slide.classList.add(defaults.selectors.activeSlide);
-//       setTimeout(() => {
-//         headers[slideId].classList.add(defaults.selectors.activeText);
-//       }, defaults.fadeHeaderDelay);
-//     } else {
-//       headers[slideId].classList.remove(defaults.selectors.activeText);
-//     }
-//   });
-// };
-
-// function $f0a5fc76378d1581cc7b$var$play() {
-//   const slide1 = document.querySelector(".slide1");
-//   slide1.classList.add("activeSlide");
-//   text__Slide1.classList.add("activeText"); ////////
-// } ////////////////////////////////////////////////////
-// ///////////////// functions for switching screens by buttons
-// ////////////////////////////////////////////////////////////
-
-// next__Slide1.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$slide3Active();
-// });
-// next__Slide2.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$slide5Active();
-// });
-// next__Slide3.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$slide4Active();
-// });
-// next__Slide4.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$slide5Active();
-// });
-// next__Slide5.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$slide6Active();
-//   slide3.classList.remove("activeSlide");
-// });
-// next__Slide6.addEventListener("click", function () {
-//   $f0a5fc76378d1581cc7b$var$selectSlideById(0);
-  
-// });
-// ////////////////////////////////////////////////////////////
-// ///////////////// Second screen
-// ////////////////////////////////////////////////////////////
-
-// ////////////////////////////////////////////////////////////
-// ///////////////// Third screen
-// ////////////////////////////////////////////////////////////
-// function $f0a5fc76378d1581cc7b$var$slide3Active() {
-//   $f0a5fc76378d1581cc7b$var$selectSlideById(1);
-// } ////////////////////////////////////////////////////////////
-// ///////////////// Fourth screen
-// ////////////////////////////////////////////////////////////
-
-// function $f0a5fc76378d1581cc7b$var$slide4Active() {
-//   $f0a5fc76378d1581cc7b$var$selectSlideById(2);
-// } ////////////////////////////////////////////////////////////
-// ///////////////// Fifth screen
-// ////////////////////////////////////////////////////////////
-
-// function $f0a5fc76378d1581cc7b$var$slide5Active() {
-//   $f0a5fc76378d1581cc7b$var$selectSlideById(3);
-// } ////////////////////////////////////////////////////////////
-// ///////////////// Sixth screen
-// ////////////////////////////////////////////////////////////
-
-// function $f0a5fc76378d1581cc7b$var$slide6Active() {
-//   $f0a5fc76378d1581cc7b$var$selectSlideById(4);
-// }
 modal__img__Slide3.addEventListener("click", function () {
   modal__Slide3.classList.add("active");
   mikro__img__Slide3.classList.add("hidden");
@@ -490,14 +362,16 @@ replay__Slide6.addEventListener("click", function () {
 });
 
 let words = [
-  "feature",
   "hallo",
-  "käddi",
+  "hallo caddy, wechsle zum nächsten feature",
+  "hallo caddy",
+  "feature",
+  "hallo käddi",
   "wechsle",
-  "zum",
-  "nächsten",
-  "feature hallo käddi wechsle zum nächsten",
-  "hallo käddi wechsle zum nächsten",
+  "zum nächsten",
+  "wechsle zum nächsten feature",
+  "hallo caddy wechsle zum nächsten feature",
+  "hallo katie",
 ];
 
 let grammar =
@@ -523,16 +397,20 @@ let micro3Slid = () => {
     count = 3;
     recognition.start();
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
-        
-        slide3Active();
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
+            slide3Active();
+          } else {
+            text__Slide1.classList.remove("activeText");
+            slide1.classList.remove("activeSlide");
+            slide2Active();
+          }
+        });
       }
-      else{
-        text__Slide1.classList.remove('activeText');
-        slide1.classList.remove('activeSlide');
-        slide2Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -552,16 +430,22 @@ let micro4Slid = () => {
     comics1__Slide3.classList.add("active");
     recognition.start();
     count = 4;
+
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
-        slide4Active();
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
+            slide4Active();
+          } else {
+            text__Slide1.classList.remove("activeText");
+            slide3.classList.remove("activeSlide");
+            slide2Active();
+          }
+        });
       }
-      else{
-        text__Slide3.classList.remove('activeText');
-        slide3.classList.remove('activeSlide');
-        slide2Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -582,16 +466,22 @@ let micro5Slid = () => {
     comics1__Slide4.classList.add("active");
     recognition.start();
     count = 5;
+
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
-        slide5Active();
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
+            slide5Active();
+          } else {
+            text__Slide4.classList.remove("activeText");
+            slide4.classList.remove("activeSlide");
+            slide2Active();
+          }
+        });
       }
-      else{
-        text__Slide4.classList.remove('activeText');
-        slide4.classList.remove('activeSlide');
-        slide2Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -612,16 +502,22 @@ let micro6Slid = () => {
     comics1__Slide5.classList.add("active");
     count = 6;
     recognition.start();
+
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
-        slide6Active();
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1)  {
+            slide6Active();
+          } else {
+            text__Slide5.classList.remove("activeText");
+            slide5.classList.remove("activeSlide");
+            slide2Active();
+          }
+        });
       }
-      else{
-        text__Slide5.classList.remove('activeText');
-        slide5.classList.remove('activeSlide');
-        slide2Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -642,24 +538,28 @@ let micro31Slid = () => {
     comics1__Slide6.classList.add("active");
     recognition.start();
     count = 3;
+
+
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
-        slide3Active();
-        // slide4.classList.remove('activeSlide');
-        // slide5.classList.remove('activeSlide');
-        // slide6.classList.remove('activeSlide');
-        slide4.setAttribute('style', 'z-index: 10');
-        slide5.setAttribute('style', 'z-index: 11');
-        slide6.setAttribute('style', 'z-index: 12');
-        slide1.setAttribute('style', 'z-index: 5');
-        setTimeout(loopStart, 700);
+      if (typeof event.results != "undefined") {
+        var resString = event.results[0][0].transcript.toLowerCase();
+        var arResult = resString.split(" ");
+        console.log(resString);
+        arResult.forEach(function (i, v) {
+          if (words.indexOf(i) > -1 || words.indexOf(resString) > -1) {
+            slide3Active();
+            slide4.setAttribute("style", "z-index: 10");
+            slide5.setAttribute("style", "z-index: 11");
+            slide6.setAttribute("style", "z-index: 12");
+            slide1.setAttribute("style", "z-index: 5");
+            setTimeout(loopStart, 700);
+          } else {
+            text__Slide6.classList.remove("activeText");
+            slide6.classList.remove("activeSlide");
+            slide2Active();
+          }
+        });
       }
-      else{
-        text__Slide6.classList.remove('activeText');
-        slide6.classList.remove('activeSlide');
-        slide2Active();
-      }
-      console.log("Confidence: " + event.results[0][0].confidence);
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -669,7 +569,6 @@ let micro31Slid = () => {
       comics1__Slide6.classList.remove("active");
     };
   });
-  
 };
 micro31Slid();
 
@@ -681,18 +580,16 @@ let nextSlid = () => {
     comics1__Slide2.classList.add("active");
     recognition.start();
     recognition.onresult = function (event) {
-      if (event.results[0][0].confidence >= 0.70) {
+      if (event.results[0][0].confidence >= 0.7) {
         console.log(count);
         nextSlideBtn(count);
-        text__Slide2.classList.remove('activeText');
-        slide2.classList.remove('activeSlide');
-        slide2.removeAttribute('style', 'z-index: 1');
-      }
-      else{
+        text__Slide2.classList.remove("activeText");
+        slide2.classList.remove("activeSlide");
+        slide2.removeAttribute("style", "z-index: 1");
+      } else {
         slide2Active();
       }
       console.log("Confidence: " + event.results[0][0].confidence);
-      
     };
     recognition.onspeechend = function () {
       recognition.stop();
@@ -702,9 +599,8 @@ let nextSlid = () => {
       comics1__Slide2.classList.remove("active");
     };
   });
-  
 };
-next__Slide2.addEventListener('click', function(){
+next__Slide2.addEventListener("click", function () {
   nextSlideBtn(count);
 });
 nextSlid();
