@@ -35,7 +35,6 @@ window.onload = function () {
 function play() {
   slide1.classList.add("activeSlide");
   text__Slide1.classList.add("activeText");
-  console.log(1);
 }
 
 next__Slide1.addEventListener("click", function () {
@@ -114,7 +113,6 @@ function slide2Active() {
   slide2.classList.add("activeSlide");
   slide2.removeAttribute("style", "z-index: 100");
   setTimeout(slide2Text, 750);
-  console.log(156);
 }
 
 function slide2Text() {
