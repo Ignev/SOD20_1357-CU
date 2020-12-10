@@ -1,17 +1,3 @@
-.phone {
-  position: relative;
-  height: 621px;
-  width: 361px;
-  display: flex;
-  justify-content: center;
-  top: 10%;
-}
-.phone__media {
-  height: 621px;
-  width: 361px;
-  position: relative;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -24,10 +10,18 @@ div {
 html,
 body {
   width: 100%;
-  background: #1a4f45;
   height: 100%;
+}
+
+body {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#slideList {
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -38,29 +32,7 @@ body {
   overflow: hidden;
   left: 0;
   right: 0;
-  top: 11.5%;
   margin: auto;
-}
-
-@media screen and (max-width: 900px) {
-  body {
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-  }
-  .phone__media {
-    display: none;
-  }
-  .container {
-    top: 0;
-    left: 0;
-  }
-  .phone {
-    width: 320px;
-    height: 480px;
-    top: 0;
-    left: 0;
-  }
 }
 
 .slide1 {
@@ -114,14 +86,14 @@ body {
 /*************************************************************/
 
 .bg__Slide1 {
-  background: url(./assets/img/bg-1.png) 50% 50% no-repeat;
+  background: url(bg-1.png) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .logo__Slide1 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -148,7 +120,7 @@ body {
 }
 
 .text__Slide1 {
-  background: url(./assets/fonts/text-banner-1.svg) 0% 100% no-repeat;
+  background: url(text-banner-1.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 24%;
@@ -160,17 +132,17 @@ body {
 }
 
 .btn__Slide1 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 20px;
+  left: 26px;
 }
 
 .ligal__Slide1 {
-  background: url(./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg)
-    0% 100% no-repeat;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 3%;
@@ -179,7 +151,7 @@ body {
 }
 
 .comics__Slide1 {
-  background: url(./assets/img/comics.svg) 100% 100% no-repeat;
+  background: url(comics.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -194,7 +166,7 @@ body {
 }
 
 .comics1__Slide1 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -287,6 +259,23 @@ body {
   background: #00b1f2;
   opacity: 0.25;
 }
+.mikro__Slide2:before {
+  /*z-index: -1;*/
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+
+  background: #00b1f2;
+  opacity: 0.25;
+}
 .mikro__Slide6:before {
   z-index: -1;
   width: 100%;
@@ -342,7 +331,7 @@ body {
 }
 
 .mikro__img__Slide1 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -366,7 +355,7 @@ body {
 }
 
 .next__Slide1 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -379,14 +368,14 @@ body {
 /*************************************************************/
 
 .bg__Slide2 {
-  background: url(./assets/img/bg-0.jpg) 50% 50% no-repeat;
+  background: url(bg-0.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .logo__Slide2 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -413,7 +402,7 @@ body {
 }
 
 .text__Slide2 {
-  background: url(./assets/fonts/GroupTwo.svg) 0% 100% no-repeat;
+  background: url(GroupTwo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
@@ -422,43 +411,38 @@ body {
   opacity: 1;
 }
 
-.mikro__Slide2:before {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-
-  position: absolute;
-  content: "";
-  animation-name: mikro__Slide1;
-  animation-delay: 1s;
-  animation-duration: 2.25s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-
-  background: #00b1f2;
-  opacity: 0.25;
-}
-
 .btn__Slide2 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 20px;
+  left: 26px;
 }
 
 .ligal__Slide2 {
-  background: url(./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100% no-repeat;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 3%;
   bottom: 1px;
   left: 25px;
 }
+/*
+.comics__Slide2 {
+    background: url(assets/images/comics.svg) 100% 100% no-repeat;
+    background-size: contain;
+    width: 54.7%;
+    height: 15%;
+    right: 0px;
+    bottom: 140px;
+    transition: 0.5s;
+    opacity: 1;
+}
+*/
 .comics1__Slide2 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -481,7 +465,7 @@ body {
 }
 
 .mikro__img__Slide2 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -505,7 +489,7 @@ body {
 }
 
 .next__Slide2 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -513,19 +497,15 @@ body {
   right: 13px;
 }
 
-/*************************************************************/
-/*************************Three Slide*************************/
-/*************************************************************/
-
 .bg__Slide3 {
-  background: url(./assets/img/bg-2.jpg) 50% 50% no-repeat;
+  background: url(bg-2.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide3 {
-  background: url(./assets/img/modal-btn.svg) 50% 50% no-repeat;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -550,7 +530,7 @@ body {
 }
 
 .close {
-  background: url(./assets/img/close.svg) 100% 0% no-repeat;
+  background: url(close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -559,7 +539,8 @@ body {
 }
 
 .textModal__Slide3 {
-  background: url(./assets/fonts/Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg) 50% 100% no-repeat;
+  background: url(Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg)
+    50% 100% no-repeat;
   background-size: contain;
   width: 86%;
   height: 10%;
@@ -570,18 +551,18 @@ body {
 }
 
 .btnColor {
-  background: url(./assets/img/banner-color.svg) 50% 100% no-repeat;
+  background: url(banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
-  bottom: 4%;
+  bottom: 3%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .logo__Slide3 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -608,7 +589,7 @@ body {
 }
 
 .text__Slide3 {
-  background: url(./assets/fonts/Groupfive.svg) 0% 100% no-repeat;
+  background: url(Groupfive.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
@@ -618,24 +599,36 @@ body {
 }
 
 .btn__Slide3 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 25px;
+  left: 26px;
 }
 
 .ligal__Slide3 {
-  background: url(./assets/fonts/banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
   bottom: 1px;
-  left: 27px;
+  left: 25px;
 }
+/*
+.comics__Slide3 {
+    background: url(assets/images/comics.svg) 100% 100% no-repeat;
+    background-size: contain;
+    width: 54.7%;
+    height: 15%;
+    right: 0px;
+    bottom: 140px;
+    transition: 0.5s;
+    opacity: 1;
+}
+*/
 .comics1__Slide3 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -659,7 +652,7 @@ body {
 }
 
 .mikro__img__Slide3 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -683,7 +676,7 @@ body {
 }
 
 .next__Slide3 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -697,14 +690,14 @@ body {
 /*************************************************************/
 
 .bg__Slide4 {
-  background: url(./assets/img/bg-3.jpg) 50% 50% no-repeat;
+  background: url(bg-3.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide4 {
-  background: url(./assets/img/modal-btn.svg) 50% 50% no-repeat;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -729,7 +722,7 @@ body {
 }
 
 .close {
-  background: url(./assets/img/close.svg) 100% 0% no-repeat;
+  background: url(close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -738,7 +731,8 @@ body {
 }
 
 .textModal__Slide4 {
-  background: url(./assets/fonts/Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg) 50% 100% no-repeat;
+  background: url(Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg)
+    50% 100% no-repeat;
   background-size: contain;
   width: 86%;
   height: 10%;
@@ -749,18 +743,18 @@ body {
 }
 
 .btnColor {
-  background: url(./assets/img/banner-color.svg) 50% 100% no-repeat;
+  background: url(banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
-  bottom: 4%;
+  bottom: 3%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .logo__Slide4 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -787,7 +781,7 @@ body {
 }
 
 .text__Slide4 {
-  background: url(./assets/fonts/GroupFo.svg) 0% 100% no-repeat;
+  background: url(GroupFo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 65%;
   height: 20%;
@@ -797,24 +791,37 @@ body {
 }
 
 .btn__Slide4 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 20px;
+  left: 26px;
 }
 
 .ligal__Slide4 {
-  background: url(./assets/fonts/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100% no-repeat;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
   bottom: 1px;
   left: 25px;
 }
+/*
+.comics__Slide4 {
+    background: url(assets/images/comics.svg) 100% 100% no-repeat;
+    background-size: contain;
+    width: 54.7%;
+    height: 15%;
+    right: 0px;
+    bottom: 140px;
+    transition: 0.5s;
+    opacity: 1;
+}
+*/
 .comics1__Slide4 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -838,7 +845,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide4 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -862,7 +869,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide4 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -876,14 +883,14 @@ comics1__Slide4.acitve {
 /*************************************************************/
 
 .bg__Slide5 {
-  background: url(./assets/img/bg-4.jpg) 50% 50% no-repeat;
+  background: url(bg-4.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide5 {
-  background: url(./assets/img/modal-btn.svg) 50% 50% no-repeat;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -908,7 +915,7 @@ comics1__Slide4.acitve {
 }
 
 .close {
-  background: url(./assets/img/close.svg) 100% 0% no-repeat;
+  background: url(close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -917,7 +924,8 @@ comics1__Slide4.acitve {
 }
 
 .textModal__Slide5 {
-  background: url(./assets/fonts/Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg) 50% 100% no-repeat;
+  background: url(Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg)
+    50% 100% no-repeat;
   background-size: contain;
   width: 86%;
   height: 10%;
@@ -928,18 +936,18 @@ comics1__Slide4.acitve {
 }
 
 .btnColor {
-  background: url(./assets/img/banner-color.svg) 50% 100% no-repeat;
+  background: url(banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
-  bottom: 4%;
+  bottom: 3%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .logo__Slide5 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -966,7 +974,7 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide5 {
-  background: url(./assets/fonts/GroupThree.svg) 0% 100% no-repeat;
+  background: url(GroupThree.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 76%;
   height: 31%;
@@ -976,24 +984,36 @@ comics1__Slide4.acitve {
 }
 
 .btn__Slide5 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 20px;
+  left: 26px;
 }
 
 .ligal__Slide5 {
-  background: url(./assets/fonts/banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
   bottom: 1px;
   left: 25px;
 }
+/*
+.comics__Slide5 {
+    background: url(assets/images/comics.svg) 100% 100% no-repeat;
+    background-size: contain;
+    width: 54.7%;
+    height: 15%;
+    right: 0px;
+    bottom: 140px;
+    transition: 0.5s;
+    opacity: 1;
+}
+*/
 .comics1__Slide5 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -1014,7 +1034,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide5 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -1038,7 +1058,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide5 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -1052,14 +1072,14 @@ comics1__Slide4.acitve {
 /*************************************************************/
 
 .bg__Slide6 {
-  background: url(./assets/img/bg-5.jpg) 50% 50% no-repeat;
+  background: url(bg-5.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide6 {
-  background: url(./assets/img/modal-btn.svg) 50% 50% no-repeat;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -1076,7 +1096,6 @@ comics1__Slide4.acitve {
   animation: modal__img__pulse 1.25s ease 0s infinite,
     modal__img__unfade 0.5s linear 2s 1 normal forwards;
 }
-
 .modal__Slide6 {
   background-color: #fff;
   width: 97%;
@@ -1092,7 +1111,7 @@ comics1__Slide4.acitve {
 }
 
 .close {
-  background: url(./assets/img/close.svg) 100% 0% no-repeat;
+  background: url(close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -1101,7 +1120,8 @@ comics1__Slide4.acitve {
 }
 
 .textModal__Slide6 {
-  background: url(./assets/fonts/Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg) 50% 100% no-repeat;
+  background: url(Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg)
+    50% 100% no-repeat;
   background-size: contain;
   width: 86%;
   height: 10%;
@@ -1112,18 +1132,18 @@ comics1__Slide4.acitve {
 }
 
 .btnColor {
-  background: url(./assets/img/banner-color.svg) 50% 100% no-repeat;
+  background: url(banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
-  bottom: 4%;
+  bottom: 3%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .logo__Slide6 {
-  background: url(./assets/img/logo.svg) 50% 0% no-repeat;
+  background: url(logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -1150,26 +1170,26 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide6 {
-  background: url(./assets/fonts/GroupSix.svg) 0% 100% no-repeat;
+  background: url(GroupSix.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 67.5%;
   height: 17.5%;
-  top: 155px;
+  top: 160px;
   left: 26px;
   opacity: 1;
 }
 
 .btn__Slide6 {
-  background: url(./assets/img/banner-btn.svg) 0% 100% no-repeat;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
   bottom: 27px;
-  left: 20px;
+  left: 26px;
 }
 
 .ligal__Slide6 {
-  background: url(./assets/fonts/banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
@@ -1178,18 +1198,18 @@ comics1__Slide4.acitve {
 }
 /*
 .comics__Slide6 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
-  background-size: contain;
-  width: 54.7%;
-  height: 15%;
-  right: 0px;
-  bottom: 140px;
-  transition: 0.5s;
-  opacity: 1;
+    background: url(assets/images/comics.svg) 100% 100% no-repeat;
+    background-size: contain;
+    width: 54.7%;
+    height: 15%;
+    right: 0px;
+    bottom: 140px;
+    transition: 0.5s;
+    opacity: 1;
 }
 */
 .comics1__Slide6 {
-  background: url(./assets/img/comics1.svg) 100% 100% no-repeat;
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -1210,7 +1230,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide6 {
-  background: url(./assets/img/mikro.svg) 50% 50% no-repeat;
+  background: url(mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -1234,7 +1254,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide6 {
-  background: url(./assets/img/next.svg) 100% 100% no-repeat;
+  background: url(next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -1260,7 +1280,7 @@ video {
 }
 
 .muted {
-  background: url(./assets/img/sound-off.png) 0% 100% no-repeat;
+  background: url(sound-off.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1271,7 +1291,7 @@ video {
 }
 
 .sound {
-  background: url(./assets/img/sound-on.png) 0% 100% no-repeat;
+  background: url(sound-on.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1282,7 +1302,7 @@ video {
 }
 
 .replay {
-  background: url(./assets/img/replay.png) 0% 100% no-repeat;
+  background: url(replay.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1342,6 +1362,6 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #222222 url(./assets/img/audio.svg) center center no-repeat;
+  background: #222222 url(audio.svg) center center no-repeat;
   background-size: 41px;
 }
