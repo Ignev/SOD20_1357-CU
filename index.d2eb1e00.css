@@ -13,12 +13,12 @@
 }
 
 * {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 div {
-position: absolute;
+  position: absolute;
 }
 
 html,
@@ -31,14 +31,14 @@ body {
 }
 
 body {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #slideList {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
@@ -54,9 +54,9 @@ height: 100%;
 }
 
 .slide1 {
-width: 100%;
-height: 100%;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transition: 0.75s;
 }
 
 @media screen and (max-width: 900px) {
@@ -81,1326 +81,1239 @@ transition: 0.75s;
 }
 
 .slide2 {
-width: 100%;
-height: 100%;
-transform: translateX(100%);
-opacity: 0;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.75s;
 }
 
 .slide3 {
-width: 100%;
-height: 100%;
-transform: translateX(100%);
-opacity: 0;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.75s;
 }
 
 .slide4 {
-width: 100%;
-height: 100%;
-transform: translateX(100%);
-opacity: 0;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.75s;
 }
 
 .slide5 {
-width: 100%;
-height: 100%;
-transform: translateX(100%);
-opacity: 0;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.75s;
 }
 
 .slide6 {
-width: 100%;
-height: 100%;
-transform: translateX(100%);
-opacity: 0;
-transition: 0.75s;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.75s;
 }
 
-/*************************************************************/
-/*************************First Slide*************************/
-/*************************************************************/
-
 .bg__Slide1 {
-background: url(bg-1.png) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-1.png) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .logo__Slide1 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide1 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide1 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide1 {
-background: url(text-banner-1.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 70%;
-height: 24%;
-bottom: 80px;
-left: 21px;
-transition: 0.4s;
-transform: translateX(10px);
-opacity: 0;
+  background: url(text-banner-1.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 70%;
+  height: 24%;
+  bottom: 80px;
+  left: 21px;
+  transition: 0.4s;
+  transform: translateX(10px);
+  opacity: 0;
 }
 
 .btn__Slide1 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide1 {
-background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
-  no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 3%;
-bottom: 1px;
-left: 25px;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 3%;
+  bottom: 1px;
+  left: 25px;
 }
 
 .comics__Slide1 {
-background: url(comics.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 143px;
-transition: 0.5s;
-opacity: 0;
+  background: url(comics.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 54.7%;
+  height: 15%;
+  right: 0px;
+  bottom: 143px;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .comics__Slide1.active {
-opacity: 1;
+  opacity: 1;
 }
 
 .comics1__Slide1 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  background: url(comics1.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 54.7%;
+  height: 15%;
+  right: 0px;
+  bottom: 140px;
+  transition: 0.5s;
+  opacity: 0;
 }
 .comics__Slide1.active {
-opacity: 1;
+  opacity: 1;
 }
 
 .mikro__Slide1 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
-z-index: 2;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
+  z-index: 2;
 }
 
 .mikro__Slide1.active:before {
-animation: none;
+  animation: none;
 }
 .mikro__Slide2.active:before {
-animation: none;
+  animation: none;
 }
 .mikro__Slide3.active:before {
-animation: none;
+  animation: none;
 }
 .mikro__Slide4.active:before {
-animation: none;
+  animation: none;
 }
 .mikro__Slide5.active:before {
-animation: none;
+  animation: none;
 }
 .mikro__Slide6.active:before {
-animation: none;
+  animation: none;
 }
 
 .mikro__Slide3:before {
-z-index: -1;
-width: 100%;
-height: 100%;
-border-radius: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 
-position: absolute;
-content: "";
-animation-name: mikro__Slide1;
-animation-delay: 1s;
-animation-duration: 2.25s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
-background: #00b1f2;
-opacity: 0.25;
+  background: #00b1f2;
+  opacity: 0.25;
 }
 .mikro__Slide4:before {
-z-index: -1;
-width: 100%;
-height: 100%;
-border-radius: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 
-position: absolute;
-content: "";
-animation-name: mikro__Slide1;
-animation-delay: 1s;
-animation-duration: 2.25s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
-background: #00b1f2;
-opacity: 0.25;
+  background: #00b1f2;
+  opacity: 0.25;
 }
 .mikro__Slide5:before {
-z-index: -1;
-width: 100%;
-height: 100%;
-border-radius: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 
-position: absolute;
-content: "";
-animation-name: mikro__Slide1;
-animation-delay: 1s;
-animation-duration: 2.25s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
-background: #00b1f2;
-opacity: 0.25;
+  background: #00b1f2;
+  opacity: 0.25;
 }
 .mikro__Slide2:before {
-/*z-index: -1;*/
-width: 100%;
-height: 100%;
-border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 
-position: absolute;
-content: "";
-animation-name: mikro__Slide1;
-animation-delay: 1s;
-animation-duration: 2.25s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
-background: #00b1f2;
-opacity: 0.25;
+  background: #00b1f2;
+  opacity: 0.25;
 }
 .mikro__Slide6:before {
-z-index: -1;
-width: 100%;
-height: 100%;
-border-radius: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 
-position: absolute;
-content: "";
-animation-name: mikro__Slide1;
-animation-delay: 1s;
-animation-duration: 2.25s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in;
+  position: absolute;
+  content: "";
+  animation-name: mikro__Slide1;
+  animation-delay: 1s;
+  animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 
-background: #00b1f2;
-opacity: 0.25;
+  background: #00b1f2;
+  opacity: 0.25;
 }
 
 @keyframes modal__img__unfade {
-0% {
-  opacity: 0;
-}
-100% {
-  opacity: 1;
-}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes modal__img__pulse {
-0% {
-  transform: scale(1);
-}
-50% {
-  transform: scale(0.75);
-}
-100% {
-  transform: scale(1);
-}
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes mikro__Slide1 {
-0% {
-  transform: scale(1);
-  opacity: 0.4;
-}
-50% {
-  transform: scale(2);
-  opacity: 0;
-}
-100% {
-  transform: scale(2);
-  opacity: 0;
-}
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 .mikro__img__Slide1 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide1 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide1 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
 }
 
-/*************************************************************/
-/*************************Second Slide*************************/
-/*************************************************************/
-
 .bg__Slide2 {
-background: url(bg-0.jpg) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-0.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .logo__Slide2 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide2 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide2 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide2 {
-background: url(GroupTwo.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 70%;
-height: 30%;
-bottom: 80px;
-left: 15px;
-opacity: 1;
+  background: url(GroupTwo.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 70%;
+  height: 30%;
+  bottom: 80px;
+  left: 15px;
+  opacity: 1;
 }
 
 .btn__Slide2 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide2 {
-background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
-  no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 3%;
-bottom: 1px;
-left: 25px;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 3%;
+  bottom: 1px;
+  left: 25px;
 }
-/*
-.comics__Slide2 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
+.comics1__Slide2 {
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
   right: 0px;
   bottom: 140px;
   transition: 0.5s;
-  opacity: 1;
-}
-*/
-.comics1__Slide2 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  opacity: 0;
 }
 .comics1__Slide2.active {
-opacity: 1;
+  opacity: 1;
 }
 
 .mikro__Slide2 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
 }
 
 .mikro__img__Slide2 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide2 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide2 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
 }
 
 .bg__Slide3 {
-background: url(bg-2.jpg) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-2.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .modal__img__Slide3 {
-background: url(modal-btn.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 32px;
-height: 8%;
-top: 40%;
-right: 40px;
-z-index: 20;
-opacity: 0;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 8%;
+  top: 40%;
+  right: 40px;
+  z-index: 20;
+  opacity: 0;
 }
 
 .modal__Slide3 {
-background-color: #fff;
-width: 97%;
-height: 96%;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-margin: auto;
-z-index: 10;
-transition: 0.5s;
-opacity: 0;
+  background-color: #fff;
+  width: 97%;
+  height: 96%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .close {
-background: url(close.svg) 100% 0% no-repeat;
-background-size: contain;
-width: 5%;
-height: 5%;
-right: 1%;
-top: 1%;
+  background: url(close.svg) 100% 0% no-repeat;
+  background-size: contain;
+  width: 5%;
+  height: 5%;
+  right: 1%;
+  top: 1%;
 }
 
 .textModal__Slide3 {
-background: url(Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg)
-  50% 100% no-repeat;
-background-size: contain;
-width: 86%;
-height: 10%;
-bottom: 16%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg)
+    50% 100% no-repeat;
+  background-size: contain;
+  width: 86%;
+  height: 10%;
+  bottom: 16%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .btnColor {
-background: url(banner-color.svg) 50% 100% no-repeat;
-background-size: contain;
-width: 50%;
-height: 10%;
-bottom: 3%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(banner-color.svg) 50% 100% no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 10%;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .logo__Slide3 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide3 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide3 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide3 {
-background: url(Groupfive.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 70%;
-height: 30%;
-bottom: 80px;
-left: 25px;
-opacity: 1;
+  background: url(Groupfive.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 70%;
+  height: 30%;
+  bottom: 80px;
+  left: 25px;
+  opacity: 1;
 }
 
 .btn__Slide3 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide3 {
-background: url(banner-lidal-2.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 5%;
-bottom: 1px;
-left: 25px;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 5%;
+  bottom: 1px;
+  left: 25px;
 }
-/*
-.comics__Slide3 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
+
+.comics1__Slide3 {
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
   right: 0px;
   bottom: 140px;
   transition: 0.5s;
-  opacity: 1;
-}
-*/
-.comics1__Slide3 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  opacity: 0;
 }
 .comics1__Slide3.active {
-opacity: 1;
+  opacity: 1;
 }
 
 .mikro__Slide3 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
-z-index: 20;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
+  z-index: 20;
 }
 
 .mikro__img__Slide3 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide3 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide3 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
-z-index: 20;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
+  z-index: 20;
 }
 
-/*************************************************************/
-/*************************Four Slide**************************/
-/*************************************************************/
-
 .bg__Slide4 {
-background: url(bg-3.jpg) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-3.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .modal__img__Slide4 {
-background: url(modal-btn.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 32px;
-height: 8%;
-top: 40%;
-right: 100px;
-z-index: 20;
-opacity: 0;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 8%;
+  top: 40%;
+  right: 100px;
+  z-index: 20;
+  opacity: 0;
 }
 
 .modal__Slide4 {
-background-color: #fff;
-width: 97%;
-height: 96%;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-margin: auto;
-z-index: 10;
-transition: 0.5s;
-opacity: 0;
+  background-color: #fff;
+  width: 97%;
+  height: 96%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .close {
-background: url(close.svg) 100% 0% no-repeat;
-background-size: contain;
-width: 5%;
-height: 5%;
-right: 1%;
-top: 1%;
+  background: url(close.svg) 100% 0% no-repeat;
+  background-size: contain;
+  width: 5%;
+  height: 5%;
+  right: 1%;
+  top: 1%;
 }
 
 .textModal__Slide4 {
-background: url(Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg)
-  50% 100% no-repeat;
-background-size: contain;
-width: 86%;
-height: 10%;
-bottom: 16%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg)
+    50% 100% no-repeat;
+  background-size: contain;
+  width: 86%;
+  height: 10%;
+  bottom: 16%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .btnColor {
-background: url(banner-color.svg) 50% 100% no-repeat;
-background-size: contain;
-width: 50%;
-height: 10%;
-bottom: 3%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(banner-color.svg) 50% 100% no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 10%;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .logo__Slide4 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide4 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide4 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide4 {
-background: url(GroupFo.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 65%;
-height: 20%;
-bottom: 80px;
-left: 23px;
-opacity: 1;
+  background: url(GroupFo.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 65%;
+  height: 20%;
+  bottom: 80px;
+  left: 23px;
+  opacity: 1;
 }
 
 .btn__Slide4 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide4 {
-background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
-  no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 5%;
-bottom: 1px;
-left: 25px;
+  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+    no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 5%;
+  bottom: 1px;
+  left: 25px;
 }
-/*
-.comics__Slide4 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
+
+.comics1__Slide4 {
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
   right: 0px;
   bottom: 140px;
   transition: 0.5s;
-  opacity: 1;
-}
-*/
-.comics1__Slide4 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  opacity: 0;
 }
 comics1__Slide4.acitve {
-opacity: 1;
+  opacity: 1;
 }
 
 .mikro__Slide4 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
-z-index: 20;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
+  z-index: 20;
 }
 
 .mikro__img__Slide4 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide4 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide4 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
-z-index: 20;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
+  z-index: 20;
 }
 
-/*************************************************************/
-/*************************Five Slide**************************/
-/*************************************************************/
-
 .bg__Slide5 {
-background: url(bg-4.jpg) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-4.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .modal__img__Slide5 {
-background: url(modal-btn.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 32px;
-height: 8%;
-top: 30%;
-right: 50px;
-z-index: 20;
-opacity: 0;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 8%;
+  top: 30%;
+  right: 50px;
+  z-index: 20;
+  opacity: 0;
 }
 
 .modal__Slide5 {
-background-color: #fff;
-width: 97%;
-height: 96%;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-margin: auto;
-z-index: 10;
-transition: 0.5s;
-opacity: 0;
+  background-color: #fff;
+  width: 97%;
+  height: 96%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .close {
-background: url(close.svg) 100% 0% no-repeat;
-background-size: contain;
-width: 5%;
-height: 5%;
-right: 1%;
-top: 1%;
+  background: url(close.svg) 100% 0% no-repeat;
+  background-size: contain;
+  width: 5%;
+  height: 5%;
+  right: 1%;
+  top: 1%;
 }
 
 .textModal__Slide5 {
-background: url(Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg)
-  50% 100% no-repeat;
-background-size: contain;
-width: 86%;
-height: 10%;
-bottom: 16%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg)
+    50% 100% no-repeat;
+  background-size: contain;
+  width: 86%;
+  height: 10%;
+  bottom: 16%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .btnColor {
-background: url(banner-color.svg) 50% 100% no-repeat;
-background-size: contain;
-width: 50%;
-height: 10%;
-bottom: 3%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(banner-color.svg) 50% 100% no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 10%;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .logo__Slide5 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide5 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide5 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide5 {
-background: url(GroupThree.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 76%;
-height: 31%;
-bottom: 80px;
-left: 24px;
-opacity: 1;
+  background: url(GroupThree.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 76%;
+  height: 31%;
+  bottom: 80px;
+  left: 24px;
+  opacity: 1;
 }
 
 .btn__Slide5 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide5 {
-background: url(banner-lidal-2.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 5%;
-bottom: 1px;
-left: 25px;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 5%;
+  bottom: 1px;
+  left: 25px;
 }
-/*
-.comics__Slide5 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
+.comics1__Slide5 {
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
   right: 0px;
   bottom: 140px;
   transition: 0.5s;
-  opacity: 1;
-}
-*/
-.comics1__Slide5 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  opacity: 0;
 }
 
 .mikro__Slide5 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
-z-index: 20;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
+  z-index: 20;
 }
 
 .mikro__img__Slide5 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide5 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide5 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
-z-index: 20;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
+  z-index: 20;
 }
 
-/*************************************************************/
-/*************************Six Slide***************************/
-/*************************************************************/
-
 .bg__Slide6 {
-background: url(bg-5.jpg) 50% 50% no-repeat;
-background-size: cover;
-width: 100%;
-height: 100%;
+  background: url(bg-5.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .modal__img__Slide6 {
-background: url(modal-btn.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 32px;
-height: 8%;
-top: 40%;
-right: 50px;
-z-index: 20;
-opacity: 0;
+  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 8%;
+  top: 40%;
+  right: 50px;
+  z-index: 20;
+  opacity: 0;
 }
 
 .activeSlide > .modal__img__Slide6,
 .activeSlide > .modal__img__Slide5,
 .activeSlide > .modal__img__Slide4,
 .activeSlide > .modal__img__Slide3 {
-animation: modal__img__pulse 1.25s ease 0s infinite,
-  modal__img__unfade 0.5s linear 2s 1 normal forwards;
+  animation: modal__img__pulse 1.25s ease 0s infinite,
+    modal__img__unfade 0.5s linear 2s 1 normal forwards;
 }
 .modal__Slide6 {
-background-color: #fff;
-width: 97%;
-height: 96%;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-margin: auto;
-z-index: 10;
-transition: 0.5s;
-opacity: 0;
+  background-color: #fff;
+  width: 97%;
+  height: 96%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  transition: 0.5s;
+  opacity: 0;
 }
 
 .close {
-background: url(close.svg) 100% 0% no-repeat;
-background-size: contain;
-width: 5%;
-height: 5%;
-right: 1%;
-top: 1%;
+  background: url(close.svg) 100% 0% no-repeat;
+  background-size: contain;
+  width: 5%;
+  height: 5%;
+  right: 1%;
+  top: 1%;
 }
 
 .textModal__Slide6 {
-background: url(Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg)
-  50% 100% no-repeat;
-background-size: contain;
-width: 86%;
-height: 10%;
-bottom: 16%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg)
+    50% 100% no-repeat;
+  background-size: contain;
+  width: 86%;
+  height: 10%;
+  bottom: 16%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .btnColor {
-background: url(banner-color.svg) 50% 100% no-repeat;
-background-size: contain;
-width: 50%;
-height: 10%;
-bottom: 3%;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(banner-color.svg) 50% 100% no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 10%;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .logo__Slide6 {
-background: url(logo.svg) 50% 0% no-repeat;
-background-size: contain;
-width: 19%;
-height: 13%;
-top: 25px;
-left: 0;
-right: 0;
-margin: auto;
+  background: url(logo.svg) 50% 0% no-repeat;
+  background-size: contain;
+  width: 19%;
+  height: 13%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .left__Slide6 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-left: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  left: 0;
+  top: 53px;
 }
 
 .right__Slide6 {
-height: 3px;
-width: 37%;
-background-color: #fff;
-right: 0;
-top: 53px;
+  height: 3px;
+  width: 37%;
+  background-color: #fff;
+  right: 0;
+  top: 53px;
 }
 
 .text__Slide6 {
-background: url(GroupSix.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 67.5%;
-height: 17.5%;
-top: 160px;
-left: 26px;
-opacity: 1;
+  background: url(GroupSix.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 67.5%;
+  height: 17.5%;
+  top: 160px;
+  left: 26px;
+  opacity: 1;
 }
 
 .btn__Slide6 {
-background: url(banner-btn.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 43.5%;
-height: 9%;
-bottom: 27px;
-left: 26px;
+  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 43.5%;
+  height: 9%;
+  bottom: 27px;
+  left: 26px;
 }
 
 .ligal__Slide6 {
-background: url(banner-lidal-2.svg) 0% 100% no-repeat;
-background-size: contain;
-width: 66.7%;
-height: 5%;
-bottom: 1px;
-left: 25px;
+  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background-size: contain;
+  width: 66.7%;
+  height: 5%;
+  bottom: 1px;
+  left: 25px;
 }
-/*
-.comics__Slide6 {
-  background: url(assets/images/comics.svg) 100% 100% no-repeat;
+.comics1__Slide6 {
+  background: url(comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
   right: 0px;
   bottom: 140px;
   transition: 0.5s;
-  opacity: 1;
-}
-*/
-.comics1__Slide6 {
-background: url(comics1.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 54.7%;
-height: 15%;
-right: 0px;
-bottom: 140px;
-transition: 0.5s;
-opacity: 0;
+  opacity: 0;
 }
 
 .mikro__Slide6 {
-background-color: #00b1f2;
-width: 45px;
-height: 45px;
-border-radius: 50%;
-right: 13px;
-bottom: 73px;
-z-index: 20;
+  background-color: #00b1f2;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  right: 13px;
+  bottom: 73px;
+  z-index: 20;
 }
 
 .mikro__img__Slide6 {
-background: url(mikro.svg) 50% 50% no-repeat;
-background-size: contain;
-width: 100%;
-height: 100%;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-visibility: visible;
+  background: url(mikro.svg) 50% 50% no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  visibility: visible;
 }
 
 #mikro__img1__Slide6 {
-width: 80%;
-top: 0;
-bottom: 0;
-margin: auto;
-position: absolute;
-left: 0;
-right: 0;
-visibility: hidden;
+  width: 80%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
 }
 
 .next__Slide6 {
-background: url(next.svg) 100% 100% no-repeat;
-background-size: contain;
-width: 9%;
-height: 6%;
-bottom: 25px;
-right: 13px;
-z-index: 20;
+  background: url(next.svg) 100% 100% no-repeat;
+  background-size: contain;
+  width: 9%;
+  height: 6%;
+  bottom: 25px;
+  right: 13px;
+  z-index: 20;
 }
 
-/*************************************************************/
-/***********************Video Settings************************/
-/*************************************************************/
-
 .video {
-width: 86%;
-top: 4.7%;
-left: 0;
-right: 0;
-margin: auto;
+  width: 86%;
+  top: 4.7%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 video {
-width: 100%;
+  width: 100%;
 }
 
 .muted {
-background: url(sound-off.png) 0% 100% no-repeat;
-background-size: contain;
-width: 11%;
-height: 12%;
-left: 1%;
-bottom: 2%;
-visibility: visible;
-z-index: 10000;
+  background: url(sound-off.png) 0% 100% no-repeat;
+  background-size: contain;
+  width: 11%;
+  height: 12%;
+  left: 1%;
+  bottom: 2%;
+  visibility: visible;
+  z-index: 10000;
 }
 
 .sound {
-background: url(sound-on.png) 0% 100% no-repeat;
-background-size: contain;
-width: 11%;
-height: 12%;
-left: 1%;
-bottom: 2%;
-visibility: hidden;
-z-index: 10000;
+  background: url(sound-on.png) 0% 100% no-repeat;
+  background-size: contain;
+  width: 11%;
+  height: 12%;
+  left: 1%;
+  bottom: 2%;
+  visibility: hidden;
+  z-index: 10000;
 }
 
 .replay {
-background: url(replay.png) 0% 100% no-repeat;
-background-size: contain;
-width: 11%;
-height: 12%;
-left: 1%;
-bottom: 2%;
-visibility: hidden;
-z-index: 10000;
+  background: url(replay.png) 0% 100% no-repeat;
+  background-size: contain;
+  width: 11%;
+  height: 12%;
+  left: 1%;
+  bottom: 2%;
+  visibility: hidden;
+  z-index: 10000;
 }
 
-/*************************************************************/
-/*************************Interactive*************************/
-/*************************************************************/
-
 .activeSlide {
-transform: translateX(0%);
-opacity: 1;
-z-index: 20;
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 20;
 }
 
 .activeSlide > .activeText {
-opacity: 1;
-transform: translateX(0px);
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .active {
-opacity: 1;
+  opacity: 1;
 }
 
 .deActive {
-opacity: 0;
+  opacity: 0;
 }
 
 .hidden {
-visibility: hidden !important;
-transition: 0s !important;
+  visibility: hidden !important;
+  transition: 0s !important;
 }
 
 .visible {
-visibility: visible !important;
-transition: 0s !important;
+  visibility: visible !important;
+  transition: 0s !important;
 }
 
 #hellopreloader {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #hellopreloader > p {
-display: none;
+  display: none;
 }
 
 #hellopreloader_preload {
-display: block;
-position: absolute;
-z-index: 99999;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: #222222 url(audio.svg) center center no-repeat;
-background-size: 41px;
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222222 url(audio.svg) center center no-repeat;
+  background-size: 41px;
 }
