@@ -121,14 +121,14 @@ body {
 }
 
 .bg__Slide1 {
-  background: url(bg-1.png) 50% 50% no-repeat;
+  background: url(../img/bg-1.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .logo__Slide1 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -155,7 +155,7 @@ body {
 }
 
 .text__Slide1 {
-  background: url(text-banner-1.svg) 0% 100% no-repeat;
+  background: url(../img/text-banner-1.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 24%;
@@ -167,7 +167,7 @@ body {
 }
 
 .btn__Slide1 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -176,7 +176,7 @@ body {
 }
 
 .ligal__Slide1 {
-  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+  background: url(../img/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
     no-repeat;
   background-size: contain;
   width: 66.7%;
@@ -186,7 +186,7 @@ body {
 }
 
 .comics__Slide1 {
-  background: url(comics.svg) 100% 100% no-repeat;
+  background: url(../img/comics.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -201,7 +201,7 @@ body {
 }
 
 .comics1__Slide1 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -365,7 +365,7 @@ body {
 }
 
 .mikro__img__Slide1 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -389,7 +389,7 @@ body {
 }
 
 .next__Slide1 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -398,14 +398,14 @@ body {
 }
 
 .bg__Slide2 {
-  background: url(bg-0.jpg) 50% 50% no-repeat;
+  background: url(../img/bg-0.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .logo__Slide2 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -432,7 +432,7 @@ body {
 }
 
 .text__Slide2 {
-  background: url(GroupTwo.svg) 0% 100% no-repeat;
+  background: url(../img/GroupTwo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
@@ -442,7 +442,7 @@ body {
 }
 
 .btn__Slide2 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -451,7 +451,7 @@ body {
 }
 
 .ligal__Slide2 {
-  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+  background: url(../img/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
     no-repeat;
   background-size: contain;
   width: 66.7%;
@@ -460,7 +460,7 @@ body {
   left: 25px;
 }
 .comics1__Slide2 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -483,7 +483,7 @@ body {
 }
 
 .mikro__img__Slide2 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -507,7 +507,7 @@ body {
 }
 
 .next__Slide2 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -516,14 +516,14 @@ body {
 }
 
 .bg__Slide3 {
-  background: url(bg-2.jpg) 50% 50% no-repeat;
+  background: url(../img/bg-2.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide3 {
-  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background: url(../img/modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -548,7 +548,7 @@ body {
 }
 
 .close {
-  background: url(close.svg) 100% 0% no-repeat;
+  background: url(../img/close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -557,7 +557,7 @@ body {
 }
 
 .textModal__Slide3 {
-  background: url(Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg)
+  background: url(../img/Alles-im-Blick-Mit-den-neuen-LED-Frontscheinwerfern-und-LED-Ruckleuchten-entgeht-Ihnen-nichts-mehr.svg)
     50% 100% no-repeat;
   background-size: contain;
   width: 86%;
@@ -569,7 +569,7 @@ body {
 }
 
 .btnColor {
-  background: url(banner-color.svg) 50% 100% no-repeat;
+  background: url(../img/banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
@@ -580,7 +580,7 @@ body {
 }
 
 .logo__Slide3 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -607,7 +607,7 @@ body {
 }
 
 .text__Slide3 {
-  background: url(Groupfive.svg) 0% 100% no-repeat;
+  background: url(../img/Groupfive.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 70%;
   height: 30%;
@@ -617,7 +617,7 @@ body {
 }
 
 .btn__Slide3 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -626,7 +626,7 @@ body {
 }
 
 .ligal__Slide3 {
-  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(../img/banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
@@ -635,7 +635,7 @@ body {
 }
 
 .comics1__Slide3 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -659,7 +659,7 @@ body {
 }
 
 .mikro__img__Slide3 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -683,7 +683,7 @@ body {
 }
 
 .next__Slide3 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -693,14 +693,14 @@ body {
 }
 
 .bg__Slide4 {
-  background: url(bg-3.jpg) 50% 50% no-repeat;
+  background: url(../img/bg-3.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide4 {
-  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background: url(../img/modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -725,7 +725,7 @@ body {
 }
 
 .close {
-  background: url(close.svg) 100% 0% no-repeat;
+  background: url(../img/close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -734,7 +734,7 @@ body {
 }
 
 .textModal__Slide4 {
-  background: url(Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg)
+  background: url(../img/Innen-uberzeugt-die-funfte-Generation-des-Caddy-Cargo-mit-neuen-Hightech-Losungen-und-deutlich-mehr-Platz.svg)
     50% 100% no-repeat;
   background-size: contain;
   width: 86%;
@@ -746,7 +746,7 @@ body {
 }
 
 .btnColor {
-  background: url(banner-color.svg) 50% 100% no-repeat;
+  background: url(../img/banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
@@ -757,7 +757,7 @@ body {
 }
 
 .logo__Slide4 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -784,7 +784,7 @@ body {
 }
 
 .text__Slide4 {
-  background: url(GroupFo.svg) 0% 100% no-repeat;
+  background: url(../img/GroupFo.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 65%;
   height: 20%;
@@ -794,7 +794,7 @@ body {
 }
 
 .btn__Slide4 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -803,7 +803,7 @@ body {
 }
 
 .ligal__Slide4 {
-  background: url(Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
+  background: url(../img/Abbildung-zeigt-Sonderausstattung-gegen-Mehrpreis.svg) 0% 100%
     no-repeat;
   background-size: contain;
   width: 66.7%;
@@ -813,7 +813,7 @@ body {
 }
 
 .comics1__Slide4 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -837,7 +837,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide4 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -861,7 +861,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide4 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -871,14 +871,14 @@ comics1__Slide4.acitve {
 }
 
 .bg__Slide5 {
-  background: url(bg-4.jpg) 50% 50% no-repeat;
+  background: url(../img/bg-4.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide5 {
-  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background: url(../img/modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -903,7 +903,7 @@ comics1__Slide4.acitve {
 }
 
 .close {
-  background: url(close.svg) 100% 0% no-repeat;
+  background: url(../img/close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -912,7 +912,7 @@ comics1__Slide4.acitve {
 }
 
 .textModal__Slide5 {
-  background: url(Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg)
+  background: url(../img/Dank-extrabreiter-Schiebetur-konnen-jetzt-Europaletten-sogar-seitlich-eingeladen-werden.svg)
     50% 100% no-repeat;
   background-size: contain;
   width: 86%;
@@ -924,7 +924,7 @@ comics1__Slide4.acitve {
 }
 
 .btnColor {
-  background: url(banner-color.svg) 50% 100% no-repeat;
+  background: url(../img/banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
@@ -935,7 +935,7 @@ comics1__Slide4.acitve {
 }
 
 .logo__Slide5 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -962,7 +962,7 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide5 {
-  background: url(GroupThree.svg) 0% 100% no-repeat;
+  background: url(../img/GroupThree.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 76%;
   height: 31%;
@@ -972,7 +972,7 @@ comics1__Slide4.acitve {
 }
 
 .btn__Slide5 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -981,7 +981,7 @@ comics1__Slide4.acitve {
 }
 
 .ligal__Slide5 {
-  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(../img/banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
@@ -989,7 +989,7 @@ comics1__Slide4.acitve {
   left: 25px;
 }
 .comics1__Slide5 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -1010,7 +1010,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide5 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -1034,7 +1034,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide5 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -1044,14 +1044,14 @@ comics1__Slide4.acitve {
 }
 
 .bg__Slide6 {
-  background: url(bg-5.jpg) 50% 50% no-repeat;
+  background: url(../img/bg-5.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .modal__img__Slide6 {
-  background: url(modal-btn.svg) 50% 50% no-repeat;
+  background: url(../img/modal-btn.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 32px;
   height: 8%;
@@ -1083,7 +1083,7 @@ comics1__Slide4.acitve {
 }
 
 .close {
-  background: url(close.svg) 100% 0% no-repeat;
+  background: url(../img/close.svg) 100% 0% no-repeat;
   background-size: contain;
   width: 5%;
   height: 5%;
@@ -1092,7 +1092,7 @@ comics1__Slide4.acitve {
 }
 
 .textModal__Slide6 {
-  background: url(Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg)
+  background: url(../img/Der-Lane-Assist-erfasst-und-korrigiert-autonom-bei-drohender-Uberfahrung-der-Spurbegrenzungslinien.svg)
     50% 100% no-repeat;
   background-size: contain;
   width: 86%;
@@ -1104,7 +1104,7 @@ comics1__Slide4.acitve {
 }
 
 .btnColor {
-  background: url(banner-color.svg) 50% 100% no-repeat;
+  background: url(../img/banner-color.svg) 50% 100% no-repeat;
   background-size: contain;
   width: 50%;
   height: 10%;
@@ -1115,7 +1115,7 @@ comics1__Slide4.acitve {
 }
 
 .logo__Slide6 {
-  background: url(logo.svg) 50% 0% no-repeat;
+  background: url(../img/logo.svg) 50% 0% no-repeat;
   background-size: contain;
   width: 19%;
   height: 13%;
@@ -1142,7 +1142,7 @@ comics1__Slide4.acitve {
 }
 
 .text__Slide6 {
-  background: url(GroupSix.svg) 0% 100% no-repeat;
+  background: url(../img/GroupSix.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 67.5%;
   height: 17.5%;
@@ -1152,7 +1152,7 @@ comics1__Slide4.acitve {
 }
 
 .btn__Slide6 {
-  background: url(banner-btn.svg) 0% 100% no-repeat;
+  background: url(../img/banner-btn.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 43.5%;
   height: 9%;
@@ -1161,7 +1161,7 @@ comics1__Slide4.acitve {
 }
 
 .ligal__Slide6 {
-  background: url(banner-lidal-2.svg) 0% 100% no-repeat;
+  background: url(../img/banner-lidal-2.svg) 0% 100% no-repeat;
   background-size: contain;
   width: 66.7%;
   height: 5%;
@@ -1169,7 +1169,7 @@ comics1__Slide4.acitve {
   left: 25px;
 }
 .comics1__Slide6 {
-  background: url(comics1.svg) 100% 100% no-repeat;
+  background: url(../img/comics1.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 54.7%;
   height: 15%;
@@ -1190,7 +1190,7 @@ comics1__Slide4.acitve {
 }
 
 .mikro__img__Slide6 {
-  background: url(mikro.svg) 50% 50% no-repeat;
+  background: url(../img/mikro.svg) 50% 50% no-repeat;
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -1214,7 +1214,7 @@ comics1__Slide4.acitve {
 }
 
 .next__Slide6 {
-  background: url(next.svg) 100% 100% no-repeat;
+  background: url(../img/next.svg) 100% 100% no-repeat;
   background-size: contain;
   width: 9%;
   height: 6%;
@@ -1236,7 +1236,7 @@ video {
 }
 
 .muted {
-  background: url(sound-off.png) 0% 100% no-repeat;
+  background: url(../img/sound-off.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1247,7 +1247,7 @@ video {
 }
 
 .sound {
-  background: url(sound-on.png) 0% 100% no-repeat;
+  background: url(../img/sound-on.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1258,7 +1258,7 @@ video {
 }
 
 .replay {
-  background: url(replay.png) 0% 100% no-repeat;
+  background: url(../img/replay.png) 0% 100% no-repeat;
   background-size: contain;
   width: 11%;
   height: 12%;
@@ -1314,6 +1314,6 @@ video {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #222222 url(audio.svg) center center no-repeat;
+  background: #222222 url(../img/audio.svg) center center no-repeat;
   background-size: 41px;
 }
